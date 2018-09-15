@@ -84,7 +84,10 @@ $bodyFont		: 'Roboto', sans-serif;
 
 h1 {font-size: 2.2rem;}
 h2 {font-size: 2rem;}
-h3 {font-size: 1.2rem;}
+h3 {
+	font-size: 1.2rem;
+	margin: 0;
+}
 
 @include device800 {
 	h1 {font-size: 2.8rem;}
@@ -111,61 +114,69 @@ h1, h2, h3 {
 
 a {
 	display: inline-block;
+	color: $primary;
+	transition: .2s;
+	text-decoration: none;
+	&:hover {
+		color: darken($primary, 10%);
+	}
 }
 
 .header-decor {
 	position: relative;
-	&::before {
-		position: absolute;
-		bottom: -20px;
-		left: 0;
-		content: '';
-		height: 23px;
-		width: 120px;
-		background: $primary;
-	}
-	&::after {
-		position: absolute;
-		bottom: -26px;
-		left: 0;
-		content: '';
-		height: 23px;
-		width: 130px;
-		-webkit-transform: rotate(30deg);
-		-ms-transform: rotate(30deg);
-		transform: rotate(-6deg);
-		background: #fff;
-	}
+	// &::before {
+	// 	position: absolute;
+	// 	bottom: -20px;
+	// 	left: 0;
+	// 	content: '';
+	// 	height: 23px;
+	// 	width: 120px;
+	// 	background: $primary;
+	// }
+	// &::after {
+	// 	position: absolute;
+	// 	bottom: -26px;
+	// 	left: 0;
+	// 	content: '';
+	// 	height: 23px;
+	// 	width: 130px;
+	// 	-webkit-transform: rotate(30deg);
+	// 	-ms-transform: rotate(30deg);
+	// 	transform: rotate(-6deg);
+	// 	background: #fff;
+	// }
 }
 
+* {
+	font-family: 'sans-serif';
+}
 
-p, a {
+p, a, li {
 	font-family: $bodyFont;
+}
+
+li {
+	list-style: none;
+	padding: 5px 0;
 }
 
 .btn {
 	padding: 1rem 2rem;
 	text-align: center;
-	background-color: $secondary;
-	color: #fff;
+	color: $primary;
+	border: 2px solid $primary;
 	text-decoration: none;
-	font-size: 1rem;
-	font-weight: 300;
+	font-size: 1.2rem;
 	width: 100%;
 	&:hover {
-		background-color: darken($secondary, 10%);
+		background-color: $primary;
 		transition: .3s;
 		cursor: pointer;
+		color: #fff;
 	}
 	@include device500 {
 		width: auto;
 	}
-}
-
-
-
-* {
-	font-family: 'sans-serif';
 }
 
 .container {
@@ -184,14 +195,15 @@ header {
 	.header__content {
 		position: relative;
 		z-index: 1;
-		align-self: center;
-		padding-left: 6rem;
+		// align-self: center;
+		// padding-left: 6rem;
 		outline: 2px solid #fff;
-		padding: 1rem 2rem 5rem 2rem;
-		margin-top: 6rem;
+		padding: 10px 60px 50px 20px;
+		margin-top: 100px;
 		z-index: 2;
 		h2 {
 			max-width: 500px;
+			margin: 20px 0;
 		}
 	}
 	.header__background {
@@ -222,17 +234,28 @@ header {
 			clip-path: polygon(0 16%, 0 67%, 100% 0, 100% 100%);
 			
 		}
+		.header__background {
+			height: 330px;
+		}
 	}
 }
 .about {
 	line-height: 1.5;
+	margin: 40px 0;
+	margin: 40px 0;
 	&__col {
-		padding-right: 1rem;
+		text-align: center;
+		padding: 20px 0;
+	}
+	i {
+		color: $secondary;
+		padding-right: 8px;
 	}
 	@include device800 {
 		@include flexbox;
+		@include justify-content(space-around);
 		&__col {
-			width: 50%;
+			width: 33%
 
 		}
 	}
@@ -247,9 +270,9 @@ header {
 	margin: auto;
 	&__btn {
 		padding: 10px;
-		border: none;
 		margin: 5px;
 		font-family: $bodyFont;
+		background: #fff;
 		@include device500 {
 			width: 31.333%;
 		}
@@ -292,6 +315,17 @@ header {
 	&__header {
 		text-align: center;
 		font-size: 1.8rem;
+		border-bottom: 1px solid $primary;
+		margin: 0;
+		a {
+			display: block;
+			padding: 20px 0;
+			font-weight: 500;
+			&:hover {
+				color: #fff;
+				background: $primary;
+			}
+		}
 	}
 	&__btn {
 		
@@ -312,6 +346,21 @@ header {
 			top: 0;
 			display: none;
 			background: rgba(#fff, .8);
+		}
+	}
+}
+
+.animation {
+	line-height: 1.5;
+	&__col {
+		padding-right: 1rem;
+	}
+	@include device800 {
+		@include flexbox;
+		@include justify-content(space-around);
+		&__col {
+			width: 48%;
+
 		}
 	}
 }
