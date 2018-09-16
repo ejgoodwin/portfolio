@@ -124,27 +124,6 @@ a {
 
 .header-decor {
 	position: relative;
-	// &::before {
-	// 	position: absolute;
-	// 	bottom: -20px;
-	// 	left: 0;
-	// 	content: '';
-	// 	height: 23px;
-	// 	width: 120px;
-	// 	background: $primary;
-	// }
-	// &::after {
-	// 	position: absolute;
-	// 	bottom: -26px;
-	// 	left: 0;
-	// 	content: '';
-	// 	height: 23px;
-	// 	width: 130px;
-	// 	-webkit-transform: rotate(30deg);
-	// 	-ms-transform: rotate(30deg);
-	// 	transform: rotate(-6deg);
-	// 	background: #fff;
-	// }
 }
 
 * {
@@ -154,7 +133,9 @@ a {
 p, a, li {
 	font-family: $bodyFont;
 }
-
+ul {
+	padding: 0;
+}
 li {
 	list-style: none;
 	padding: 5px 0;
@@ -339,6 +320,21 @@ header {
 			height: 50px;
 		}
 	}
+	ul {
+		padding-left: 30px;
+	}
+	li {
+		position: relative;
+		&::before {
+			content: "\f0da";
+			font-family: 'Font Awesome\ 5 Free';
+			font-weight: 900;
+			position: absolute;
+			left: -18px;
+			top: 8px;
+			color: $primary;
+		}
+	}
 	@include device800 {
 		width: 48%;
 		&__link {
@@ -352,21 +348,32 @@ header {
 
 .animation {
 	line-height: 1.5;
-	&__col {
-		padding-right: 1rem;
+	max-width: 800px;
+	text-align: center;
+	margin: 100px auto;
+	&__header {
+		color: $primary;
+		font-size: 2rem;
+		font-weight: 500;
 	}
-	@include device800 {
-		@include flexbox;
-		@include justify-content(space-around);
-		&__col {
-			width: 48%;
-
-		}
+	&__info {
+		padding: 20px 0 50px 0;
+	}
+	p {
+		line-height: 1.5;	
 	}
 }
 
 iframe {
 	max-width: 800px;
+}
+
+footer {
+	text-align: center;
+	i {
+		color: $primary;
+		padding-right: 10px;
+	}
 }
 
 

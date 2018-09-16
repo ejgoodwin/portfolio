@@ -55,6 +55,9 @@ a {
 p, a, li {
   font-family: "Roboto", sans-serif; }
 
+ul {
+  padding: 0; }
+
 li {
   list-style: none;
   padding: 5px 0; }
@@ -235,6 +238,18 @@ header {
       -ms-transform: translatey(-50%);
       transform: translatey(-50%);
       height: 50px; }
+  .website ul {
+    padding-left: 30px; }
+  .website li {
+    position: relative; }
+    .website li::before {
+      content: "\f0da";
+      font-family: 'Font Awesome\ 5 Free';
+      font-weight: 900;
+      position: absolute;
+      left: -18px;
+      top: 8px;
+      color: #18AEBC; }
   @media only screen and (min-width: 800px) {
     .website {
       width: 48%; }
@@ -245,21 +260,26 @@ header {
         background: rgba(255, 255, 255, 0.8); } }
 
 .animation {
-  line-height: 1.5; }
-  .animation__col {
-    padding-right: 1rem; }
-  @media only screen and (min-width: 800px) {
-    .animation {
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-      justify-content: space-around; }
-      .animation__col {
-        width: 48%; } }
+  line-height: 1.5;
+  max-width: 800px;
+  text-align: center;
+  margin: 100px auto; }
+  .animation__header {
+    color: #18AEBC;
+    font-size: 2rem;
+    font-weight: 500; }
+  .animation__info {
+    padding: 20px 0 50px 0; }
+  .animation p {
+    line-height: 1.5; }
 
 iframe {
   max-width: 800px; }
+
+footer {
+  text-align: center; }
+  footer i {
+    color: #18AEBC;
+    padding-right: 10px; }
 
 /*# sourceMappingURL=style.css.map */
