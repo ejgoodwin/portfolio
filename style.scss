@@ -1,7 +1,8 @@
 // Variables
-$primary	: #18AEBC;
+$primary	: #8F62CC;
 $darkenPrimary : #05383D;
 $secondary	: #7b0046;
+$grey		: #F4F4F4;
 
 $headerFont 	: 'Roboto', sans-serif;
 $bodyFont		: 'Roboto', sans-serif;
@@ -101,6 +102,14 @@ img {
 
 * {
 	box-sizing: border-box;
+	font-smooth: auto;
+	    -webkit-font-smoothing: antialiased;
+
+}
+
+*::before,
+*::after {
+	box-sizing: border-box;
 }
 
 body {
@@ -122,6 +131,8 @@ a {
 	}
 }
 
+
+
 .header-decor {
 	position: relative;
 }
@@ -132,6 +143,7 @@ a {
 
 p, a, li {
 	font-family: $bodyFont;
+	line-height: 1.5;
 }
 ul {
 	padding: 0;
@@ -168,74 +180,411 @@ li {
 	}
 }
 
-header {
-	min-height: 400px;
+.dropdown-menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(#fff, .8);
+	transform: translateY(-150%);
+	transition: .5s;
+	z-index: 1;
+	&__list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: 100%;
+	}
+	&__list-item {
+		text-align: center;
+		font-weight: 600;
+		font-size: 4rem;
+	}
+	&__link {
+		padding: 2rem;
+	}
+	&--open {
+		transform: translateY(0);
+		transition: .5s;
+	}
+}
+
+/* ---------------- Header ----------------
+
+------------------------------------------- */
+
+.header {
+	position: relative;
+	height: 100vh;
 	color: #fff;
-	@include flexbox;
-	@include justify-content(center);
-	.header__content {
-		position: relative;
-		z-index: 1;
-		outline: 2px solid #fff;
-		padding: 10px 60px 50px 20px;
-		margin-top: 100px;
-		z-index: 2;
-		h2 {
-			max-width: 500px;
-			margin: 20px 0;
-		}
+	&__name {
+		display: flex;
+		align-items: center;
+		background: $primary;
 	}
-	.header__background {
-		width: 100%;
-		height: 300px;
-		background: $secondary;
-		position: absolute;
-		left: -50px;
-		top: -50px;
-		z-index: -1;
-		@include flexbox;
-		@include flex-direction(column);
-		@include justify-content(center);
+	&__name-text {
+		display: flex;
+		align-items: center;
+		height: 200px;
+		opacity: 0;
+		animation: text-appear .3s linear 1s;
+		animation-fill-mode: forwards;
+		padding: 3rem 5rem;
 	}
-	.header-box-outline {
-		background-color: $primary;
-		position: absolute;
-		left: 0%;
-		top: 0;
-		width: 100%;
-		height: 400px;
-		z-index: 0;
-		
+	&__job {
+		display: flex;
+		align-items: center;
+	}
+	&__job-text {
+		display: flex;
+		align-items: center;
+		height: 200px;
+		width: auto;
+		display: inline-block;
+		color: $primary;
+		font-weight: 600;
+		opacity: 0;
+		animation: text-appear .3s linear 1s;
+		animation-fill-mode: forwards;
+		padding: 3rem 5rem;
 	}
 	@include device800 {
-		.header-box-outline {
-			-webkit-clip-path: polygon(0 16%, 0 67%, 100% 0, 100% 100%);
-			clip-path: polygon(0 16%, 0 67%, 100% 0, 100% 100%);
-			
+		display: flex;
+		&__name {
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			height: 100%;
+			width: 100%;
+			background: $primary;
+			animation: header-slide .5s ease-in .3s;
+			animation-fill-mode: forwards;
 		}
-		.header__background {
-			height: 330px;
+		&__name-text {
+			display: flex;
+			align-items: center;
+			height: 200px;
+			opacity: 0;
+			animation: text-appear .3s linear 1s;
+			animation-fill-mode: forwards;
+			padding: 3rem 5rem;
+			&::before {
+				position: absolute;
+				top: 0;
+				left: 0;
+				content: '';
+				width: 0px;
+				height: 0px;
+				border-bottom: 2px solid #fff;
+				border-left: 2px solid #fff;
+				animation: border-fill-1 .5s linear 1.3s;
+				animation-fill-mode: forwards;
+			}
+			&::after {
+				position: absolute;
+				content: '';
+				width: 1px;
+				height: 1px;
+				border-top: 2px solid #fff;
+				top: 0;
+				right: 0;
+				animation: border-fill-3 .3s ease-out 2.6s;
+				animation-fill-mode: forwards;
+			}
+		}
+		&__job {
+			position: absolute;
+			top: 0;
+			right: 0;
+			display: flex;
+			align-items: center;
+			height: 100%;
+			width: 50%;
+		}
+		&__job-text {
+			display: flex;
+			align-items: center;
+			height: 200px;
+			width: auto;
+			display: inline-block;
+			color: $primary;
+			font-weight: 600;
+			opacity: 0;
+			animation: text-appear .3s linear 1s;
+			animation-fill-mode: forwards;
+			padding: 3rem 5rem;
+			&::before {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				content: '';
+				width: 0px;
+				height: 0px;
+				border-bottom: 2px solid $primary;
+				border-right: 2px solid $primary;
+				animation: border-fill-2 .5s linear 1.8s;
+				animation-fill-mode: forwards;
+			}
+			&::after {
+				position: absolute;
+				content: '';
+				width: 1px;
+				height: 1px;
+				border-top: 2px solid $primary;
+				top: 0;
+				right: 0;
+				animation: border-fill-3 .3s linear 2.3s;
+				animation-fill-mode: forwards;
+			}
 		}
 	}
 }
-.about {
-	line-height: 1.5;
-	margin: 40px 0;
-	margin: 40px 0;
-	&__col {
-		text-align: center;
-		padding: 20px 0;
+@keyframes header-slide {
+	0% {
+		width: 100%;
 	}
-	i {
-		color: $secondary;
-		padding-right: 8px;
+	100% {
+		width: 50%;
+	}
+}
+@keyframes text-appear {
+	0% {
+		transform: translateY(-20px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+@keyframes border-fill-1 {
+	30% {
+		height: 100%;
+		width: 0;
+	}
+	100% {
+		height: 100%;
+		width: 100%;
+	}
+}
+@keyframes border-fill-2 {
+	70% {
+		height: 0;
+		width: 100%;
+	}
+	100% {
+		height: 100%;
+		width: 100%;
+	}
+}
+@keyframes border-fill-3 {
+	1% {
+		height: 3px;
+	}
+	100% {
+		width: 100%;
+		height: 3px;
+	}
+}
+.hamburger {
+	position: fixed;
+	right: 20px;
+	top: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	width: 55px;
+	height: 55px;
+	padding: .5rem;
+	margin-bottom: 1rem;
+	background: rgba(#fff, 0.7);
+	z-index: 2;
+	&:hover {
+		cursor: pointer;
+	}
+	&__line {
+		display: block;
+	    height: 5px;
+	    width: 50px;
+	    margin-bottom: 6px;
+	    border-radius: 5px;
+	    background: $primary;
+	    transition: .5s;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+		&--1 {
+			animation: hamburger-jiggle .5s ease-out 3s;
+			animation-timing-function:  cubic-bezier(.28,.03,0,1.6);
+		}
+		&--2 {
+			animation: hamburger-jiggle .5s ease-out 3.1s;
+			animation-timing-function:  cubic-bezier(.28,.03,0,1.6);
+		}
+		&--3 {
+			animation: hamburger-jiggle .5s ease-out 3.2s;
+			animation-timing-function:  cubic-bezier(.28,.03,0,1.6);
+		}
+	}
+	&.hamburger-cross {
+		.hamburger__line--1 {
+			transform: rotate(225deg) translate(-7px, -7px);
+		}
+		.hamburger__line--2 {
+			transform: scaleX(0) translateX(-80px);
+			border-radius: 50%;
+		}
+		.hamburger__line--3 {
+			transform: rotate(-225deg) translate(-8px, 9px);
+		}
+	}
+}
+@keyframes hamburger-jiggle {
+	50% {
+		transform: translateY(-4px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+/* ---------------- Feature Project ----------------
+
+------------------------------------------- */
+
+.feature-project {
+	h2 {
+		padding: 0 1rem 2rem 1rem;
+		margin-top: 0;
+		color: $primary;
+		border-bottom: 1px solid $primary;
+	}
+	&__heading {
+		padding: 5rem 1rem;
+	}
+	&__vid {
+		padding: 1rem;
+	}
+	&__subtitle {
+		color: $primary;
+		padding-left: 1rem;
+	}
+	&__description {
+		background: $grey;
+		padding: 6rem 1rem;
+		p {
+			text-align: center;
+			max-width: 800px;
+			margin: auto;
+		}
+	}
+	&__nav {
+		padding: 5rem 1rem;
+	}
+	&__nav-text {
+		padding: 1rem;
+	}
+	&__nav-img {
+		padding: 1rem;
+	}
+	&__email-img-large {
+		padding: 1rem;
+		img {
+			margin: auto;
+			display: block;
+		}
+	}
+	&__email-text {
+		padding: 1rem;
+		img {
+			margin: auto;
+			display: block;
+		}
+	}
+	@include device500 {
+		h2 {
+			padding: 2rem 1rem;
+			margin-top: 2rem;
+		}
+		&__email-img-large {
+			img {
+				max-width: 300px;
+			}
+		}
+		&__email-text {
+			img {
+				max-width: 300px;
+			}
+		}
 	}
 	@include device800 {
-		@include flexbox;
-		@include justify-content(space-around);
-		&__col {
-			width: 33%
+		&__heading {
+			display: flex;
+		}
+		&__title {
+			width: 50%;
+		}
+		&__vid {
+			width: 50%;
+		}
+		&__nav {
+			display: flex;
+			align-items: center;
+		}
+		&__nav-img {
+			width: 50%;
+		}
+		&__nav-text {
+			width: 50%;
 
+		}
+		&__email {
+			display: flex;
+			align-items: center;
+			padding: 3rem 1rem;
+		}
+		&__email-img-large {
+			width: 50%;
+		}
+		&__email-text {
+			width: 50%;
+			p {
+				padding: 2rem 0;
+			}
+		}
+	}
+
+}
+
+
+/* ---------------- All Projects ----------------
+
+------------------------------------------- */
+
+.all-projects {
+	padding: 5rem 1rem;
+	h2 {
+		padding: 2rem 1rem;
+		color: $primary;
+		border-bottom: 1px solid $primary;
+
+	}
+	@include device800 {
+		display: flex;
+		h2 {
+			margin-bottom: 0;
+		}
+		&__title {
+			width: 50%;
+		}
+		&__filter {
+			width: 50%;
 		}
 	}
 }
@@ -245,15 +594,18 @@ header {
 	flex-wrap:wrap;
 	width: 100%;
 	list-style: none;
-	max-width: 600px;
-	margin: auto;
+	justify-content: center;
+	align-items: flex-end;
 	&__btn {
 		padding: 10px;
 		margin: 5px;
 		font-family: $bodyFont;
-		background: #fff;
-		@include device500 {
-			width: 31.333%;
+		background: $primary;
+		color: #fff;
+		width: 140px;
+		&:hover {
+			background: none;
+			color: $primary;
 		}
 	}
 }
