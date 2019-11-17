@@ -135,6 +135,35 @@ li {
   position: relative;
   height: 100vh;
   color: #fff; }
+  .header__github {
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    opacity: 0;
+    -webkit-animation: text-appear-alt .3s linear 2.3s;
+    animation: text-appear-alt .3s linear 2.3s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards; }
+    .header__github:hover {
+      color: #fff;
+      text-decoration: underline; }
+  .header__cv {
+    color: #fff;
+    position: absolute;
+    top: 80px;
+    left: -20px;
+    opacity: 0;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-animation: text-appear-alt .3s linear 2.3s;
+    animation: text-appear-alt .3s linear 2.3s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards; }
+    .header__cv:hover {
+      color: #fff;
+      text-decoration: underline; }
   .header__name {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -334,13 +363,13 @@ li {
     transform: translateY(0);
     opacity: 1; } }
 
-@-webkit-keyframes shapes-appear {
+@-webkit-keyframes text-appear-alt {
   0% {
     opacity: 0; }
   100% {
     opacity: 1; } }
 
-@keyframes shapes-appear {
+@keyframes text-appear-alt {
   0% {
     opacity: 0; }
   100% {
