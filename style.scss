@@ -1,7 +1,7 @@
 // Variables
-$primary	: #8F62CC;
+$primary	: #6f0037;
 $darkenPrimary : #05383D;
-$secondary	: #7b0046;
+// $secondary	: #98D8A7;
 $grey		: #F4F4F4;
 
 $headerFont 	: 'Roboto', sans-serif;
@@ -131,11 +131,6 @@ a {
 	}
 }
 
-
-
-.header-decor {
-	position: relative;
-}
 
 * {
 	font-family: 'sans-serif';
@@ -344,6 +339,7 @@ li {
 		}
 	}
 }
+
 @keyframes header-slide {
 	0% {
 		width: 100%;
@@ -359,6 +355,14 @@ li {
 	}
 	100% {
 		transform: translateY(0);
+		opacity: 1;
+	}
+}
+@keyframes shapes-appear {
+	0% {
+		opacity: 0;
+	}
+	100% {
 		opacity: 1;
 	}
 }
@@ -476,13 +480,18 @@ li {
 		padding-left: 1rem;
 	}
 	&__description {
+		position: relative;
 		background: $grey;
-		padding: 6rem 1rem;
+		padding: 8rem 1rem;
+		overflow: hidden;
 		p {
 			text-align: center;
 			max-width: 800px;
 			margin: auto;
+			font-size: 1.2rem;
+			line-height: 1.7;
 		}
+
 	}
 	&__nav {
 		padding: 5rem 1rem;
