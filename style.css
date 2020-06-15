@@ -583,6 +583,9 @@ li {
       display: block; }
   .feature-project__email-text {
     padding: 1rem; }
+    .feature-project__email-text p {
+      font-size: 1rem;
+      line-height: 1.6; }
     .feature-project__email-text img {
       margin: auto;
       display: block; }
@@ -657,6 +660,8 @@ li {
     .feature-project__title {
       font-size: 3rem; }
     .feature-project__description p {
+      font-size: 1.2rem; }
+    .feature-project__email-text p {
       font-size: 1.2rem; } }
 
 /* ---------------- All Projects ----------------

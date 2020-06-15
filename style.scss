@@ -596,6 +596,10 @@ li {
 	}
 	&__email-text {
 		padding: 1rem;
+		p {
+			font-size: 1rem;
+			line-height: 1.6;
+		}
 		img {
 			margin: auto;
 			display: block;
@@ -684,6 +688,11 @@ li {
 			p {
 				font-size: 1.2rem;
 				
+			}
+		}
+		&__email-text {
+			p {
+				font-size: 1.2rem;
 			}
 		}
 	}
