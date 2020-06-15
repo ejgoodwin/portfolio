@@ -1,0 +1,19 @@
+.job-filter-search {
+	@include media-breakpoint($lg) {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		&__filter {
+			display: flex;
+			width: 50%;
+			.form-group {
+				margin-bottom: 0;
+				max-width: 200px;
+				flex-grow: 1;
+				margin-right: .5rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,99 @@
+body {
+	font-family: $font-main;
+	color: $font-colour-primary;
+	background-color: $grey-lighten;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+main {
+	margin-top: 4rem;
+}
+
+// Transition between light and dark theme
+* {
+	transition: .1s background-color;
+}
+
+a {
+	color: $primary;
+	&:hover {
+		color: darken($primary, 5);
+	}
+	&.link-grey {
+		color: $font-colour-grey;
+		&:hover {
+			color: $font-colour-primary;
+		}
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+.list {
+	padding-left: 1.8rem;
+}
+
+.card--narrow {
+	max-width: 550px;
+	margin: auto;
+}
+
+.main {
+	padding-bottom: 1rem;
+}
+
+.translation-section {
+	width: 66.666%;
+	padding-right: 15px;
+	padding-left: 15px;
+	transition: .1s;
+	&--media-app {
+		width: 60%;
+	}
+	&--expanded {
+		width: 100%;
+		padding-right: 75px
+	}
+	&--full-width {
+		width: 100%;
+		padding-right: 15px;
+	}
+}
+
+.job-page__progress-bar {
+	width: 200px;
+	.progress-bar {
+		background-color: $primary;
+		&--full {
+			background-color: $success;
+		}
+	}
+}
+
+.format-tag {
+	margin: 0 1px 2px;
+	height: 16px;
+	opacity: .8;
+	transition: .1s;
+	&:hover {
+		opacity: 1;
+		cursor: pointer;
+	}
+}
+
+.shortcut-key {
+	display: inline-block;
+	background: $grey;
+	padding: .3rem .5rem .1rem;
+	border-radius: 4px;
+	&--medium {
+		min-width: 80px;
+	}
+	&--sm {
+		min-width: 35px;
+		text-align: center;
+	}
+}
+

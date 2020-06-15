@@ -1,0 +1,55 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>README.md</title>
+      </head>
+      <body>
+        <h1 id="croppie-a-javascript-image-cropper">Croppie - A Javascript Image Cropper</h1>
+<h2 id="to-install">To Install</h2>
+<p>Bower: <code>bower install croppie</code></p>
+<p>Npm: <code>npm install croppie</code></p>
+<p>Download:
+<a href="croppie.js">croppie.js</a> &amp; <a href="croppie.css">croppie.css</a></p>
+<h2 id="adding-croppie-to-your-site">Adding croppie to your site</h2>
+<pre><code class="lang-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;croppie.css&quot; /&gt;
+&lt;script src=&quot;croppie.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<h2 id="cdn">CDN</h2>
+<p>cdnjs.com provides croppie via cdn <a href="https://cdnjs.com/libraries/croppie">https://cdnjs.com/libraries/croppie</a></p>
+<pre><code>https://cdnjs.cloudflare.com/ajax/libs/croppie/{version}/croppie.min.css
+https://cdnjs.cloudflare.com/ajax/libs/croppie/{version}/croppie.min.js
+</code></pre><h2 id="documentation">Documentation</h2>
+<p><a href="http://foliotek.github.io/Croppie#documentation">Documentation</a></p>
+<h2 id="related-libraries">Related Libraries</h2>
+<ul>
+<li><a href="https://gitlab.com/michel.werren/croppie-dart">croppie-dart</a></li>
+<li><a href="https://github.com/allenRoyston/ngCroppie">ngCroppie</a></li>
+<li><a href="https://github.com/lpsBetty/angular-croppie">angular-croppie</a></li>
+<li><a href="https://github.com/dima-kov/django-croppie">django-croppie</a></li>
+<li><a href="https://github.com/jofftiquez/vue-croppie">vue-croppie</a></li>
+</ul>
+<h2 id="contributing">Contributing</h2>
+<p>First, thanks for contributing.  This project is difficult to maintain with one person.  Here&#39;s a &quot;checklist&quot; of things to remember when contributing to croppie.</p>
+<ul>
+<li>Don&#39;t forget to update the documentation.</li>
+<li>If you&#39;re adding a new option/event/method, try adding to an example on the documentation.  Or create a new example, if you feel the need.</li>
+<li>We don&#39;t have tests for Croppie :( (if you want to create tests I&#39;d be forever grateful), so please try to test the functionality you&#39;re changing on the demo page.  I&#39;ve tried to add as many use-cases as I can think of on there.  Compare the functionality in your branch to the one on the official page.  If they all still work, then great!</li>
+</ul>
+<p>If you&#39;re looking for a simple server to load the demo page, I use <a href="https://github.com/tapio/live-server">https://github.com/tapio/live-server</a>.</p>
+<h4 id="minifying">Minifying</h4>
+<p><code>uglifyjs croppie.js -c -m -r &#39;$,require,exports&#39; -o croppie.min.js</code></p>
+<h4 id="releasing-a-new-version">Releasing a new version</h4>
+<p>For the most part, you shouldn&#39;t worry about these steps unless you&#39;re the one handling the release.  Please don&#39;t bump the release and don&#39;t minify/uglify in a PR.  That just creates merge conflicts when merging.  Those steps will be performed when the release is created.</p>
+<ol>
+<li>Bump version in croppie.js</li>
+<li>Minify/Uglify</li>
+<li>Commit</li>
+<li>npm version [new version]</li>
+<li><code>git push &amp;&amp; git push --tags</code></li>
+<li><code>npm publish</code></li>
+<li>Draft a new release with new tag on <a href="https://github.com/Foliotek/Croppie/releases">https://github.com/Foliotek/Croppie/releases</a></li>
+<li>Deploy to gh-pages <code>npm run deploy</code></li>
+</ol>
+
+      </body>
+    </html>

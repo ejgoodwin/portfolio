@@ -1,0 +1,15 @@
+.pagination {
+	margin-bottom: .5rem;
+	.page-link {
+		padding: .375rem .75rem;
+		color: $primary;
+		border: 1px solid $border-colour;
+	}
+	.page-item.active .page-link {
+		background-color: $primary;
+		border: 1px solid $primary;
+	}
+	.page-item.disabled .page-link {
+		color: $font-colour-grey;
+	}
+}

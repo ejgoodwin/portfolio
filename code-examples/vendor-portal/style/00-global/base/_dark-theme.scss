@@ -1,0 +1,358 @@
+// Main Greys
+$dt-300: #4B4B4B;
+$dt-400: #404041;
+$dt-500: #333333;
+$dt-550: #292929;
+$dt-600: #1F1F1F;
+//Font
+$dt-font-main: #FAFBFC;
+//Borders
+$dt-border: $dt-300;
+// Other
+$dt-warning: #3c340e;
+
+
+.dark-theme {
+	background-color: $dt-600;
+	* {
+		// transition: .1s background-color;
+	}
+	.card-body {
+		background: $dt-500;
+		color: $dt-font-main;
+	}
+	.dropdown-menu {
+		background-color: $dt-400;
+		color: $dt-font-main;
+		.dropdown-item {
+			color: $dt-font-main;
+			&:hover {
+				background-color: $dt-400;
+			}
+		}
+	}
+	.header {
+		background-color: $dt-500;
+		&__dropdown {
+			background-color: $dt-400;
+			color: $dt-font-main;
+		}
+	}
+	.header-progress {
+		&__dropdown {
+			background-color: $dt-400;
+			color: $dt-font-main;
+		}
+	}
+	.pagination {
+		&--dark {
+			.pagination__input {
+				background-color: $dt-500;
+			}
+		}
+		.btn.disabled {
+			border-color: $dt-border;
+			&:hover {
+				border-color: $dt-border;
+			}
+		}
+	}
+	
+	.segment {
+		background-color: $dt-600;
+		border: 1px solid $dt-border;
+		opacity: .7;
+		.segment-header {
+			background-color: $dt-500;
+			&__segment-number {
+				background-color: $dt-550;
+				color: $font-colour-grey;
+			}
+		}
+		.segment-body {
+			color: $dt-font-main;
+			&__target {
+				background-color: transparent;
+			}
+			&__btn {
+				.segment-body__icon-circle--green,
+				.segment-body__icon-circle--yellow {
+					color: $dt-500;
+				}
+				&:hover {
+					.segment-body__icon-circle--yellow {
+						color: $white;
+					}
+				}
+			}
+		}
+		&--locked {
+			background-color: $dt-600;
+			border: 1px solid $dt-border;
+			&::before {
+				background-color: $dt-600;
+				border-color: lighten($dt-border, 20);
+			}
+			.segment-header {
+				background-color: $dt-600;
+				&__segment-number {
+					background-color: $dt-600;
+				}
+			}
+			.pell-content {
+				background-color: $dt-600;
+			}
+		}
+		&--active {
+			background-color: $dt-500;
+			border-bottom: 1px solid $primary-darken;
+			border-left: none;
+			border-right: none;
+			opacity: 1;
+			.segment-header {
+				background-color: $dt-400;
+				&__segment-number {
+					background-color: $dt-500;
+					color: $dt-font-main;
+				}
+			}
+			.segment-body {
+				&::before,
+				&::after {
+					background-color: $primary-darken;
+				}
+			}
+			.pell-content {
+				background-color: $dt-500;
+			}
+		}
+	}
+	.pell-content {
+		background-color: $dt-600;
+		border: 1px solid $dt-border;
+	}
+	.tools {
+		&.card {
+			background-color: $dt-500;
+			color: $dt-font-main;
+		}
+		.hamburger {
+			&:hover {
+				cursor: pointer;
+				.hamburger__icon {
+					color: $dt-font-main;
+				}
+			}
+		}
+		.tabs-section {
+			border-color: $dt-border;
+		}
+		.nav-tabs {
+			border-color: $dt-border;
+			.nav-link {
+				&.active {
+					color: $dt-font-main;
+				}
+				&:hover {
+					color: $dt-font-main;
+				}
+				&:active {
+					background: transparent;
+				}
+			} 
+		}
+		// input,
+		// select {
+		// 	background-color: $dt-500;
+		// 	border-color: $dt-border;
+		// 	color: $dt-font-main;
+		// }
+	}
+	.layout-icon {
+		svg:hover {
+			.svg-path-layout {
+				fill: $dt-font-main;
+			}
+		}
+	}
+	.alert-warning {
+		background-color: $dt-warning;
+		color: $dt-font-main;
+		.fas {
+			color: $warning;
+		}
+	}
+	.media-section {
+		border-color: $dt-border;
+		&__waveform img {
+			opacity: .4;
+		}
+	}
+	.memory-matches {
+		&__target {
+			border-top-color: $dt-border;
+			border-right-color: $dt-border;
+			border-bottom-color: $dt-border;
+		}
+		&__label {
+			background-color: $dt-300;
+			border-color: $dt-border;
+		}
+		&__strikethrough {
+			background-color: rgba($danger, .4);
+		}
+	}
+	.concordance-search {
+		&__result {
+			border-color: $dt-border;
+		}
+		&__highlight {
+			color: lighten($success, 15);
+		}
+	}
+	.table:not(.table-plain) {
+		color: $dt-font-main;
+		thead {
+			background-color: $dt-300;
+			color: $dt-font-main;
+		}
+		td {
+			border-color: $dt-border;
+		}
+		.glossary-full-table__head {
+			border-left-color: $dt-300;
+		}
+	}
+	.reserved-words__item {
+		border-color: $dt-border;
+	}
+	.tools-section-horiz {
+		border-top: 1px solid $dt-600;
+		.tools {
+			&__drag-btn {
+				background-color: $dt-300;
+				&::after {
+					background-color: $dt-500;
+				}
+			}
+			&__drag-line {
+				background-color: $font-colour-grey;
+			}
+		}
+	}
+	
+	.waveform {
+		border-color: $dt-border;
+		img {
+			opacity: .8;
+		}
+		&__text-container {
+			background-color: $dt-500;
+			border-top-color: $dt-border;
+			border-bottom-color: $dt-border;
+		}
+		&__text {
+			color: $dt-font-main;
+		}
+	}
+	.modal-content {
+		background-color: $dt-500;
+		color: $dt-font-main;
+		.modal-header,
+		.modal-footer {
+			border-color: $dt-border;
+		}
+		.close span {
+			color: $white;
+		}
+	}
+	.popover {
+		background-color: $dt-400;
+		.popover-body {
+			color: $dt-font-main;
+		}
+		.arrow::before,
+		.arrow::after {
+			border-top-color: $dt-400;
+		}
+	}
+	.tour {
+		&__arrow {
+			background-color: $dt-300;
+		}
+		&__body {
+			background-color: $dt-300;
+			color: $dt-font-main;
+		}
+		&__header {
+			border-color: lighten($dt-border, 20);
+		}
+	}
+	.qa-highlight {
+		background: darken($danger-darken, 10);
+	}
+	.qa-warning {
+		&:not(.qa-warning--active):hover {
+			background-color: $dt-400;
+			border-color: $dt-border;
+		}
+		&--active {
+			.qa-warning__description {
+				color: $dt-font-main;
+			}
+		}
+		
+	}
+	.table {
+		color: $dt-font-main;
+		.shortcut-key {
+			color: $font-colour-primary;
+		}
+		td,
+		th {
+			border-color: $dt-border;
+		}
+	}
+	.tour {
+		background-color: rgba(0,0,0, .5);
+	}
+	.tour-highlight {
+		border: 1px solid rgba($warning, .5);
+		&.segment {
+			opacity: 1 !important;
+			.segment-body__source {
+				opacity: 1;
+			}
+		}
+	}
+	.progress {
+		background-color: $dt-600;
+	}
+	input,
+	textarea,
+	select {
+		background-color: $dt-500;
+		border-color: $dt-border;
+		color: $dt-font-main;
+		&:focus {
+			background-color: $dt-500;
+			color: $dt-font-main;
+		}
+	}
+	input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	  color: $font-colour-grey;
+	}
+	input::-moz-placeholder { /* Firefox 19+ */
+	  color: $font-colour-grey;
+	}
+	input:-ms-input-placeholder { /* IE 10+ */
+	  color: $font-colour-grey;
+	}
+	input:-moz-placeholder { /* Firefox 18- */
+	  color: $font-colour-grey;
+	}
+	.btn-primary {
+		background-color: $primary-darken;
+		border-color: $primary-darken;
+	}
+}

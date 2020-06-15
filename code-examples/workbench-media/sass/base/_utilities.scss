@@ -1,0 +1,53 @@
+// Remove dot, margin and padding from ul
+ul.no-style {
+	list-style: none;
+	padding-left: 0;
+	margin-bottom: 0;
+}
+
+// Loops use $colours list foudn in _variables.scss
+// Use !important because they are overriding Boostrap Utilities
+
+// Background colours
+// e.g. .bg-primary
+.bg {
+	@each $colour in $colours {
+		&-#{nth($colour, 1)} {
+			background-color: nth($colour, 2) !important;
+			color: inherit;
+		}
+	}
+}
+
+// Font colours
+// e.g. .text-primary
+.text {
+	@each $colour in $colours {
+		&-#{nth($colour, 1)} {
+			color: nth($colour, 2) !important;
+		}
+	}
+}
+
+// Border colours
+// e.g. .border-primary
+.border {
+	@each $colour in $colours {
+		&-#{nth($colour, 1)} {
+			border-color: nth($colour, 2) !important;
+		}
+	}
+}
+
+// Similar to Bootstrap's .d-none but without the !important, allowing it to be overridden 
+.display-none {
+	display: none;
+}
+
+.rotate-180 {
+	transform: rotate(180deg);
+}
+
+.box-shadow {
+	box-shadow: $box-shadow;
+}

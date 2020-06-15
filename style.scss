@@ -1,8 +1,11 @@
 // Variables
-$primary	: #6f0037;
-$darkenPrimary : #05383D;
-// $secondary	: #98D8A7;
+$primary	: #D5644A;
+// $darkenPrimary : #05383D;
+$secondary	: #4A333E;
 $grey		: #F4F4F4;
+$grey-dark: #4A464D;
+$highlight: #30B4CC;
+$font-colour: #3e3d44;
 
 $headerFont 	: 'Roboto', sans-serif;
 $bodyFont		: 'Roboto', sans-serif;
@@ -83,11 +86,19 @@ $bodyFont		: 'Roboto', sans-serif;
 
 ------------------------------------------- */
 
-h1 {font-size: 2.2rem;}
-h2 {font-size: 2rem;}
+h1 {
+	font-size: 2.2rem;
+}
+h2 {
+	font-size: 2rem;
+}
 h3 {
 	font-size: 1.2rem;
 	margin: 0;
+}
+h1, h2, h3 {
+	font-family: $headerFont;
+	font-weight: 300;
 }
 
 @include device800 {
@@ -101,6 +112,7 @@ img {
 }
 
 * {
+	font-family: $bodyFont;
 	box-sizing: border-box;
 	font-smooth: auto;
 	    -webkit-font-smoothing: antialiased;
@@ -116,27 +128,17 @@ body {
 	margin: 0;
 }
 
-h1, h2, h3 {
-	font-family: $headerFont;
-	font-weight: 300;
-}
-
 a {
 	display: inline-block;
 	color: $primary;
 	transition: .2s;
 	text-decoration: none;
 	&:hover {
-		color: darken($primary, 10%);
+		color: darken($primary, 20%);
 	}
 }
-
-
-* {
-	font-family: 'sans-serif';
-}
-
-p, a, li {
+p, li {
+	color: $font-colour;
 	font-family: $bodyFont;
 	line-height: 1.5;
 }
@@ -149,15 +151,17 @@ li {
 }
 
 .btn {
-	padding: 1rem 2rem;
+	padding: .5rem 1rem;
 	text-align: center;
-	color: $primary;
-	border: 2px solid $primary;
+	color: #fff;
+	background: $primary;
 	text-decoration: none;
 	font-size: 1.2rem;
 	width: 100%;
+	margin: .5rem 0;
+	border-radius: 3px;
 	&:hover {
-		background-color: $primary;
+		background-color: darken($primary, 15);
 		transition: .3s;
 		cursor: pointer;
 		color: #fff;
@@ -179,8 +183,9 @@ li {
 	position: fixed;
 	top: 0;
 	left: 0;
-	bottom: 0;
 	right: 0;
+	height: 100vh;
+	padding: 5rem;
 	background: rgba(#fff, .8);
 	transform: translateY(-150%);
 	transition: .5s;
@@ -191,18 +196,37 @@ li {
 		align-items: center;
 		flex-direction: column;
 		height: 100%;
+		background: $primary;
+		margin: 0;
 	}
 	&__list-item {
 		text-align: center;
 		font-weight: 600;
-		font-size: 4rem;
+		font-size: 2rem;
+
 	}
 	&__link {
-		padding: 2rem;
+		padding: 1.5rem;
+		color: rgba(#fff, .6);
+		border-bottom: 4px solid transparent;
+		&:hover {
+			color: rgba(#fff, .8);
+			// color: $highlight;
+			// border-color: rgba($highlight, .5);
+		}
 	}
 	&--open {
 		transform: translateY(0);
 		transition: .5s;
+	}
+	@include device800 {
+		&__list {
+			// margin: 5rem;
+			// height: 86vh;
+		}
+		&__list-item {
+			font-size: 4rem;
+		}
 	}
 }
 
@@ -212,7 +236,6 @@ li {
 
 .header {
 	position: relative;
-	height: 100vh;
 	color: #fff;
 	&__github {
 		color: #fff;
@@ -266,7 +289,7 @@ li {
 		width: auto;
 		display: inline-block;
 		color: $primary;
-		font-weight: 600;
+		text-align: left;
 		opacity: 0;
 		animation: text-appear .3s linear 1s;
 		animation-fill-mode: forwards;
@@ -274,6 +297,7 @@ li {
 	}
 	@include device800 {
 		display: flex;
+		height: 100vh;
 		&__name {
 			position: absolute;
 			top: 0;
@@ -283,7 +307,7 @@ li {
 			justify-content: flex-end;
 			height: 100%;
 			width: 100%;
-			background: $primary;
+			// background: $primary;
 			animation: header-slide .5s ease-in .3s;
 			animation-fill-mode: forwards;
 		}
@@ -302,8 +326,9 @@ li {
 				content: '';
 				width: 0px;
 				height: 0px;
-				border-bottom: 2px solid #fff;
-				border-left: 2px solid #fff;
+				border-bottom: 5px solid #fff;
+				border-left: 5px solid #fff;
+				opacity: 0;
 				animation: border-fill-1 .5s linear 1.3s;
 				animation-fill-mode: forwards;
 			}
@@ -312,9 +337,10 @@ li {
 				content: '';
 				width: 1px;
 				height: 1px;
-				border-top: 2px solid #fff;
+				border-top: 5px solid #fff;
 				top: 0;
 				right: 0;
+				opacity: 0;
 				animation: border-fill-3 .3s ease-out 2.6s;
 				animation-fill-mode: forwards;
 			}
@@ -329,17 +355,6 @@ li {
 			width: 50%;
 		}
 		&__job-text {
-			display: flex;
-			align-items: center;
-			height: 200px;
-			width: auto;
-			display: inline-block;
-			color: $primary;
-			font-weight: 600;
-			opacity: 0;
-			animation: text-appear .3s linear 1s;
-			animation-fill-mode: forwards;
-			padding: 3rem 5rem;
 			&::before {
 				position: absolute;
 				bottom: 0;
@@ -347,8 +362,9 @@ li {
 				content: '';
 				width: 0px;
 				height: 0px;
-				border-bottom: 2px solid $primary;
-				border-right: 2px solid $primary;
+				border-bottom: 5px solid $primary;
+				border-right: 5px solid $primary;
+				opacity: 0;
 				animation: border-fill-2 .5s linear 1.8s;
 				animation-fill-mode: forwards;
 			}
@@ -357,9 +373,10 @@ li {
 				content: '';
 				width: 1px;
 				height: 1px;
-				border-top: 2px solid $primary;
+				border-top: 5px solid $primary;
 				top: 0;
 				right: 0;
+				opacity: 0;
 				animation: border-fill-3 .3s linear 2.3s;
 				animation-fill-mode: forwards;
 			}
@@ -394,6 +411,12 @@ li {
 	}
 }
 @keyframes border-fill-1 {
+	0% {
+		opacity: 0;
+	}
+	1% {
+		opacity: 1;
+	}
 	30% {
 		height: 100%;
 		width: 0;
@@ -401,9 +424,16 @@ li {
 	100% {
 		height: 100%;
 		width: 100%;
+		opacity: 1;
 	}
 }
 @keyframes border-fill-2 {
+	0% {
+		opacity: 0;
+	}
+	1% {
+		opacity: 1;
+	}
 	70% {
 		height: 0;
 		width: 100%;
@@ -411,15 +441,23 @@ li {
 	100% {
 		height: 100%;
 		width: 100%;
+		opacity: 1;
+
 	}
 }
 @keyframes border-fill-3 {
+	0% {
+		opacity: 0;
+	}
 	1% {
+		opacity: 1;
 		height: 3px;
 	}
 	100% {
 		width: 100%;
 		height: 3px;
+		opacity: 1;
+
 	}
 }
 .hamburger {
@@ -446,7 +484,7 @@ li {
 	    margin-bottom: 6px;
 	    border-radius: 5px;
 	    background: $primary;
-	    transition: .5s;
+	    transition: .6s;
 		&:last-of-type {
 			margin-bottom: 0;
 		}
@@ -490,38 +528,58 @@ li {
 ------------------------------------------- */
 
 .feature-project {
-	h2 {
-		padding: 0 1rem 2rem 1rem;
+	overflow: hidden;
+	&__title {
+		position: relative;
+		padding-bottom: 1rem;
 		margin-top: 0;
+		margin-bottom: .5rem;
 		color: $primary;
-		border-bottom: 1px solid $primary;
+		&::after {
+			content: '';
+			position: absolute;
+			height: 2px;
+			width: 80px;
+			left: 0;
+			bottom: 0;
+			background: #30B4CC;
+		}
 	}
 	&__heading {
-		padding: 5rem 1rem;
+		padding: 5rem 0;
 	}
 	&__vid {
 		padding: 1rem;
 	}
 	&__subtitle {
-		color: $primary;
-		padding-left: 1rem;
+		color: #30B4CC;
+		margin-top: 0;
+		font-weight: 700;
+		font-size: .75rem;
+		letter-spacing: 1.2px;
+		text-transform: uppercase;
+		// padding-left: 1rem;
 	}
 	&__description {
 		position: relative;
 		background: $grey;
-		padding: 8rem 1rem;
-		overflow: hidden;
+		padding: 4rem 1rem;
 		p {
-			text-align: center;
 			max-width: 800px;
-			margin: auto;
-			font-size: 1.2rem;
-			line-height: 1.7;
+			margin: 0 auto 1rem;
+			font-size: 1rem;
+			line-height: 1.6;
 		}
 
 	}
-	&__nav {
-		padding: 5rem 1rem;
+	&__mobile-pic {
+		display: block;
+		width: 300px;
+		margin: 2rem auto;
+	}
+	&__tiles {
+		padding: 15rem 2rem;
+		transform: rotate(-8deg);
 	}
 	&__nav-text {
 		padding: 1rem;
@@ -544,9 +602,12 @@ li {
 		}
 	}
 	@include device500 {
-		h2 {
-			padding: 2rem 1rem;
+		&__title {
 			margin-top: 2rem;
+		}
+		&__paragraph {
+			padding-left: 2rem;
+
 		}
 		&__email-img-large {
 			img {
@@ -563,15 +624,32 @@ li {
 		&__heading {
 			display: flex;
 		}
-		&__title {
+		&__title-container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 			width: 50%;
 		}
 		&__vid {
 			width: 50%;
 		}
-		&__nav {
+		&__description {
 			display: flex;
-			align-items: center;
+		}
+		&__paragraph {
+			order: 1
+		}
+		&__mobile-container {
+			position: relative;
+			width: 25%;
+			order: 0;
+		}
+		&__mobile-pic {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			margin-top: 0;
 		}
 		&__nav-img {
 			width: 50%;
@@ -591,11 +669,24 @@ li {
 		&__email-text {
 			width: 50%;
 			p {
-				padding: 2rem 0;
+				padding-top: 2rem;
+			}
+			.btn {
+				margin-bottom: 2rem;
 			}
 		}
 	}
-
+	@include device1200 {
+		&__title {
+			font-size: 3rem;
+		}
+		&__description {
+			p {
+				font-size: 1.2rem;
+				
+			}
+		}
+	}
 }
 
 

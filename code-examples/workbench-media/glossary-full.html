@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Workbench Glossary</title>
+	<!-- Font Awesome -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<!-- Main styleshee -->
+	<link rel="stylesheet" type="text/css" href="css/main.min.css">
+
+</head>
+<body>
+
+	<header class="header">
+		<a class="header__logo-container" href="home-validator.html">
+			<img src="images/workbench-logo.svg">
+		</a>
+		<div class="header__details">
+			<div class="header__user-dropdown dropdown">
+				<a class="header__dropdown-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hi, Erica Goodwin</a>
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+					<a class="dropdown-item" href="#">Action</a>
+					<a class="dropdown-item" href="#">Logout</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<div class="container">
+			<div class="row">
+				<div class="card card-body">
+					<h1 class="heading">Glossary</h1>
+					<div class="row">
+						<div class="col-md-6">
+							<form>
+								<div class="d-flex mb-2">
+									<div class="input-group">
+										<input class="form-control" type="text" name="" placeholder="Search table">
+										<div class="input-group-append ">
+											<button class="btn btn-primary"><i class="fas fa-search"></i></button>
+										</div>
+									</div>
+									<select class="glossary__select form-control ml-2">
+										<option value="source">Source</option>
+										<option value="target">Target</option>
+									</select>
+									<button class="btn btn-icon-change btn-outline-primary ml-2" data-toggle="collapse" type="button" data-target="#glossary-collapse" aria-expanded="false">
+										<i class="icon-collapsed fas fa-plus"></i>
+										<i class="icon-expanded fas fa-minus"></i>
+									</button>
+								</div>
+
+								<div class="collapse" id="glossary-collapse">
+									<div class="d-flex">
+										<input class="form-control" type="text" name="" placeholder="Source">
+										<input class="form-control ml-2" type="text" name="" placeholder="Target">
+										<button class="btn btn-outline-primary ml-2" type="button">Add</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+
+					<div class="glossary__key">
+						<span class="glossary__key-item glossary__key-item--main">Main Glossary</span>
+						<span class="glossary__key-item glossary__key-item--project">Project Glossary</span>
+					</div>
+
+					<table class="table glossary-full-table">
+						<thead class="glossary-full-table__head">
+							<th>Source</th>
+							<th>Target</th>
+							<th width="100">Created</th>
+						</thead>
+						<tbody>
+							<tr class="glossary-full-table__main">
+								<td>Repito</td>
+								<td>Repeat</td>
+								<td>28/12/2019</td>
+							</tr>
+							<tr class="glossary-full-table__project">
+								<td>Repito</td>
+								<td>Repeat</td>
+								<td>28/12/2019</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="tools-bottom-bar">
+						<div class="tools-bottom-bar__rows">
+							<label class="" for="rows-per-page">Rows per page</label>
+							<select class="form-control ml-2 form-control-sm tools-bottom-bar__rows-select" id="row-per-page">
+								<option>10</option>
+								<option>50</option>
+								<option>100</option>
+							</select>
+						</div>
+						<div class="pagination">
+							<button class="btn btn-outline-primary btn-sm ml-2 disabled" disabled><i class="fas fa-angle-double-left"></i></button>
+							<input class="form-control form-control-sm pagination__input ml-2" type="text" name="" value="1">
+							<span>of 14</span>
+							<button class="btn btn-outline-primary btn-sm ml-2"><i class="fas fa-angle-double-right"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<!-- JQuery -->
+	<script
+	  src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+	<!-- Popper (for bootstrap dropdowns) -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+	<!-- Bootstrap -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<!-- Interact - drag and resize -->
+	<script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+
+	<!-- Custom JS -->
+	<script src="main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Workbench Home</title>
+	<!-- Font Awesome -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<!-- Main styleshee -->
+	<link rel="stylesheet" type="text/css" href="css/main.min.css">
+
+</head>
+<body>
+
+	<header class="header">
+		<a class="header__logo-container" href="front-page.html">
+			<img src="images/workbench-logo.svg">
+		</a>
+		<div class="header__details">
+			<div class="header__select">
+				<select class="form-control form-control-sm">
+					<option value="andrea-bonetto">Andrea Bonetto</option>
+					<option value="translator-1">Translator 1</option>
+					<option value="translator-2">Translator 2</option>
+				</select>
+			</div>
+			<div class="header__user-dropdown dropdown">
+				<a class="header__dropdown-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hi, Erica Goodwin</a>
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+					<a class="dropdown-item" href="#">Action</a>
+					<a class="dropdown-item" href="#">Logout</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<div class="container-fluid">
+			<div class="card card-body font-size-sm">
+				<div class="d-flex justify-content-between align-items-end">
+					<h1 class="heading mb-3">Translations</h1>
+					<div class="d-flex align-items-center mb-3">
+						<span>Show signed off batches</span>
+						<label class="switch switch-pill switch-label switch-primary mb-0 ml-2">
+							<input type="checkbox" class="switch-input" checked>
+							<span class="switch-slider" data-checked="Yes" data-unchecked="No"></span>
+						</label>
+					</div>
+				</div>
+				<div class="table-responsive">
+					<table class="table dataTable">
+						<thead>
+							<th>#</th>
+							<th class="sorting" tabindex="0">Job</th>
+							<th>Batch name</th>
+							<th>Language</th>
+							<th class="sorting" tabindex="0">Segments</th>
+							<th class="sorting" tabindex="0">Words</th>
+							<th class="sorting_desc" tabindex="0">Progress</th>
+							<th>Time Report</th>
+							<th>Download</th>
+							<th>Actions</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>TJ54367</td>
+								<td>7_pointers_for_planting_covers.xml</td>
+								<td>EN-GB > IT</td>
+								<td>18/22</td>
+								<td>301/341</td>
+								<td>
+									<div class="job-page__progress-bar">
+										<div class="progress">
+					                        <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+					                    </div>
+					                </div>
+								</td>
+								<td>
+									<span data-toggle="tooltip" data-placement="top" title="View timer report">
+										<a href="" data-toggle="modal" data-target="#timerReport-1">
+											<i class="font-size-med far fa-clock"></i>
+										</a>
+									</span>
+
+								</td>
+								<td></td>
+								<td>
+									<div class="d-flex flex-column">
+										<a class="btn btn-sm btn-primary" href="translate-media.html">Translate</a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>TJ54367</td>
+								<td>7_pointers_for_planting_covers.xml</td>
+								<td>EN-GB > IT</td>
+								<td>22/22</td>
+								<td>341/341</td>
+								<td>
+									<div class="job-page__progress-bar">
+										<div class="progress">
+					                        <div class="progress-bar progress-bar--full" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+					                    </div>
+					                </div>
+								</td>
+								<td>
+									<span data-toggle="tooltip" data-placement="top" title="View timer report">
+										<a href="" data-toggle="modal" data-target="#timerReport-1">
+											<i class="font-size-med far fa-clock"></i>
+										</a>
+									</span>
+								</td>
+								<td>
+									<br>
+								</td>
+								<td>
+									<div class="d-flex flex-column">
+										<a class="btn btn-sm btn-outline-primary mt-1 mb-1" href="qa.html">Apply QA</a>
+										<a class="btn btn-sm btn-primary" href="translate.html">Edit</a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>TJ54367</td>
+								<td>7_pointers_for_planting_covers.xml</td>
+								<td>EN-GB > IT</td>
+								<td>22/22</td>
+								<td>341/341</td>
+								<td>
+									<div class="job-page__progress-bar">
+										<div class="progress">
+					                        <div class="progress-bar progress-bar--full" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+					                    </div>
+					                </div>
+								</td>
+								<td>
+									<span data-toggle="tooltip" data-placement="top" title="View timer report">
+										<a href="" data-toggle="modal" data-target="#timerReport-1">
+											<i class="font-size-med far fa-clock"></i>
+										</a>
+									</span>
+								</td>
+								<td>
+									<a href="" target="_blank"><i class="fas fa-download pr-1"></i></a>
+								</td>
+								<td>
+									<div class="d-flex flex-column">
+										<button class="btn btn-sm btn-outline-primary mt-1 mb-1" data-toggle="modal" data-target="#sign-off-1">Sign off</button>
+
+										<a class="btn btn-sm btn-primary" href="translate.html">Edit</a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>TJ54367</td>
+								<td>7_pointers_for_planting_covers.xml</td>
+								<td>EN-GB > IT</td>
+								<td>22/22</td>
+								<td>341/341</td>
+								<td>
+									<div class="job-page__progress-bar">
+										<div class="progress">
+					                        <div class="progress-bar progress-bar--full" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+					                    </div>
+					                </div>
+								</td>
+								<td>
+									<span data-toggle="tooltip" data-placement="top" title="View timer report">
+										<a href="" data-toggle="modal" data-target="#timerReport-1">
+											<i class="font-size-med far fa-clock"></i>
+										</a>
+									</span>
+								</td>
+								<td>
+									<span data-toggle="tooltip" data-placement="top" title="You will need to review this in the Workbench as formatting does not allow download and review." tabindex="0">
+										<i class="text-danger font-size-med fas fa-exclamation-circle"></i>
+									</span>
+								</td>
+								<td>
+									<div class="d-flex flex-column">
+										<button class="btn btn-sm btn-outline-primary mt-1 mb-1" data-toggle="modal" data-target="#sign-off-1">Sign off</button>
+										<a class="btn btn-sm btn-primary" href="translate.html">Edit</a>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</main>
+
+
+	<!-- Modal: sign off -->
+	<div class="modal fade" id="sign-off-1" tabindex="-1" role="dialog" aria-labelledby="sign-off-1" aria-hidden="true">
+	 	<div class="modal-dialog no-border" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalScrollableTitle">Sign Off</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>Thanks for your work on this batch, we appreciate it.</p>
+					<p><strong>Can you please confirm that the following items have been completed:</strong></p>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="reviewed-glossary-2" name="reviewed-glossary">
+						<label class="form-check-label" for="reviewed-glossary-2">I have reviewed the glossary</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="reviewed-reserved-2" name="reviewed-reserved">
+						<label class="form-check-label" for="reviewed-reserved-2">I have reviewed the reserved words</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="spellchecked-2" name="spellchecked">
+						<label class="form-check-label" for="spellchecked-2">I have spellchecked</label>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-primary">Sign off</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal End: sign off -->
+
+	<!-- Modal: Timer report -->
+	<div class="modal fade" id="timerReport-1" tabindex="-1" role="dialog" aria-labelledby="timerReport-1" aria-hidden="true">
+	  <div class="modal-dialog no-border modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalScrollableTitle">Time Spent on Project</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="table-responsive">
+					<table class="table">
+						<thead>
+							<th>Session</th>
+							<th>Start time</th>
+							<th>End time</th>
+							<th>Progress</th>
+							<th>Active time</th>
+							<th>Idle time</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>00:00:00</td>
+								<td>00:00:00</td>
+								<td>
+									<div class="job-page__progress-bar">
+										<div class="progress">
+					                        <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+					                    </div>
+					                </div>
+								</td>
+								<td>00:00:00</td>
+								<td>00:00:00</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>00:00:00</td>
+								<td>00:00:00</td>
+								<td>
+									<div class="job-page__progress-bar">
+										<div class="progress">
+					                        <div class="progress-bar progress-bar--full" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+					                    </div>
+					                </div>
+								</td>
+								<td>00:00:00</td>
+								<td>00:00:00</td>
+							</tr>
+							<tr>
+								<td colspan="4"><strong>Total</strong></td>
+								<td>00:00:00</td>
+								<td>00:00:00</td>
+							</tr>
+							<tr>
+								<td colspan="6"><strong>Words in project:</strong> 540</td>
+							</tr>
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	<!-- Modal End: Time report -->
+
+	<!-- JQuery -->
+	<script
+	  src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+	<!-- Popper (for bootstrap dropdowns) -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+	<!-- Bootstrap -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<!-- Interact - drag and resize -->
+	<script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+
+	<!-- Custom JS -->
+	<script src="main.js"></script>
+
+</body>
+</html>

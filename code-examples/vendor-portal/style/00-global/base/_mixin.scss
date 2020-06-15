@@ -1,0 +1,14 @@
+// Media queries - use with size variables that match with Bootstrap's if poss.
+@mixin media-breakpoint($size) {
+	@media (min-width: $size) {
+		@content;
+	}
+}
+
+// Colour styling for font icons
+@mixin icon-btn-plain($initial_colour, $hover_colour) {
+	color: $initial_colour;
+	&:hover {
+		color: $hover_colour;
+	}
+}

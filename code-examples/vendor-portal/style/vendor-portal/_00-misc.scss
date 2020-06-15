@@ -1,0 +1,33 @@
+.vp-main {
+	padding-bottom: 1rem;
+	margin-top: 35px;
+	transition: .1s margin-left;
+	@include media-breakpoint($md) {
+		margin-left: 200px;
+		margin-top: 0;
+		&--expanded {
+			margin-left: 50px;
+		}
+	}
+}
+
+.timezone-tooltip {
+	display: inline-block;
+	border-bottom: 1px dotted $font-colour-primary;
+	cursor: pointer;
+}
+
+#profile-image {
+	width: 100%; 
+	display: block; 
+	padding-bottom: 3rem;  
+	height: 350px; 
+	margin-bottom: 1rem;
+}
+.profile-pic-zoom img  {
+	max-width: 100% !important;
+}
+
+.cr-slider::-webkit-slider-thumb {
+	background: $primary;
+}

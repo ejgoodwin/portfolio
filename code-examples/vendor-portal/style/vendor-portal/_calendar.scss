@@ -1,0 +1,137 @@
+#calendar {
+	display: flex;
+	// max-width: 300px;
+	margin-left: auto;
+	.fc-header-toolbar {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		padding: 0 .2rem;
+	}
+	.fc-toolbar h2 {
+		font-size: .75rem;
+	}
+	.fc-right {
+		margin-top: .3rem;
+		text-align: center;
+	}
+	.fc-toolbar > * > :not(:first-child) {
+		margin-left: 0;
+	}
+	.fc-today-button,
+	.fc-prev-button,
+	.fc-next-button {
+		background-color: $blue-dark;
+		border-color: $blue-dark;
+	}
+	.fc-today-button {
+		margin-bottom: .2rem;
+	}
+	.fc-prev-button,
+	.fc-next-button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		height: 35px;
+		width: 35px;
+		margin: .1rem;
+		.fc-icon {
+			margin-top: -1px;
+		}
+	}
+	.fc-view {
+		width: 190px;
+		table {
+			padding: .2rem;
+			border-radius: 4px;
+			font-size: .625rem;
+			background-color: $blue-dark;
+			td,
+			th {
+				border: none;
+			}
+		} 
+	}
+	.fc-day-header {
+		span {
+			display: none;
+		}
+		&.fc-sun {
+			&::after {
+				content: "S"
+			}
+		}
+		&.fc-mon {
+			&::after {
+				content: "M"
+			}
+		}
+		&.fc-tue {
+			&::after {
+				content: "T"
+			}
+		}
+		&.fc-wed {
+			&::after {
+				content: "W"
+			}
+		}
+		&.fc-thu {
+			&::after {
+				content: "T"
+			}
+		}
+		&.fc-fri {
+			&::after {
+				content: "F"
+			}
+		}
+		&.fc-sat {
+			&::after {
+				content: "S"
+			}
+		}
+	}
+	.fc-dayGrid-view .fc-body .fc-row {
+		height: 2rem;
+		min-height: 2rem;
+	}
+	.fc-day-top {
+		text-align: center;
+		span {
+			float: none;
+		}
+	}
+	.fc-scroller {
+		height: auto !important;
+	}
+	.fc-dayGrid-view .fc-body .fc-row {
+		min-height: 1.2rem;
+		height: 1.2rem !important;
+
+	}
+	.fc-day-number {
+		// display: inline-block;
+	}
+	.fc-today {
+		background: $blue-dark;
+		.fc-day-number {
+			display: inline-block;
+			position: relative;
+			padding: .1rem .17rem;
+			&::after {
+				position: absolute;
+				content: '';
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				border: 1px solid $primary;
+				border-radius: 50%;
+				z-index: 200;
+			}
+			
+		}
+	}
+}

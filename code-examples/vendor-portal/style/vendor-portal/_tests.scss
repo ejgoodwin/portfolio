@@ -1,0 +1,75 @@
+.tests-range-label {
+	margin-bottom: .2rem;
+}
+.tests-range-input {
+	display: block;
+	width: 160px;
+	margin-bottom: .5rem;
+	&.custom-range::-webkit-slider-thumb {
+		background: $primary;
+	}
+}
+
+.tests-text {
+	display: flex;
+	flex-wrap: wrap;
+	&[data-text-size="text-size-small"] {
+		.tests-text {
+			&__source,
+			&__target,
+			&__textarea.form-control {
+				font-size: .875rem;
+			}
+		}
+	}
+	&[data-text-size="text-size-medium"] {
+		.tests-text {
+			&__source,
+			&__target,
+			&__textarea.form-control {
+				font-size: 1rem;
+			}
+		}
+	}
+	&[data-text-size="text-size-large"] {
+		.tests-text {
+			&__source,
+			&__target,
+			&__textarea.form-control {
+				font-size: 1.125rem;
+			}
+		}
+	}
+	&[data-text-size="text-size-xlarge"] {
+		.tests-text {
+			&__source,
+			&__target,
+			&__textarea.form-control {
+				font-size: 1.25rem;
+			}
+		}
+	}
+	&__source {
+		border: 1px solid $border-colour;
+		border-radius: .25rem;
+		padding: .375rem .75rem;
+	}
+	&__target {
+		border: 1px solid $border-colour;
+		border-radius: .25rem;
+		padding: .375rem .75rem;
+	}
+
+	@include media-breakpoint($lg) {
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		&__source,
+		&__target,
+		&__textarea-container {
+			width: 49%;
+		}
+		&__textarea.form-control {
+			height: 100%;
+		}
+	}
+}

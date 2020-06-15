@@ -1,0 +1,67 @@
+body {
+	font-size: .875rem;
+}
+.font-w-reg {
+	font-weight: 400;
+}
+.font-w-s-bold {
+	font-weight: 600;
+}
+.font-w-bold {
+	font-weight: 700;
+}
+.font-quicksand {
+	font-family: $font-quicksand;
+}
+.font-size-xs {
+	font-size: .75rem;
+}
+.font-size-sm {
+	font-size: .875rem;
+}
+.font-size-med {
+	font-size: 1rem;
+}
+
+// Override Bootstrap style
+.text-muted {
+	color: $font-colour-grey !important;
+}
+.heading-sm {
+	font-size: .8rem;
+	font-weight: 700;
+}
+.heading-grey {
+	padding: 1rem;
+	background-color: $grey-lighten;
+	color: $font-colour-grey;
+}
+
+.heading {
+	font-size: 26px;
+	margin-bottom: 1.5rem;
+	&--bold-sm {
+		font-size: 1.25rem;
+		font-weight: 600;
+	}
+}
+.subheading {
+	&--2 {
+		font-size: 1.125rem;
+		font-weight: 600;
+	}
+	&--3 {
+		font-size: 1rem;
+		font-weight: 600;
+	}
+	&--4 {
+		font-size: .875rem;
+		font-weight: 600;
+	}
+	&--5 {
+		font-size: .875rem;
+	}
+	&--6 {
+		font-size: .875rem;
+	}
+}

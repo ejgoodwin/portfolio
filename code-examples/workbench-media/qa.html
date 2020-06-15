@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>QA</title>
+	<!-- Font Awesome -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<!-- Main styleshee -->
+	<link rel="stylesheet" type="text/css" href="css/main.min.css">
+
+</head>
+<body>
+
+	<header class="header">
+		<a class="header__logo-container" href="index.html">
+			<img src="images/workbench-logo.svg">
+		</a>
+		<div class="header__details">
+			<div class="header__user-dropdown dropdown">
+				<a class="header__dropdown-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hi, Erica Goodwin</a>
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+					<a class="dropdown-item" href="#">Action</a>
+					<a class="dropdown-item" href="#">Logout</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<div class="container-fluid">
+			<div class="card card-body">
+				<h1 class="heading">QA | Total warnings: 4 (Ignored: 1)</h1>
+				<h4 class="subheading--4"><i class="fas fa-filter"></i> Filters</h4>
+				<div class="d-flex justify-content-between align-items-end mb-3">
+					
+					<div class="d-flex">
+						<div class="mr-2">
+							<label class="font-size-sm">Warning category</label>
+							<select class="form-control form-control-sm">
+								<option value="all">All</option>
+								<option value="number">Number</option>
+								<option value="punctuation">Puntuation</option>
+								<option value="special-char">Special char</option>
+							</select>
+						</div>
+						<div class="mr-2">
+							<label class="font-size-sm">Ignored</label>
+							<select class="form-control form-control-sm">
+								<option value="all">All</option>
+								<option value="number">Ignored</option>
+								<option value="punctuation">Not ignored</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="d-flex flex-column">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" name="apply-to-cat" id="apply-to-cat">
+							<label class="form-check-label mb-2 font-size-sm" for="apply-to-cat">Apply to category</label>
+						</div>
+						<button class="btn btn-outline-primary btn-sm align-self-end">Ignore all</button>
+					</div>
+				</div>
+				<div class="table-responsive">
+					<table class="table font-size-sm">
+						<thead>
+							<th>#</th>
+							<th>Source</th>
+							<th width="32%">Target</th>
+							<th width="32%">Warnings</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>4</td>
+								<td><img class="format-tag" src="images/b-open.svg">Smoothies<img class="format-tag" src="images/b-close.svg"> can damage the enamel on your teeth and hike up your calorie intake.</td>
+								<td><img class="format-tag" src="images/b-open.svg">冰沙<img class="format-tag" src="images/b-close.svg">会损坏牙齿上的牙釉质并提高卡路里摄入量。sfgndfgbdfgb</td>
+								<td>
+									<div class="qa-warning">
+										<div class="qa-warning__info">
+											<span class="badge badge-pill badge-primary-darken">Pronunciation</span>
+											<strong class="ml-1">.</strong>
+											<span class="qa-warning__description">Trailing punctuation mark different from target.</span>
+										</div>
+										<div class="qa-warning__btn">
+											<button class="btn btn-primary btn-sm">Ignore</button>
+										</div>
+									</div>
+									<div class="qa-warning">
+										<div class="qa-warning__info">
+											<span class="badge badge-pill badge-primary-darken">Special char</span>
+											<span class="badge badge-pill badge-warning">Ignored</span>
+											<strong class="ml-1">sfgndfgbdfgb</strong>
+											<span class="qa-warning__description">Trailing punctuation mark different from target.</span>
+										</div>
+										<div class="qa-warning__btn">
+											<button class="btn btn-danger btn-sm">Cancel</button>
+										</div>
+									</div>											
+								</td>
+							</tr>
+
+							<tr>
+								<td>8</td>
+								<td><img class="format-tag" src="images/x-tag.svg">The 42nd Chess Olympiad, organised by the Fédération Internationale des Échecs (FIDE) and comprising an Open[1] and Women’s tournament, <img class="format-tag" src="images/x-tag.svg">as well as several events designed to promote the game of chess, was held in Baku, Azerbaijan, from 1–<span class="qa-highlight">14 September 2016</span>.[2] It was the first time that the Chess Olympiad had been hosted in Azerbaijan; however, Azerbaijan had previously hosted strong tournaments, including the annual Shamkir Chess super-tournament in memory of Vugar Gashimov (1986–2014) and the 2015 Chess World Cup.[3][4][5][6]</td>
+								<td><img class="format-tag" src="images/x-tag.svg">由国际足球联合会（FIDE）组织的第42届国际象棋奥林匹克竞赛（1-14）在阿塞拜疆巴库举行，<img class="format-tag" src="images/x-tag.svg">包括公开赛[1]和女子锦标赛以及旨在促进象棋比赛的多项赛事2016年9月。[2]这是国际象棋奥运会首次在阿塞拜疆举办。 [3] [4] [5] [6]但是，阿塞拜疆以前曾举办过大型比赛，包括一年一度的Shamkir Chess超级锦标赛，以纪念Vugar Gashimov（1986-2015）和2015 Chess World Cup。[3] [4] [5] [6]</td>
+								<td>
+									<div class="qa-warning">
+										<div class="qa-warning__info">
+											<span class="badge badge-pill badge-primary-darken">Number</span>
+											<strong class="ml-1">2017</strong>
+											<span class="qa-warning__description">Number missing from source.</span>
+										</div>
+										<div class="qa-warning__btn">
+											<button class="btn btn-primary btn-sm">Ignore</button>
+										</div>
+									</div>
+									<div class="qa-warning qa-warning--active">
+										<div class="qa-warning__info">
+											<span class="badge badge-pill badge-primary-darken">Number</span>
+											<strong class="ml-1">14 September 2016</strong>
+											<span class="qa-warning__description">Date missing from target.</span>
+										</div>
+										<div class="qa-warning__btn">
+											<button class="btn btn-primary btn-sm">Ignore</button>
+										</div>
+									</div>											
+								</td>
+							</tr>
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<!-- JQuery -->
+	<script
+	  src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+	<!-- Popper (for bootstrap dropdowns) -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+	<!-- Bootstrap -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<!-- Interact - drag and resize -->
+	<script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+
+	<!-- Custom JS -->
+	<script src="main.js"></script>
+
+</body>
+</html>

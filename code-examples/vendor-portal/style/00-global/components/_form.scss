@@ -1,0 +1,11 @@
+input[type="file"] {
+	&::-webkit-file-upload-button {
+		background-color: $white;
+		border: 1px solid $border-colour;
+		border-radius: 3px;
+		&:hover {
+			border-color: darken($border-colour, 20);
+			cursor: pointer;
+		}
+	} 
+}

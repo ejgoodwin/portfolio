@@ -1,0 +1,36 @@
+.pagination {
+	display: flex;
+	align-items: center;
+	font-size: .875rem;
+	&__input {
+		width: 40px;
+		margin-right: .5rem;
+	}
+	.btn {
+		height: 28px;
+		display: flex;
+	}
+	.btn.disabled {
+		border-color: darken($grey-darken, 10);
+		color: $font-colour-grey;
+		&:hover {
+			background-color: transparent;
+			border-color: darken($grey-darken, 10);
+			color: $font-colour-grey;
+			i {
+				color: $font-colour-grey;
+			}
+		}
+	}
+	&__input {
+		height: 28px;
+	}
+	&--dark {
+		color: $white;
+		.pagination__input {
+			background-color: $secondary;
+			color: $white;
+			border-color: lighten($secondary-lighten, 10);
+		}
+	}
+}
