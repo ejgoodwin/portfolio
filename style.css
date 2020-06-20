@@ -652,8 +652,6 @@ li {
       width: 50%; }
     .feature-project__email-text {
       width: 50%; }
-      .feature-project__email-text p {
-        padding-top: 2rem; }
       .feature-project__email-text .btn {
         margin-bottom: 2rem; } }
   @media only screen and (min-width: 1200px) {
