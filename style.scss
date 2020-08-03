@@ -30,6 +30,11 @@ $bodyFont		: 'Roboto', sans-serif;
           @content;
      }
 }
+@mixin device1500 {
+     @media only screen and (min-width: 1500px) {
+          @content;
+     }
+}
 
 /* ---------------- FLEXBOX ----------------
 
@@ -254,7 +259,7 @@ li {
 		color: #fff;
 		position: absolute;
 		top: 80px;
-		left: -20px;
+		left: -25px;
 		opacity: 0;
 		transform: rotate(-90deg);
 		animation: text-appear-alt .3s linear 2.3s;
@@ -281,13 +286,12 @@ li {
 	&__job {
 		display: flex;
 		align-items: center;
+		border-bottom: 1px solid $primary;
 	}
 	&__job-text {
 		display: flex;
 		align-items: center;
-		height: 200px;
 		width: auto;
-		display: inline-block;
 		color: $primary;
 		text-align: left;
 		opacity: 0;
@@ -314,11 +318,9 @@ li {
 		&__name-text {
 			display: flex;
 			align-items: center;
-			height: 200px;
-			opacity: 0;
-			animation: text-appear .3s linear 1s;
-			animation-fill-mode: forwards;
-			padding: 3rem 5rem;
+			padding: 3rem 2rem;
+			font-size: 2rem;
+			min-width: 98%;
 			&::before {
 				position: absolute;
 				top: 0;
@@ -355,6 +357,10 @@ li {
 			width: 50%;
 		}
 		&__job-text {
+			height: 200px;
+			font-size: 2rem;
+			padding: 3rem 2rem;
+			min-width: 98%;
 			&::before {
 				position: absolute;
 				bottom: 0;
@@ -380,6 +386,15 @@ li {
 				animation: border-fill-3 .3s linear 2.3s;
 				animation-fill-mode: forwards;
 			}
+		}
+	}
+	@include device1200 {
+		&__job-text,
+		&__name-text {
+			font-size: 2.5rem;
+			padding: 3rem 5rem;
+			min-width: auto;
+			width: 570px;
 		}
 	}
 }
@@ -546,7 +561,7 @@ li {
 		}
 	}
 	&__heading {
-		padding: 5rem 0;
+		padding: 2rem 0;
 	}
 	&__vid {
 		padding: 1rem;
@@ -627,6 +642,7 @@ li {
 	@include device800 {
 		&__heading {
 			display: flex;
+			padding: 5rem 0;
 		}
 		&__title-container {
 			display: flex;
@@ -639,6 +655,7 @@ li {
 		}
 		&__description {
 			display: flex;
+			justify-content: center;
 		}
 		&__paragraph {
 			order: 1
@@ -665,6 +682,8 @@ li {
 		&__email {
 			display: flex;
 			align-items: center;
+			max-width: 1400px;
+			margin: auto;
 			padding: 3rem 1rem;
 		}
 		&__email-img-large {

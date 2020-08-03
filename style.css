@@ -162,7 +162,7 @@ li {
     color: #fff;
     position: absolute;
     top: 80px;
-    left: -20px;
+    left: -25px;
     opacity: 0;
     -webkit-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
@@ -202,7 +202,8 @@ li {
     display: flex;
     -webkit-align-items: center;
     -ms-flex-align: center;
-    align-items: center; }
+    align-items: center;
+    border-bottom: 1px solid #D5644A; }
   .header__job-text {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -210,9 +211,7 @@ li {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    height: 200px;
     width: auto;
-    display: inline-block;
     color: #D5644A;
     text-align: left;
     opacity: 0;
@@ -253,13 +252,9 @@ li {
         -webkit-align-items: center;
         -ms-flex-align: center;
         align-items: center;
-        height: 200px;
-        opacity: 0;
-        -webkit-animation: text-appear .3s linear 1s;
-        animation: text-appear .3s linear 1s;
-        -webkit-animation-fill-mode: forwards;
-        animation-fill-mode: forwards;
-        padding: 3rem 5rem; }
+        padding: 3rem 2rem;
+        font-size: 2rem;
+        min-width: 98%; }
         .header__name-text::before {
           position: absolute;
           top: 0;
@@ -299,33 +294,44 @@ li {
         align-items: center;
         height: 100%;
         width: 50%; }
-      .header__job-text::before {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        content: '';
-        width: 0px;
-        height: 0px;
-        border-bottom: 5px solid #D5644A;
-        border-right: 5px solid #D5644A;
-        opacity: 0;
-        -webkit-animation: border-fill-2 .5s linear 1.8s;
-        animation: border-fill-2 .5s linear 1.8s;
-        -webkit-animation-fill-mode: forwards;
-        animation-fill-mode: forwards; }
-      .header__job-text::after {
-        position: absolute;
-        content: '';
-        width: 1px;
-        height: 1px;
-        border-top: 5px solid #D5644A;
-        top: 0;
-        right: 0;
-        opacity: 0;
-        -webkit-animation: border-fill-3 .3s linear 2.3s;
-        animation: border-fill-3 .3s linear 2.3s;
-        -webkit-animation-fill-mode: forwards;
-        animation-fill-mode: forwards; } }
+      .header__job-text {
+        height: 200px;
+        font-size: 2rem;
+        padding: 3rem 2rem;
+        min-width: 98%; }
+        .header__job-text::before {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          content: '';
+          width: 0px;
+          height: 0px;
+          border-bottom: 5px solid #D5644A;
+          border-right: 5px solid #D5644A;
+          opacity: 0;
+          -webkit-animation: border-fill-2 .5s linear 1.8s;
+          animation: border-fill-2 .5s linear 1.8s;
+          -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+        .header__job-text::after {
+          position: absolute;
+          content: '';
+          width: 1px;
+          height: 1px;
+          border-top: 5px solid #D5644A;
+          top: 0;
+          right: 0;
+          opacity: 0;
+          -webkit-animation: border-fill-3 .3s linear 2.3s;
+          animation: border-fill-3 .3s linear 2.3s;
+          -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; } }
+  @media only screen and (min-width: 1200px) {
+    .header__job-text, .header__name-text {
+      font-size: 2.5rem;
+      padding: 3rem 5rem;
+      min-width: auto;
+      width: 570px; } }
 
 @-webkit-keyframes header-slide {
   0% {
@@ -544,7 +550,7 @@ li {
       bottom: 0;
       background: #30B4CC; }
   .feature-project__heading {
-    padding: 5rem 0; }
+    padding: 2rem 0; }
   .feature-project__vid {
     padding: 1rem; }
   .feature-project__subtitle {
@@ -602,7 +608,8 @@ li {
     .feature-project__heading {
       display: -webkit-flex;
       display: -ms-flexbox;
-      display: flex; }
+      display: flex;
+      padding: 5rem 0; }
     .feature-project__title-container {
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -619,7 +626,10 @@ li {
     .feature-project__description {
       display: -webkit-flex;
       display: -ms-flexbox;
-      display: flex; }
+      display: flex;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
     .feature-project__paragraph {
       -webkit-order: 1;
       -ms-flex-order: 1;
@@ -647,6 +657,8 @@ li {
       -webkit-align-items: center;
       -ms-flex-align: center;
       align-items: center;
+      max-width: 1400px;
+      margin: auto;
       padding: 3rem 1rem; }
     .feature-project__email-img-large {
       width: 50%; }
