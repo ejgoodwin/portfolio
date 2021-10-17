@@ -281,8 +281,8 @@ li {
 				content: '';
 				width: 0px;
 				height: 0px;
-				border-bottom: 5px solid rgba(#fff, .5);
-				border-left: 5px solid rgba(#fff, .5);
+				border-bottom: 5px solid #9c81a0;
+				border-left: 5px solid #9c81a0;
 				opacity: 0;
 				animation: border-fill-1 .5s linear 1.3s;
 				animation-fill-mode: forwards;
@@ -292,7 +292,7 @@ li {
 				content: '';
 				width: 1px;
 				height: 1px;
-				border-top: 5px solid rgba(#fff, .5);
+				border-top: 5px solid #9c81a0;
 				top: 0;
 				right: 0;
 				opacity: 0;
