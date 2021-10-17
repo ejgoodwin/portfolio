@@ -1,5 +1,5 @@
 // Variables
-$primary	: #370341;
+$primary	: #4e002b;
 // $darkenPrimary : #05383D;
 $grey		: #F4F4F4;
 $grey-dark: #4A464D;
@@ -86,7 +86,7 @@ a {
 	transition: .2s;
 	text-decoration: none;
 	&:hover {
-		color: darken($primary, 20%);
+		color: darken($primary, 10%);
 	}
 }
 p a {
@@ -119,7 +119,7 @@ li {
 	margin: .5rem 0;
 	border-radius: 3px;
 	&:hover {
-		background-color: darken($primary, 15);
+		background-color: darken($primary, 10%);
 		transition: .3s;
 		cursor: pointer;
 		color: #fff;
@@ -281,8 +281,8 @@ li {
 				content: '';
 				width: 0px;
 				height: 0px;
-				border-bottom: 5px solid #9c81a0;
-				border-left: 5px solid #9c81a0;
+				border-bottom: 5px solid #aa8396;
+				border-left: 5px solid #aa8396;
 				opacity: 0;
 				animation: border-fill-1 .5s linear 1.3s;
 				animation-fill-mode: forwards;
@@ -292,7 +292,7 @@ li {
 				content: '';
 				width: 1px;
 				height: 1px;
-				border-top: 5px solid #9c81a0;
+				border-top: 5px solid #aa8396;
 				top: 0;
 				right: 0;
 				opacity: 0;
@@ -546,8 +546,7 @@ li {
 		margin: 2rem auto;
 	}
 	&__tiles {
-		padding: 15rem 2rem;
-		transform: rotate(-8deg);
+		padding: 16rem 2rem 4rem;
 	}
 	&__nav-text {
 		padding: 1rem;
@@ -750,7 +749,7 @@ li {
 			font-weight: 900;
 			position: absolute;
 			left: -18px;
-			top: 8px;
+			top: 4px;
 			color: $primary;
 		}
 	}
