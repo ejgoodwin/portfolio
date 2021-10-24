@@ -644,7 +644,7 @@ li {
   margin: 2rem auto;
 }
 .feature-project__tiles {
-  padding: 4rem 0;
+  padding: 4rem 1rem;
 }
 .feature-project__nav-text {
   padding: 1rem;
@@ -881,6 +881,11 @@ li {
     top: 0;
     display: none;
     background: rgba(255, 255, 255, 0.8);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .website li {
+    font-size: 1.2rem;
   }
 }
 

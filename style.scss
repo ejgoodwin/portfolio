@@ -508,7 +508,7 @@ li {
 		margin: 2rem auto;
 	}
 	&__tiles {
-		padding: 4rem 0;
+		padding: 4rem 1rem;
 	}
 	&__nav-text {
 		padding: 1rem;
@@ -724,6 +724,11 @@ li {
 			top: 0;
 			display: none;
 			background: rgba(#fff, .8);
+		}
+	}
+	@include device1200 {
+		li {
+			font-size: 1.2rem;
 		}
 	}
 }
