@@ -1,5 +1,6 @@
 // Variables
-$primary	: #4e002b;
+$primary	: #4E588D;
+$secondary	: #221E27;
 // $darkenPrimary : #05383D;
 $grey		: #F4F4F4;
 $grey-dark: #4A464D;
@@ -49,8 +50,10 @@ h3 {
 	margin: 0;
 }
 h1, h2, h3 {
+	color: $font-colour;
 	font-family: $headerFont;
 	font-weight: 500;
+	line-height: 1.5;
 }
 
 @include device800 {
@@ -147,7 +150,7 @@ li {
 	background: rgba(#fff, .8);
 	transform: translateY(-150%);
 	transition: .5s;
-	z-index: 1;
+	z-index: 2;
 	&__list {
 		display: flex;
 		justify-content: center;
@@ -165,13 +168,14 @@ li {
 	}
 	&__link {
 		padding: 1.5rem;
-		color: rgba(#fff, .6);
+		color: rgba(#fff, .8);
 		border-bottom: 4px solid transparent;
 		&:hover {
-			color: rgba(#fff, .8);
+			color: rgba(#fff, 1);
 		}
 	}
 	&--open {
+		background: $secondary;
 		transform: translateY(0);
 		transition: .5s;
 	}
@@ -191,173 +195,123 @@ li {
 ------------------------------------------- */
 
 .header {
-	position: relative;
 	color: #fff;
-	&__github {
-		color: #fff;
-		position: absolute;
-		top: 10px;
-		left: 50px;
-		opacity: 0;
-		animation: text-appear-alt .3s linear 2.3s;
-		animation-fill-mode: forwards;
-		&:hover {
-			color: #fff;
-			text-decoration: underline;
-		}
+	background-color: $secondary;
+	position: relative;
+	h1, h2 {
+		color: rgba(white, .9);
 	}
-	&__cv {
-		color: #fff;
-		position: absolute;
-		top: 64px;
-		left: -8px;
-		opacity: 0;
-		transform: rotate(-90deg);
-		animation: text-appear-alt .3s linear 2.3s;
-		animation-fill-mode: forwards;
-		&:hover {
-			color: #fff;
-			text-decoration: underline;
-		}
+	&__role {
+		background: $primary;
+		padding: 2.5rem 1rem 1rem;
+	}
+	&__role-text {
+		line-height: 1.5;
+	}
+	&__role-image {
+		display: block;
+		margin: 1rem auto;
+		max-width: 300px;
 	}
 	&__name {
-		display: flex;
-		align-items: center;
-		background: $primary;
+		padding: 1rem;
 	}
-	&__name-text {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		height: 200px;
-		opacity: 0;
-		animation: text-appear .3s linear 1s;
-		animation-fill-mode: forwards;
-		padding: 3rem 5rem;
+	&__name-desc {
+		color: rgba(white, .9);
+		font-size: 1.2rem;
 	}
-	&__job {
-		display: flex;
-		align-items: center;
-		border-bottom: 1px solid $primary;
+	&__name-text-title {
+		margin: 1rem 0;
 	}
-	&__job-text {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: auto;
-		color: $primary;
-		text-align: center;
-		opacity: 0;
-		animation: text-appear .3s linear 1s;
-		animation-fill-mode: forwards;
-		padding: 3rem 5rem;
+	&__social a {
+		font-size: 3rem;
+		margin-inline-end: .5rem;
+		&:hover {
+			color: lighten($primary, 10%)
+		}
 	}
 	@include device800 {
-		display: flex;
 		height: 100vh;
-		&__name {
-			position: absolute;
-			top: 0;
+		&::after {
+			// animation: header-slide .5s ease-in .3s;
+			// animation-fill-mode: forwards;
+			background: $primary;
+			clip-path: polygon(0 0, 100% 0, 64% 100%, 0% 100%);
+			content: '';
+			bottom: 0;
 			left: 0;
-			display: flex;
-			align-items: center;
-			justify-content: flex-end;
-			height: 100%;
-			width: 100%;
-			// background: $primary;
-			animation: header-slide .5s ease-in .3s;
-			animation-fill-mode: forwards;
-		}
-		&__name-text {
-			display: flex;
-			align-items: center;
-			padding: 3rem 2rem;
-			font-size: 2rem;
-			min-width: 98%;
-			&::before {
-				position: absolute;
-				top: 0;
-				left: 0;
-				content: '';
-				width: 0px;
-				height: 0px;
-				border-bottom: 5px solid #aa8396;
-				border-left: 5px solid #aa8396;
-				opacity: 0;
-				animation: border-fill-1 .5s linear 1.3s;
-				animation-fill-mode: forwards;
-			}
-			&::after {
-				position: absolute;
-				content: '';
-				width: 1px;
-				height: 1px;
-				border-top: 5px solid #aa8396;
-				top: 0;
-				right: 0;
-				opacity: 0;
-				animation: border-fill-3 .3s ease-out 2.6s;
-				animation-fill-mode: forwards;
-			}
-		}
-		&__job {
 			position: absolute;
+			right: 35%;
 			top: 0;
-			right: 0;
-			display: flex;
-			align-items: center;
-			height: 100%;
-			width: 50%;
 		}
-		&__job-text {
-			height: 200px;
-			font-size: 2rem;
-			padding: 3rem 2rem;
-			min-width: 98%;
-			&::before {
-				position: absolute;
-				bottom: 0;
-				left: 0;
-				content: '';
-				width: 0px;
-				height: 0px;
-				border-bottom: 5px solid $primary;
-				border-right: 5px solid $primary;
-				opacity: 0;
-				animation: border-fill-2 .5s linear 1.8s;
-				animation-fill-mode: forwards;
-			}
-			&::after {
-				position: absolute;
-				content: '';
-				width: 1px;
-				height: 1px;
-				border-top: 5px solid $primary;
-				top: 0;
-				right: 0;
-				opacity: 0;
-				animation: border-fill-3 .3s linear 2.3s;
-				animation-fill-mode: forwards;
-			}
+		&__content {
+			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+			height: 100vh;
+			margin: auto;
+			max-width: 1400px;
+		}
+		&__role {
+			background: 0;
+			display: flex;
+			flex-direction: column;
+			grid-column: 1 / span 7;
+			justify-content: flex-start;
+			padding: 3rem;
+			position: relative;
+		}
+		&__role-text {
+			font-size: 3rem;
+    		font-weight: bold;
+			z-index: 1;
+		}
+		&__role-image {
+			margin: 1rem 0;
+			z-index: 1;
+		}
+		&__name {
+			display: grid;
+			grid-column: 8 / span 5;
+			grid-template-areas:
+				"blank"
+				"content";
+			grid-template-rows: repeat(2, 1fr);
+			padding: 0 3rem 3rem 0;
+		}
+		&__name-content {
+			grid-area: content;
+		}
+		&__name-desc {
+			font-size: 1.5rem;
 		}
 	}
 	@include device1200 {
-		&__job-text,
-		&__name-text {
-			font-size: 2.5rem;
-			padding: 3rem 4rem;
-			min-width: auto;
-			width: 570px;
+		&__name {
+			padding: 0 4rem 4rem 0;
+		}
+		&__name-text-title {
+			font-size: 3rem;
+		}
+		&__name-desc {
+			font-size: 1.75rem;
+		}
+		&__role {
+			padding: 4rem;
+		}
+		&__role-text {
+			font-size: 4rem;
 		}
 	}
 }
 
 @keyframes header-slide {
 	0% {
-		width: 100%;
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+		right: 0;
 	}
 	100% {
-		width: 50%;
+		clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
+		right: 45%;
 	}
 }
 @keyframes text-appear {
@@ -429,19 +383,18 @@ li {
 	}
 }
 .hamburger {
+	align-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	height: 55px;
+	justify-content: center;
+	margin-bottom: 1rem;
+	padding: .5rem;
 	position: fixed;
 	right: 20px;
 	top: 20px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-content: center;
 	width: 55px;
-	height: 55px;
-	padding: .5rem;
-	margin-bottom: 1rem;
-	background: rgba(#fff, 0.7);
-	z-index: 2;
+	z-index: 3;
 	&:hover {
 		cursor: pointer;
 	}
@@ -451,25 +404,31 @@ li {
 	    width: 50px;
 	    margin-bottom: 6px;
 	    border-radius: 5px;
-	    background: $primary;
+	    background: $secondary;
 	    transition: .6s;
+		@include device800 {
+			background: $primary;
+		}
 		&:last-of-type {
 			margin-bottom: 0;
 		}
 		&--1 {
-			animation: hamburger-jiggle .5s ease-out 3s;
+			animation: hamburger-jiggle .5s ease-out .5s;
 			animation-timing-function:  cubic-bezier(.28,.03,0,1.6);
 		}
 		&--2 {
-			animation: hamburger-jiggle .5s ease-out 3.1s;
+			animation: hamburger-jiggle .5s ease-out .6s;
 			animation-timing-function:  cubic-bezier(.28,.03,0,1.6);
 		}
 		&--3 {
-			animation: hamburger-jiggle .5s ease-out 3.2s;
+			animation: hamburger-jiggle .5s ease-out .7s;
 			animation-timing-function:  cubic-bezier(.28,.03,0,1.6);
 		}
 	}
 	&.hamburger-cross {
+		.hamburger__line {
+			background: $primary;
+		}
 		.hamburger__line--1 {
 			transform: rotate(225deg) translate(-7px, -7px);
 		}
@@ -518,6 +477,9 @@ li {
 	}
 	&__vid {
 		padding: 1rem;
+		img {
+			box-shadow: 0 0 2px rgba(black, .2);
+		}
 	}
 	&__subtitle {
 		color:#444444;
@@ -546,7 +508,7 @@ li {
 		margin: 2rem auto;
 	}
 	&__tiles {
-		padding: 16rem 2rem 4rem;
+		padding: 4rem 1rem;
 	}
 	&__nav-text {
 		padding: 1rem;
@@ -555,8 +517,9 @@ li {
 		padding: 1rem;
 	}
 	&__email-img-large {
-		padding: 1rem;
+		padding: 4rem 1rem;
 		img {
+			box-shadow: 0 0 2px rgba(black, .2);
 			margin: auto;
 			display: block;
 		}
@@ -568,8 +531,9 @@ li {
 			line-height: 1.6;
 		}
 		img {
-			margin: auto;
+			box-shadow: 0 0 2px rgba(black, .2);
 			display: block;
+			margin: 2rem 0;
 		}
 	}
 	@include device500 {
@@ -595,6 +559,9 @@ li {
 		&__heading {
 			display: flex;
 			padding: 5rem 0;
+		}
+		&__tiles {
+			padding: 18rem 2rem 3rem;
 		}
 		&__title-container {
 			display: flex;
@@ -643,9 +610,6 @@ li {
 		}
 		&__email-text {
 			width: 50%;
-			.btn {
-				margin-bottom: 2rem;
-			}
 		}
 	}
 	@include device1200 {
@@ -672,7 +636,7 @@ li {
 ------------------------------------------- */
 
 .all-projects {
-	padding: 5rem 0 0;
+	padding: 2rem 0 0;
 	h2 {
 		color: $primary;
 
@@ -762,6 +726,11 @@ li {
 			background: rgba(#fff, .8);
 		}
 	}
+	@include device1200 {
+		li {
+			font-size: 1.2rem;
+		}
+	}
 }
 
 .animation {
@@ -787,10 +756,18 @@ iframe {
 }
 
 footer {
+	background: $secondary;
 	text-align: center;
-	i {
+	padding: 3rem 1rem;
+	a {
 		color: $primary;
-		padding-right: 10px;
+		&:hover {
+			color: lighten($primary, 10%);
+		}
+	}
+	i {
+		font-size: 2rem;
+		margin: .5rem;
 	}
 }
 
