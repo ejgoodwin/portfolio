@@ -18,20 +18,28 @@
 		<li class="dropdown-menu__list-item">
 			<a class="dropdown-menu__link" href="#all-projects">All Projects</a>
 		</li>
-		<li class="dropdown-menu__list-item">
+		<!-- <li class="dropdown-menu__list-item">
 			<a class="dropdown-menu__link" href="#contact">Contact</a>
-		</li>
+		</li> -->
 	</ul>
 </div>
 
 <header class="header">
-	<div class="header__name">
-		<h1 class="header__name-text">Erica Goodwin</h1>
-		<a class="header__github" href="https://github.com/ejgoodwin" target="_blank">Github</a>
-		<a class="header__cv" href="https://www.linkedin.com/in/erica-goodwin-4b6b64112/" target="_blank">LinkedIn</a>
-	</div>
-	<div class="header__job">
-		<h2 class="header__job-text">Front End Development<br>&amp; UI Design</h2>
+	<div class="header__content">
+		<div class="header__role">
+			<h1 class="header__role-text">Frontend Development<br>&amp; UI/UX Design</h1>
+			<img class="header__role-image" src="images/illustration-computer.svg" alt=""/>
+		</div>
+		<div class="header__name">
+			<div class="header__name-content">
+				<h2 class="header__name-text-title">Erica Goodwin</h2>
+				<div class="header__social">
+					<a href="https://www.linkedin.com/in/erica-goodwin-4b6b64112/" target="_blank"><i class="fab fa-linkedin"></i></a>
+					<a href="https://github.com/ejgoodwin" target="_blank"><i class="fab fa-github-square"></i></a>
+				</div>
+				<p class="header__name-desc">Hi! I’m a frontend developer with a creative background and a love for building beautiful interfaces.</p>
+			</div>
+		</div>
 	</div>
 
 	<div class="hamburger js-hamburger">
@@ -39,8 +47,6 @@
 		<span class="hamburger__line hamburger__line--2"></span>
 		<span class="hamburger__line hamburger__line--3"></span>
 	</div>
-
-
 </header>
 
 <main class="main-body">
@@ -52,7 +58,7 @@
 
 
 					<div class="feature-project__title-container">
-						<h2 class="feature-project__title">Redesign, UI Development: Web Apps &amp; Email </h2>
+						<h2 class="feature-project__title">UI Design &amp; Development: <br>Web Apps &amp; Email </h2>
 						<p class="feature-project__subtitle">Feature project</p>
 					</div>
 					<div class="feature-project__vid">
@@ -66,8 +72,7 @@
 			<div class="feature-project__description">
 				<div class="feature-project__paragraph">
 					<p>This project offered an exciting opportunity to redesign and develop the UI of internal web applications and client-facing emails for an international translations company. I focused on reusable components that would provide consistency across the applications. </p>
-					<p>Pattern Lab provided a foundation to develop a pattern library that housed the UI components. A pattern library streamlined UI development by providing reusable components and consistency.</p>
-					<p>Created at <a href="https://www.strakertranslations.com/" target="_blank">Straker Translations</a></p>
+					<p>Pattern Lab provided a foundation to develop a pattern library that housed the UI components. A pattern library streamlined UI development by providing reusable components and consistency. Created at <a href="https://www.strakertranslations.com/" target="_blank">Straker Translations</a></p>
 					<a class="btn" href="code-examples/workbench-media/index.html" target="_blank">UI example 1</a>
 					<a class="btn" href="code-examples/vendor-portal/index.html" target="_blank">UI example 2</a>
 				</div>
@@ -83,9 +88,9 @@
 					<img src="images/email-business_2.jpg">
 				</div>
 				<div class="feature-project__email-text">
+					<h3>Email redesign</h3>
 					<p>A redesign gave the company's emails a fresh, professional feel.</p> 
-					<p>Tables and inline styles ensured emails rendered correctly across all browsers and email clients.</p>
-					<p>Created at <a href="https://www.strakertranslations.com/" target="_blank">Straker Translations</a></p>
+					<p>Tables and inline styles ensured emails rendered correctly across all browsers and email clients. Created at <a href="https://www.strakertranslations.com/" target="_blank">Straker Translations</a></p>
 					<a class="btn" href="code-examples/quote-email-template.html" target="_blank ">Email Template</a>
 					<img src="images/email-quote.jpg">
 				</div>
@@ -111,7 +116,7 @@
 					<div class="website__info">
 						<h3 class="website__header"><a href="https://github.com/ejgoodwin/spotify-playlist-generator" target="_blank">Spotify Playlist Generator</a></h3>
 						<ul>
-							<li>Personal development &amp; design project</li>
+							<li>WIP personal development &amp; design project</li>
 							<li>Used Spotify Web API to create playlists, search for an artist and select suggested tracks</li>
 							<li>Spotify's play button is embedded to allow users to preview songs</li>
 						</ul>
@@ -174,7 +179,10 @@
 		</div>
 
 		<footer id="contact">
-			<p><i class="fas fa-envelope"></i>Contact me to discuss any new projects: <a href="mailto:ericagoodwin90@gmail.com">ericagoodwin90@gmail.com</a></p>
+			<p>
+				<a href="https://www.linkedin.com/in/erica-goodwin-4b6b64112/" target="_blank"><i class="fab fa-linkedin"></i></a> 
+				<a href="https://github.com/ejgoodwin" target="_blank"><i class="fab fa-github-square"></i></a>
+			</p>
 		</footer>
 
 	</div>
