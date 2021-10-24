@@ -136,7 +136,7 @@ li {
   right: 0;
   height: 100vh;
   padding: 5rem;
-  background: rgba(255, 255, 255, 0.8);
+  background: #221E27;
   -webkit-transform: translateY(-150%);
       -ms-transform: translateY(-150%);
           transform: translateY(-150%);
