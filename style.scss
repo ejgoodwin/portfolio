@@ -146,7 +146,7 @@ li {
 	left: 0;
 	right: 0;
 	height: 100vh;
-	padding: 5rem;
+	padding: 5rem 2rem;
 	background: $secondary;
 	transform: translateY(-150%);
 	transition: .5s;
@@ -180,6 +180,7 @@ li {
 		transition: .5s;
 	}
 	@include device800 {
+		padding: 5rem;
 		&__list {
 			// margin: 5rem;
 			// height: 86vh;
@@ -772,3 +773,71 @@ footer {
 	}
 }
 
+// SVG 
+.svg-switch {
+	background: #67a790;
+	border-radius: 2rem;
+	cursor: pointer;
+	margin: 2rem 0;
+	padding: 6px;
+	position: relative;
+	transition: .1s;
+	width: 52px;
+	z-index: 1;
+}
+.svg-switch-circle {
+	background: #dbdcdf;
+	border-radius: 50%;
+	display: block;
+	height: 20px;
+	transition: .1s;
+	width: 20px;
+}
+#svg-switch-input {
+	bottom: 0;
+	cursor: pointer;
+	height: 100%;
+	left: 0;
+	margin: 0;
+	opacity: 0;
+	position: absolute;
+	transition: .1s;
+	right: 0;
+	top: 0;
+	width: 100%;
+	z-index: 2;	
+	&:hover {
+		& ~ .svg-switch-circle {
+			transition: .1s;
+			background: white;
+		}
+	}
+}
+.svg-switch.lights-off {
+	background: #3a3e4b;
+}
+.svg-switch.lights-off .svg-switch-circle {
+	transform: translateX(20px);
+}
+.lights-off {
+	#svg-code-editor,
+	#svg-browser-window,
+	#svg-light-halo,
+	#svg-mug-shadow,
+	#svg-lamp-base-shadow,
+	#svg-monitor-shadow {
+		display: none;
+	}
+	#svg-monitor-screen {
+		fill: #3A3D4B;
+	}
+	#svg-light-bulb {
+		fill: #F7F0D2;
+	}
+	#svg-mug-handle {
+		fill: #93BABE;
+	}
+	#svg-lamp-head {
+		fill: #9B6D81;
+	}
+}
