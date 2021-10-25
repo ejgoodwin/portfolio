@@ -1,9 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="718" height="503" viewBox="0 0 718 503">
-  <g id="Group_5" data-name="Group 5" transform="translate(-618 -451)">
+<svg xmlns="http://www.w3.org/2000/svg" width="718.002" height="503.001" viewBox="0 0 718.002 503.001">
+  <g id="Group_5" data-name="Group 5" transform="translate(-617.998 -451)">
     <path id="Rectangle_52" data-name="Rectangle 52" d="M16,0H702a16,16,0,0,1,16,16V407a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V16A16,16,0,0,1,16,0Z" transform="translate(618 451)" fill="#2f3148"/>
-    <path id="Rectangle_100" data-name="Rectangle 100" d="M0,0H718a0,0,0,0,1,0,0V6a16,16,0,0,1-16,16H16A16,16,0,0,1,0,6V0A0,0,0,0,1,0,0Z" transform="translate(618 858)" fill="#b0b3c4"/>
-    <rect id="Rectangle_101" data-name="Rectangle 101" width="150" height="58" transform="translate(902 879)" fill="#b0b3c4"/>
-    <rect id="Rectangle_175" data-name="Rectangle 175" width="243" height="17" rx="5" transform="translate(855 937)" fill="#b0b3c4"/>
+    <path id="Union_2" data-name="Union 2" d="M18215-106a5,5,0,0,1-5-5v-7a5,5,0,0,1,5-5h233a5,5,0,0,1,5,5v7a5,5,0,0,1-5,5Zm42-17v-57h-268a16,16,0,0,1-16-16v-6h718v6a16,16,0,0,1-16,16h-268v57Z" transform="translate(-17355 1060)" fill="#b0b3c4"/>
     <rect id="Rectangle_53" data-name="Rectangle 53" width="694" height="383" rx="12" transform="translate(630 463)" fill="#eff0f5"/>
     <g id="Group_6" data-name="Group 6" transform="translate(-27 -14)">
       <rect id="Rectangle_54" data-name="Rectangle 54" width="497" height="359" rx="5" transform="translate(669 489)" fill="#383838"/>

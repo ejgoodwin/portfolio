@@ -456,6 +456,20 @@ li {
 
 .feature-project {
 	overflow: hidden;
+	&__description {
+		position: relative;
+		background: $grey;
+		padding: 2rem 1rem;
+		p {
+			max-width: 800px;
+			font-size: 1rem;
+			line-height: 1.6;
+		}
+
+	}
+	&__heading {
+		padding: 2rem 0;
+	}
 	&__title {
 		position: relative;
 		padding-bottom: 1rem;
@@ -472,9 +486,6 @@ li {
 			background: #444444;
 		}
 	}
-	&__heading {
-		padding: 2rem 0;
-	}
 	&__vid {
 		padding: 2rem 0;
 		img {
@@ -489,18 +500,6 @@ li {
 		letter-spacing: 1.2px;
 		text-transform: uppercase;
 		// padding-left: 1rem;
-	}
-	&__description {
-		position: relative;
-		background: $grey;
-		padding: 4rem 1rem;
-		p {
-			max-width: 800px;
-			margin: 0 auto 1rem;
-			font-size: 1rem;
-			line-height: 1.6;
-		}
-
 	}
 	&__mobile-pic {
 		display: block;
@@ -533,16 +532,12 @@ li {
 		img {
 			box-shadow: 0 0 2px rgba(black, .2);
 			display: block;
-			margin: 2rem 0;
+			margin: 2rem auto;
 		}
 	}
 	@include device500 {
 		&__title {
 			margin-top: 2rem;
-		}
-		&__paragraph {
-			padding-left: 2rem;
-
 		}
 		&__email-img-large {
 			img {
@@ -556,8 +551,19 @@ li {
 		}
 	}
 	@include device800 {
+		&__description {
+			padding: 4rem 1rem;
+		}
+		&__description-container {
+			display: grid;
+			grid-gap: 1rem;
+			grid-template-columns: 1fr 2fr;
+		}
 		&__heading {
-			padding: 5rem 0;
+			display: grid;
+			grid-gap: 1rem;
+			grid-template-columns: 1fr 2fr;
+			padding: 4rem 0;
 		}
 		&__tiles {
 			padding: 18rem 2rem 3rem;
@@ -567,16 +573,11 @@ li {
 			flex-direction: column;
 			justify-content: center;
 		}
-		&__description {
-			display: flex;
-			justify-content: center;
-		}
 		&__paragraph {
 			order: 1
 		}
 		&__mobile-container {
 			position: relative;
-			width: 25%;
 			order: 0;
 		}
 		&__mobile-pic {
@@ -584,7 +585,7 @@ li {
 			left: 0;
 			right: 0;
 			top: 0;
-			margin-top: 0;
+			margin: 0;
 		}
 		&__nav-img {
 			width: 50%;
@@ -605,12 +606,12 @@ li {
 		}
 		&__email-text {
 			width: 50%;
+			img {
+				margin: 2rem 0;
+			}
 		}
 	}
 	@include device1200 {
-		&__title {
-			font-size: 3rem;
-		}
 		&__description {
 			p {
 				font-size: 1.2rem;
