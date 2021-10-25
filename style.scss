@@ -211,7 +211,7 @@ li {
 	&__role-image {
 		display: block;
 		margin: 1rem auto;
-		max-width: 300px;
+		max-width: 100%;
 	}
 	&__name {
 		padding: 1rem;
@@ -228,6 +228,11 @@ li {
 		margin-inline-end: .5rem;
 		&:hover {
 			color: lighten($primary, 10%)
+		}
+	}
+	@include device500 {
+		&__role-image {
+			max-width: 450px;
 		}
 	}
 	@include device800 {
