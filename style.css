@@ -212,7 +212,7 @@ li {
 .header__role-image {
   display: block;
   margin: 1rem auto;
-  max-width: 300px;
+  max-width: 100%;
 }
 .header__name {
   padding: 1rem;
@@ -231,6 +231,11 @@ li {
 }
 .header__social a:hover {
   color: #646faa;
+}
+@media only screen and (min-width: 500px) {
+  .header__role-image {
+    max-width: 450px;
+  }
 }
 @media only screen and (min-width: 800px) {
   .header {
