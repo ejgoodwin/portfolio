@@ -476,7 +476,7 @@ li {
 		padding: 2rem 0;
 	}
 	&__vid {
-		padding: 1rem;
+		padding: 2rem 0;
 		img {
 			box-shadow: 0 0 2px rgba(black, .2);
 		}
@@ -557,7 +557,6 @@ li {
 	}
 	@include device800 {
 		&__heading {
-			display: flex;
 			padding: 5rem 0;
 		}
 		&__tiles {
@@ -567,10 +566,6 @@ li {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
-			width: 50%;
-		}
-		&__vid {
-			width: 50%;
 		}
 		&__description {
 			display: flex;
@@ -758,7 +753,7 @@ iframe {
 footer {
 	background: $secondary;
 	text-align: center;
-	padding: 3rem 1rem;
+	padding: 2rem 1rem;
 	a {
 		color: $primary;
 		&:hover {
@@ -766,7 +761,7 @@ footer {
 		}
 	}
 	i {
-		font-size: 2rem;
+		font-size: 2.5rem;
 		margin: .5rem;
 	}
 }
