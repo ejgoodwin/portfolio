@@ -22,4 +22,11 @@ $(document).ready(function() {
 		$('.js-hamburger').removeClass('hamburger-cross');
 	})
 
+	$('#svg-switch-input').click(function() {
+		let svgImage = $('.header__role-image');
+		let svgCircle = $('.svg-switch');
+		this.checked ? svgImage.addClass('lights-off') : svgImage.removeClass('lights-off');
+		this.checked ? svgCircle.addClass('lights-off') : svgCircle.removeClass('lights-off');
+	})
+
 });
