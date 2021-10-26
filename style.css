@@ -242,7 +242,7 @@ li {
 }
 @media only screen and (min-width: 800px) {
   .header {
-    height: 100vh;
+    min-height: 100vh;
   }
   .header::after {
     background: #4E588D;
@@ -260,7 +260,7 @@ li {
     display: grid;
     -ms-grid-columns: (1fr)[12];
     grid-template-columns: repeat(12, 1fr);
-    height: 100vh;
+    min-height: 100vh;
     margin: auto;
     max-width: 1400px;
   }
