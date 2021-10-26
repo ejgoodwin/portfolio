@@ -814,7 +814,7 @@ footer {
 	}
 }
 .svg-switch.lights-off {
-	background: #3a3e4b;
+	background: #191B2E;
 }
 .svg-switch.lights-off .svg-switch-circle {
 	transform: translateX(20px);
@@ -826,6 +826,8 @@ footer {
 	opacity: 1;
 	transition: .1s;
 }
+#svg-code-editor,
+#svg-browser-window,
 #svg-light-bulb,
 #svg-mug-handle,
 #svg-lamp-head {
@@ -840,16 +842,13 @@ footer {
 	#svg-monitor-shadow {
 		opacity: 0;
 	}
-	#svg-monitor-screen {
-		fill: #3A3D4B;
-	}
 	#svg-light-bulb {
 		fill: #F7F0D2;
 	}
 	#svg-mug-handle {
-		fill: #93BABE;
+		fill: #7DB6BC;
 	}
 	#svg-lamp-head {
-		fill: #9B6D81;
+		fill: #AA6E89;
 	}
 }
