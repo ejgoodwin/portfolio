@@ -988,13 +988,31 @@ footer i {
           transform: translateX(20px);
 }
 
+#svg-light-halo,
+#svg-mug-shadow,
+#svg-lamp-base-shadow,
+#svg-monitor-shadow {
+  opacity: 1;
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
+}
+
+#svg-light-bulb,
+#svg-mug-handle,
+#svg-lamp-head {
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
+}
+
 .lights-off #svg-code-editor,
 .lights-off #svg-browser-window,
 .lights-off #svg-light-halo,
 .lights-off #svg-mug-shadow,
 .lights-off #svg-lamp-base-shadow,
 .lights-off #svg-monitor-shadow {
-  display: none;
+  opacity: 0;
 }
 .lights-off #svg-monitor-screen {
   fill: #3A3D4B;
