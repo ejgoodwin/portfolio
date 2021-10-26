@@ -237,7 +237,7 @@ li {
 		}
 	}
 	@include device800 {
-		height: 100vh;
+		min-height: 100vh;
 		&::after {
 			// animation: header-slide .5s ease-in .3s;
 			// animation-fill-mode: forwards;
@@ -253,7 +253,7 @@ li {
 		&__content {
 			display: grid;
 			grid-template-columns: repeat(12, 1fr);
-			height: 100vh;
+			min-height: 100vh;
 			margin: auto;
 			max-width: 1400px;
 		}
