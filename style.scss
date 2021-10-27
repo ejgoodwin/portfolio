@@ -181,10 +181,6 @@ li {
 	}
 	@include device800 {
 		padding: 5rem;
-		&__list {
-			// margin: 5rem;
-			// height: 86vh;
-		}
 		&__list-item {
 			font-size: 4rem;
 		}
@@ -269,10 +265,12 @@ li {
 		&__role-text {
 			font-size: 3rem;
     		font-weight: bold;
+			margin-top: 0;
 			z-index: 1;
 		}
 		&__role-image {
 			margin: 1rem 0;
+			max-width: 350px;
 			z-index: 1;
 		}
 		&__name {
@@ -285,6 +283,7 @@ li {
 			padding: 0 3rem 3rem 0;
 		}
 		&__name-content {
+			align-self: end;
 			grid-area: content;
 		}
 		&__name-desc {
@@ -303,6 +302,9 @@ li {
 		}
 		&__role {
 			padding: 4rem;
+		}
+		&__role-image {
+			max-width: 500px;
 		}
 		&__role-text {
 			font-size: 4rem;
@@ -822,24 +824,22 @@ footer {
 .svg-switch.lights-off .svg-switch-circle {
 	transform: translateX(20px);
 }
-#svg-light-halo,
 #svg-mug-shadow,
 #svg-lamp-base-shadow,
 #svg-monitor-shadow {
 	opacity: 1;
-	transition: .1s;
+	transition: .2s;
 }
 #svg-code-editor,
 #svg-browser-window,
 #svg-light-bulb,
 #svg-mug-handle,
 #svg-lamp-head {
-	transition: .1s;
+	transition: .2s;
 }
 .lights-off {
 	#svg-code-editor,
 	#svg-browser-window,
-	#svg-light-halo,
 	#svg-mug-shadow,
 	#svg-lamp-base-shadow,
 	#svg-monitor-shadow {
@@ -853,6 +853,33 @@ footer {
 	}
 	#svg-lamp-head {
 		fill: #AA6E89;
+	}
+	#svg-light-halo {
+		animation: lights-off .1s ease-in;
+		transform: translate(182.23px, 90px) scale(0);
+	}
+}
+.lights-on #svg-light-halo {
+	animation: lights-on .1s ease-in;
+	transform: translate(182.23px, 90px) scale(1);
+}
+
+@keyframes lights-on {
+	0% {
+		transform: translate(182.23px, 90px) scale(.7);
+
+	}
+	100% {
+		transform: translate(182.23px, 90px) scale(1);
+	}
+}
+@keyframes lights-off {
+	0% {
+		transform: translate(182.23px, 90px) scale(1);
+
+	}
+	100% {
+		transform: translate(182.23px, 90px) scale(0);
 	}
 }
 

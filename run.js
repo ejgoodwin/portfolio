@@ -25,8 +25,13 @@ $(document).ready(function() {
 	$('#svg-switch-input').click(function() {
 		let svgImage = $('.header__role-image');
 		let svgCircle = $('.svg-switch');
-		this.checked ? svgImage.addClass('lights-off') : svgImage.removeClass('lights-off');
-		this.checked ? svgCircle.addClass('lights-off') : svgCircle.removeClass('lights-off');
+		if (this.checked) {
+			svgImage.addClass('lights-off').removeClass('lights-on');
+			svgCircle.addClass('lights-off');
+		} else {
+			svgImage.removeClass('lights-off').addClass('lights-on');
+			svgCircle.removeClass('lights-off');
+		}
 	})
 
 });

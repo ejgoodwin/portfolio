@@ -256,9 +256,7 @@ li {
     top: 0;
   }
   .header__content {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[12];
     grid-template-columns: repeat(12, 1fr);
     min-height: 100vh;
     margin: auto;
@@ -273,8 +271,6 @@ li {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 7;
     grid-column: 1/span 7;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -285,34 +281,27 @@ li {
   .header__role-text {
     font-size: 3rem;
     font-weight: bold;
+    margin-top: 0;
     z-index: 1;
   }
   .header__role-image {
     margin: 1rem 0;
+    max-width: 350px;
     z-index: 1;
   }
   .header__name {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-column: 8;
-    -ms-grid-column-span: 5;
     grid-column: 8/span 5;
-        grid-template-areas: "blank" "content";
-    -ms-grid-rows: (1fr)[2];
+    grid-template-areas: "blank" "content";
     grid-template-rows: repeat(2, 1fr);
     padding: 0 3rem 3rem 0;
   }
   .header__name-content {
+    align-self: end;
     grid-area: content;
   }
   .header__name-desc {
     font-size: 1.5rem;
-  }
-}
-@media only screen and (min-width: 800px){
-  .header__name-content {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -327,6 +316,9 @@ li {
   }
   .header__role {
     padding: 4rem;
+  }
+  .header__role-image {
+    max-width: 500px;
   }
   .header__role-text {
     font-size: 4rem;
@@ -699,17 +691,13 @@ li {
     padding: 4rem 1rem;
   }
   .feature-project__description-container {
-    display: -ms-grid;
     display: grid;
     grid-gap: 1rem;
-    -ms-grid-columns: 1fr 1rem 2fr;
     grid-template-columns: 1fr 2fr;
   }
   .feature-project__heading {
-    display: -ms-grid;
     display: grid;
     grid-gap: 1rem;
-    -ms-grid-columns: 1fr 1rem 2fr;
     grid-template-columns: 1fr 2fr;
     padding: 4rem 0;
   }
@@ -990,14 +978,13 @@ footer i {
           transform: translateX(20px);
 }
 
-#svg-light-halo,
 #svg-mug-shadow,
 #svg-lamp-base-shadow,
 #svg-monitor-shadow {
   opacity: 1;
-  -webkit-transition: 0.1s;
-  -o-transition: 0.1s;
-  transition: 0.1s;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 
 #svg-code-editor,
@@ -1005,14 +992,13 @@ footer i {
 #svg-light-bulb,
 #svg-mug-handle,
 #svg-lamp-head {
-  -webkit-transition: 0.1s;
-  -o-transition: 0.1s;
-  transition: 0.1s;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .lights-off #svg-code-editor,
 .lights-off #svg-browser-window,
-.lights-off #svg-light-halo,
 .lights-off #svg-mug-shadow,
 .lights-off #svg-lamp-base-shadow,
 .lights-off #svg-monitor-shadow {
@@ -1027,7 +1013,63 @@ footer i {
 .lights-off #svg-lamp-head {
   fill: #AA6E89;
 }
+.lights-off #svg-light-halo {
+  -webkit-animation: lights-off 0.1s ease-in;
+          animation: lights-off 0.1s ease-in;
+  -webkit-transform: translate(182.23px, 90px) scale(0);
+      -ms-transform: translate(182.23px, 90px) scale(0);
+          transform: translate(182.23px, 90px) scale(0);
+}
 
+.lights-on #svg-light-halo {
+  -webkit-animation: lights-on 0.1s ease-in;
+          animation: lights-on 0.1s ease-in;
+  -webkit-transform: translate(182.23px, 90px) scale(1);
+      -ms-transform: translate(182.23px, 90px) scale(1);
+          transform: translate(182.23px, 90px) scale(1);
+}
+
+@-webkit-keyframes lights-on {
+  0% {
+    -webkit-transform: translate(182.23px, 90px) scale(0.7);
+            transform: translate(182.23px, 90px) scale(0.7);
+  }
+  100% {
+    -webkit-transform: translate(182.23px, 90px) scale(1);
+            transform: translate(182.23px, 90px) scale(1);
+  }
+}
+
+@keyframes lights-on {
+  0% {
+    -webkit-transform: translate(182.23px, 90px) scale(0.7);
+            transform: translate(182.23px, 90px) scale(0.7);
+  }
+  100% {
+    -webkit-transform: translate(182.23px, 90px) scale(1);
+            transform: translate(182.23px, 90px) scale(1);
+  }
+}
+@-webkit-keyframes lights-off {
+  0% {
+    -webkit-transform: translate(182.23px, 90px) scale(1);
+            transform: translate(182.23px, 90px) scale(1);
+  }
+  100% {
+    -webkit-transform: translate(182.23px, 90px) scale(0);
+            transform: translate(182.23px, 90px) scale(0);
+  }
+}
+@keyframes lights-off {
+  0% {
+    -webkit-transform: translate(182.23px, 90px) scale(1);
+            transform: translate(182.23px, 90px) scale(1);
+  }
+  100% {
+    -webkit-transform: translate(182.23px, 90px) scale(0);
+            transform: translate(182.23px, 90px) scale(0);
+  }
+}
 /*
 Translate values of steam.
 translate(1306 450)
