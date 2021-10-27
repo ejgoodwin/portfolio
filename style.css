@@ -6,22 +6,21 @@
 
 ------------------------------------------- */
 h1 {
-  font-size: 2.2rem;
+  font-size: 3.5rem;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin: 0;
 }
 
 h1, h2, h3 {
-  color: #3e3d44;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
+  color: #4E588D;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.5;
 }
 
@@ -43,7 +42,7 @@ img {
 }
 
 * {
-  font-family: "Roboto", sans-serif;
+  font-family: "Work Sans", sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-smooth: auto;
@@ -82,7 +81,7 @@ p a:hover {
 
 p, li {
   color: #3e3d44;
-  font-family: "Roboto", sans-serif;
+  font-family: "Work Sans", sans-serif;
   line-height: 1.5;
 }
 
@@ -309,7 +308,7 @@ li {
     padding: 0 4rem 4rem 0;
   }
   .header__name-text-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .header__name-desc {
     font-size: 1.75rem;
@@ -321,7 +320,7 @@ li {
     max-width: 500px;
   }
   .header__role-text {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 }
 
