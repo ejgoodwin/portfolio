@@ -403,6 +403,9 @@ li {
 	z-index: 3;
 	&:hover {
 		cursor: pointer;
+		.hamburger__line {
+			background-color: lighten($primary, 10%);
+		}
 	}
 	&__line {
 		display: block;
@@ -411,7 +414,7 @@ li {
 	    margin-bottom: 6px;
 	    border-radius: 5px;
 	    background: $secondary;
-	    transition: .6s;
+	    transition: background-color .1s, transform .5s;
 		@include device800 {
 			background: $primary;
 		}
@@ -419,22 +422,22 @@ li {
 			margin-bottom: 0;
 		}
 		&--1 {
-			animation: hamburger-jiggle .5s ease-out .5s;
+			animation: hamburger-jiggle .6s ease-out .5s;
 			animation-timing-function:  cubic-bezier(.28,.03,0,1.6);
 		}
 		&--2 {
-			animation: hamburger-jiggle .5s ease-out .6s;
+			animation: hamburger-jiggle .6s ease-out .6s;
 			animation-timing-function:  cubic-bezier(.28,.03,0,1.6);
 		}
 		&--3 {
-			animation: hamburger-jiggle .5s ease-out .7s;
+			animation: hamburger-jiggle .6s ease-out .7s;
 			animation-timing-function:  cubic-bezier(.28,.03,0,1.6);
 		}
 	}
 	&.hamburger-cross {
-		.hamburger__line {
-			background: $primary;
-		}
+		// .hamburger__line {
+		// 	background: $primary;
+		// }
 		.hamburger__line--1 {
 			transform: rotate(225deg) translate(-7px, -7px);
 		}
@@ -814,7 +817,7 @@ footer {
 	}
 }
 .svg-switch.lights-off {
-	background: #191B2E;
+	background: #262939;
 }
 .svg-switch.lights-off .svg-switch-circle {
 	transform: translateX(20px);
@@ -850,5 +853,98 @@ footer {
 	}
 	#svg-lamp-head {
 		fill: #AA6E89;
+	}
+}
+
+/*
+Translate values of steam.
+translate(1324 450)
+translate(1310 450)
+translate(1296 450)
+translate(1282 450)
+translate(1268 450)
+translate(1254 450)
+translate(1240 450)
+*/
+
+$STEAM_BLOCKS: (
+	(
+		delay: 1,
+		duration: 2,
+		name: 'svg-steam-5',
+		x_position: 1310,
+		y_position: 375,
+		y_position-final: 365
+	),
+	(
+		delay: 0,
+		duration: 2,
+		name: 'svg-steam-4',
+		x_position: 1296,
+		y_position: 365,
+		y_position-final: 355
+	),
+	(
+		delay: .3,
+		duration: 3,
+		name: 'svg-steam-3',
+		x_position: 1282,
+		y_position: 350,
+		y_position-final: 345
+	),
+	(
+		delay: 3.2,
+		duration: 2,
+		name: 'svg-steam-2',
+		x_position: 1268,
+		y_position: 365,
+		y_position-final: 355
+	),
+	(
+		delay: .8,
+		duration: 3,
+		name: 'svg-steam-1',
+		x_position: 1254,
+		y_position: 375,
+		y_position-final: 365
+	)
+);
+
+@each $steam_block in $STEAM_BLOCKS {
+	$delay: map-get($steam_block, delay);
+	$duration: map-get($steam_block, duration);
+	$name: map-get($steam_block, name);
+	$x-pos: map-get($steam_block, x_position);
+	$y-pos: map-get($steam_block, y_position);
+	$y-pos-final: map-get($steam_block, y_position-final);
+	
+	##{$name} {
+		animation: steam_#{$name} #{$duration}s ease-out #{$delay}s infinite;
+		filter: blur(1.7rem);
+		opacity: 0;
+		transform: translate(#{$x-pos}px,  #{$y-pos-final}px) scale(0);
+	}
+
+	.lights-off ##{$name} {
+		animation: none;
+		opacity: 0;
+	}
+
+	@keyframes steam_#{$name} {
+		0% {
+			opacity: 0;
+			transform: translate(#{$x-pos}px, 460px) scale(.25);
+		}
+		20% {
+			opacity: .9;
+		}
+		70% {
+			opacity: .9;
+			transform: translate(#{$x-pos}px, #{$y-pos}px) scale(1);
+		}
+		100% {
+			transform: translate(#{$x-pos}px, #{$y-pos-final}px) scale(0);
+			opacity: 0;
+		}
 	}
 }
