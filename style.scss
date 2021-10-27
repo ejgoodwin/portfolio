@@ -6,8 +6,8 @@ $grey		: #F4F4F4;
 $grey-dark: #4A464D;
 $font-colour: #3e3d44;
 
-$headerFont 	: 'Roboto', sans-serif;
-$bodyFont		: 'Roboto', sans-serif;
+$headerFont 	: 'Montserrat', sans-serif;
+$bodyFont		: 'Work Sans', sans-serif;
 
 /* ---------------- MEDIA QUERIES ----------------
 
@@ -40,19 +40,18 @@ $bodyFont		: 'Roboto', sans-serif;
 ------------------------------------------- */
 
 h1 {
-	font-size: 2.2rem;
+	font-size: 3.5rem;
 }
 h2 {
-	font-size: 2rem;
+	font-size: 2.5rem;
 }
 h3 {
-	font-size: 1.2rem;
+	font-size: 1.5rem;
 	margin: 0;
 }
 h1, h2, h3 {
-	color: $font-colour;
+	color: $primary;
 	font-family: $headerFont;
-	font-weight: 500;
 	line-height: 1.5;
 }
 
@@ -295,7 +294,7 @@ li {
 			padding: 0 4rem 4rem 0;
 		}
 		&__name-text-title {
-			font-size: 3rem;
+			font-size: 2.5rem;
 		}
 		&__name-desc {
 			font-size: 1.75rem;
@@ -307,7 +306,7 @@ li {
 			max-width: 500px;
 		}
 		&__role-text {
-			font-size: 4rem;
+			font-size: 3.5rem;
 		}
 	}
 }
