@@ -40,10 +40,10 @@ $bodyFont		: 'Work Sans', sans-serif;
 ------------------------------------------- */
 
 h1 {
-	font-size: 3.5rem;
+	font-size: 2.5rem;
 }
 h2 {
-	font-size: 2.5rem;
+	font-size: 2.3rem;
 }
 h3 {
 	font-size: 1.5rem;
@@ -56,7 +56,7 @@ h1, h2, h3 {
 }
 
 @include device800 {
-	h1 {font-size: 2.8rem;}
+	h1 {font-size: 3.5rem;}
 	h2 {font-size: 2.5rem;}
 	h3 {font-size: 1.5rem;}
 }
@@ -128,6 +128,9 @@ li {
 	}
 	@include device500 {
 		width: auto;
+	}
+	@include device1200 {
+		font-size: 1.2rem;
 	}
 }
 
@@ -215,6 +218,7 @@ li {
 	&__name-desc {
 		color: rgba(white, .9);
 		font-size: 1.2rem;
+		margin: 1rem 0;
 	}
 	&__name-text-title {
 		margin: 1rem 0;
@@ -423,16 +427,13 @@ li {
 			margin-bottom: 0;
 		}
 		&--1 {
-			animation: hamburger-jiggle .6s ease-out .5s;
-			animation-timing-function:  cubic-bezier(.28,.03,0,1.6);
+			animation: hamburger-jiggle .3s ease-out .5s;
 		}
 		&--2 {
-			animation: hamburger-jiggle .6s ease-out .6s;
-			animation-timing-function:  cubic-bezier(.28,.03,0,1.6);
+			animation: hamburger-jiggle .3s ease-out .6s;
 		}
 		&--3 {
-			animation: hamburger-jiggle .6s ease-out .7s;
-			animation-timing-function:  cubic-bezier(.28,.03,0,1.6);
+			animation: hamburger-jiggle .3s ease-out .7s;
 		}
 	}
 	&.hamburger-cross {
@@ -574,6 +575,9 @@ li {
 			grid-gap: 1rem;
 			grid-template-columns: 1fr 2fr;
 			padding: 4rem 0;
+		}
+		&__paragraph .btn {
+			margin-right: .5rem;
 		}
 		&__tiles {
 			padding: 18rem 2rem 3rem;
@@ -855,30 +859,30 @@ footer {
 	}
 	#svg-light-halo {
 		animation: lights-off .1s ease-in;
-		transform: translate(182.23px, 90px) scale(0);
+		transform: translate(193.23px, 74px) scale(0);
 	}
 }
 .lights-on #svg-light-halo {
 	animation: lights-on .1s ease-in;
-	transform: translate(182.23px, 90px) scale(1);
+	transform: translate(193.23px, 74px) scale(1);
 }
 
 @keyframes lights-on {
 	0% {
-		transform: translate(182.23px, 90px) scale(.7);
+		transform: translate(193.23px, 74px) scale(.7);
 
 	}
 	100% {
-		transform: translate(182.23px, 90px) scale(1);
+		transform: translate(193.23px, 74px) scale(1);
 	}
 }
 @keyframes lights-off {
 	0% {
-		transform: translate(182.23px, 90px) scale(1);
+		transform: translate(193.23px, 74px) scale(1);
 
 	}
 	100% {
-		transform: translate(182.23px, 90px) scale(0);
+		transform: translate(193.23px, 74px) scale(0);
 	}
 }
 
