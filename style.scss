@@ -783,7 +783,7 @@ footer {
 
 // SVG 
 .svg-switch {
-	background: #67a790;
+	background: #6EB8BF;
 	border-radius: 2rem;
 	cursor: pointer;
 	margin: 2rem 0;
@@ -794,10 +794,11 @@ footer {
 	z-index: 1;
 }
 .svg-switch-circle {
-	background: #dbdcdf;
+	background: white;
 	border-radius: 50%;
 	display: block;
 	height: 20px;
+	margin-left: 0;
 	transition: .1s;
 	width: 20px;
 }
@@ -816,16 +817,20 @@ footer {
 	z-index: 2;	
 	&:hover {
 		& ~ .svg-switch-circle {
-			transition: .1s;
-			background: white;
+			transform: scale(1.1);
 		}
 	}
 }
 .svg-switch.lights-off {
 	background: #262939;
 }
-.svg-switch.lights-off .svg-switch-circle {
-	transform: translateX(20px);
+.svg-switch.lights-off {
+	#svg-switch-input:hover ~ .svg-switch-circle {
+		transform: scale(1.1);
+	}
+	.svg-switch-circle {
+		margin-left: 20px;
+	}
 }
 #svg-mug-shadow,
 #svg-lamp-base-shadow,
@@ -852,10 +857,10 @@ footer {
 		fill: #F7F0D2;
 	}
 	#svg-mug-handle {
-		fill: #7DB6BC;
+		fill: #6EB8BF;
 	}
 	#svg-lamp-head {
-		fill: #AA6E89;
+		fill: #BE7193;
 	}
 	#svg-light-halo {
 		animation: lights-off .1s ease-in;
