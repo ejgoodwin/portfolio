@@ -838,33 +838,47 @@ footer {
 	opacity: 1;
 	transition: .2s;
 }
-#svg-code-editor,
 #svg-browser-window,
+#svg-code-editor,
+#svg-lamp-base,
+#svg-lamp-head-elipsis-highlight,
+#svg-lamp-head-main-highlight,
+#svg-lamp-head-rect,
 #svg-light-bulb,
-#svg-mug-handle,
-#svg-lamp-head {
+#svg-mug,
+#svg-monitor-base,
+#svg-post-it-strike  {
 	transition: .2s;
+}
+#svg-post-it-strike {
+	stroke-width: 0;
 }
 .lights-off {
 	#svg-code-editor,
 	#svg-browser-window,
-	#svg-mug-shadow,
-	#svg-lamp-base-shadow,
-	#svg-monitor-shadow {
+	#svg-lamp-head-elipsis-highlight {
 		opacity: 0;
+	}
+	#svg-lamp-base,
+	#svg-lamp-head-rect,
+	#svg-lamp-head-main-highlight {
+		fill: #B16084;
 	}
 	#svg-light-bulb {
 		fill: #F7F0D2;
 	}
-	#svg-mug-handle {
-		fill: #6EB8BF;
+	#svg-mug {
+		fill: #57a9b1;
 	}
-	#svg-lamp-head {
-		fill: #BE7193;
+	#svg-monitor-base {
+		fill: #9DA0B4;
 	}
 	#svg-light-halo {
 		animation: lights-off .1s ease-in;
 		transform: translate(193.23px, 74px) scale(0);
+	}
+	#svg-post-it-strike {
+		stroke-width: 1px;
 	}
 }
 .lights-on #svg-light-halo {
