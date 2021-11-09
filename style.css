@@ -835,8 +835,6 @@ li {
 }
 .website__header a {
   padding: 20px 0 0;
-}
-.website__header a:hover {
   text-decoration: underline;
 }
 .website__btn {
