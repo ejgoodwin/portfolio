@@ -112,14 +112,14 @@ li {
 }
 
 .btn {
-	padding: .5rem 1rem;
+	padding: .6rem 1rem;
 	text-align: center;
 	color: #fff;
 	background: $primary;
 	text-decoration: none;
 	width: 100%;
 	margin: .5rem 0;
-	border-radius: 3px;
+	border-radius: 2rem;
 	&:hover {
 		background-color: darken($primary, 10%);
 		transition: .3s;
