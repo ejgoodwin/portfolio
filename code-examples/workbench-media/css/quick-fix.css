@@ -1,3 +1,30 @@
 .pagination .btn {
     align-items: center;
 }
+
+@media (max-width: 800px) {
+    .header {
+        padding: 8px;
+        position: static;
+    }
+    .header__details {
+        flex-wrap: wrap;
+    }
+    .header-progress {
+        display: none;
+    }
+    .header__icons:after {
+        display: none;
+    }
+    .main {
+        margin-top: 1rem;
+    }
+    .translation-section {
+        width: 100%;
+    }
+    .tools-section {
+        position: static;
+        width: 100%;
+    }
+
+}
