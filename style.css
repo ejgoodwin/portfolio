@@ -19,7 +19,7 @@ h3 {
 }
 
 h1, h2, h3 {
-  color: #4353a3;
+  color: #435197;
   font-family: "Montserrat", sans-serif;
   line-height: 1.5;
 }
@@ -61,14 +61,14 @@ body {
 
 a {
   display: inline-block;
-  color: #4353a3;
+  color: #435197;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
   text-decoration: none;
 }
 a:hover {
-  color: #34417f;
+  color: #333e74;
 }
 
 p a {
@@ -98,14 +98,14 @@ li {
   padding: 0.6rem 1rem;
   text-align: center;
   color: #fff;
-  background: #4353a3;
+  background: #435197;
   text-decoration: none;
   width: 100%;
   margin: 0.5rem 0;
   border-radius: 2rem;
 }
 .btn:hover {
-  background-color: #34417f;
+  background-color: #333e74;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -164,7 +164,7 @@ li {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100%;
-  background: #4353a3;
+  background: #435197;
   margin: 0;
 }
 .dropdown-menu__list-item {
@@ -210,7 +210,7 @@ li {
   color: rgba(255, 255, 255, 0.9);
 }
 .header__role {
-  background: #4353a3;
+  background: #435197;
   padding: 2.5rem 1rem 1rem;
 }
 .header__role-text {
@@ -238,7 +238,7 @@ li {
           margin-inline-end: 0.5rem;
 }
 .header__social a:hover {
-  color: #5d6dbc;
+  color: #5868b5;
 }
 @media only screen and (min-width: 500px) {
   .header__role-image {
@@ -250,7 +250,7 @@ li {
     min-height: 100vh;
   }
   .header::after {
-    background: #4353a3;
+    background: #435197;
     -webkit-clip-path: polygon(0 0, 100% 0, 64% 100%, 0% 100%);
             clip-path: polygon(0 0, 100% 0, 64% 100%, 0% 100%);
     content: "";
@@ -515,7 +515,7 @@ li {
   cursor: pointer;
 }
 .hamburger:hover .hamburger__line {
-  background-color: #5d6dbc;
+  background-color: #5868b5;
 }
 .hamburger__line {
   display: block;
@@ -532,7 +532,7 @@ li {
 }
 @media only screen and (min-width: 800px) {
   .hamburger__line {
-    background: #4353a3;
+    background: #435197;
   }
 }
 .hamburger__line:last-of-type {
@@ -612,7 +612,7 @@ li {
   padding-bottom: 1rem;
   margin-top: 0;
   margin-bottom: 0.5rem;
-  color: #4353a3;
+  color: #435197;
 }
 .feature-project__title::after {
   content: "";
@@ -779,7 +779,7 @@ li {
   padding: 2rem 0 0;
 }
 .all-projects h2 {
-  color: #4353a3;
+  color: #435197;
 }
 @media only screen and (min-width: 800px) {
   .all-projects h2 {
@@ -863,7 +863,7 @@ li {
   position: absolute;
   left: -18px;
   top: 4px;
-  color: #4353a3;
+  color: #435197;
 }
 @media only screen and (min-width: 800px) {
   .website {
@@ -889,7 +889,7 @@ li {
   margin: 100px auto;
 }
 .animation__header {
-  color: #4353a3;
+  color: #435197;
   font-size: 2rem;
   font-weight: 500;
 }
@@ -910,10 +910,10 @@ footer {
   padding: 2rem 1rem;
 }
 footer a {
-  color: #4353a3;
+  color: #435197;
 }
 footer a:hover {
-  color: #5d6dbc;
+  color: #5868b5;
 }
 footer i {
   font-size: 2.5rem;
