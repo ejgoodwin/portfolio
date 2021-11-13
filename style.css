@@ -307,8 +307,8 @@ li {
     z-index: 1;
   }
   .header__name {
-    -webkit-animation: text-appear 0.3s ease-in 0.8s;
-            animation: text-appear 0.3s ease-in 0.8s;
+    -webkit-animation: text-appear 0.3s ease-in 0.9s;
+            animation: text-appear 0.3s ease-in 0.9s;
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards;
     display: grid;
