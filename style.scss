@@ -238,15 +238,15 @@ li {
 	@include device800 {
 		min-height: 100vh;
 		&::after {
-			// animation: header-slide .5s ease-in .3s;
-			// animation-fill-mode: forwards;
+			animation: header-slide .5s ease-in-out .2s;
+			animation-fill-mode: forwards;
 			background: $primary;
-			clip-path: polygon(0 0, 100% 0, 64% 100%, 0% 100%);
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 			content: '';
 			bottom: 0;
 			left: 0;
 			position: absolute;
-			right: 35%;
+			right: 100%;
 			top: 0;
 		}
 		&__content {
@@ -254,16 +254,20 @@ li {
 			grid-template-columns: repeat(12, 1fr);
 			min-height: 100vh;
 			margin: auto;
-			max-width: 1400px;
 		}
 		&__role {
+			animation: text-appear .3s ease-in .7s;
+			animation-fill-mode: forwards;
 			background: 0;
 			display: flex;
 			flex-direction: column;
 			grid-column: 1 / span 7;
 			justify-content: flex-start;
+			opacity: 0;
 			padding: 3rem;
 			position: relative;
+			transform: translateY(-10px);
+			z-index: 1;
 		}
 		&__role-text {
 			font-size: 3rem;
@@ -277,13 +281,17 @@ li {
 			z-index: 1;
 		}
 		&__name {
+			animation: text-appear .3s ease-in .8s;
+			animation-fill-mode: forwards;
 			display: grid;
 			grid-column: 8 / span 5;
 			grid-template-areas:
 				"blank"
 				"content";
 			grid-template-rows: repeat(2, 1fr);
+			opacity: 0;
 			padding: 0 3rem 3rem 0;
+			transform: translateY(-10px);
 		}
 		&__name-content {
 			align-self: end;
@@ -307,7 +315,7 @@ li {
 			padding: 4rem;
 		}
 		&__role-image {
-			max-width: 500px;
+			max-width: 80%;
 		}
 		&__role-text {
 			font-size: 3.5rem;
@@ -318,16 +326,17 @@ li {
 @keyframes header-slide {
 	0% {
 		clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-		right: 0;
+		// left: 0;
+		right: 100%;
 	}
 	100% {
-		clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
-		right: 45%;
+		clip-path: polygon(0 0, 100% 0, 64% 100%, 0% 100%);
+		right: 35%;
 	}
 }
 @keyframes text-appear {
 	0% {
-		transform: translateY(-20px);
+		transform: translateY(-10px);
 		opacity: 0;
 	}
 	100% {

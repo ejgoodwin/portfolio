@@ -250,14 +250,18 @@ li {
     min-height: 100vh;
   }
   .header::after {
+    -webkit-animation: header-slide 0.5s ease-in-out 0.2s;
+            animation: header-slide 0.5s ease-in-out 0.2s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
     background: #435197;
-    -webkit-clip-path: polygon(0 0, 100% 0, 64% 100%, 0% 100%);
-            clip-path: polygon(0 0, 100% 0, 64% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     content: "";
     bottom: 0;
     left: 0;
     position: absolute;
-    right: 35%;
+    right: 100%;
     top: 0;
   }
   .header__content {
@@ -265,9 +269,12 @@ li {
     grid-template-columns: repeat(12, 1fr);
     min-height: 100vh;
     margin: auto;
-    max-width: 1400px;
   }
   .header__role {
+    -webkit-animation: text-appear 0.3s ease-in 0.7s;
+            animation: text-appear 0.3s ease-in 0.7s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
     background: 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -280,8 +287,13 @@ li {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    opacity: 0;
     padding: 3rem;
     position: relative;
+    -webkit-transform: translateY(-10px);
+        -ms-transform: translateY(-10px);
+            transform: translateY(-10px);
+    z-index: 1;
   }
   .header__role-text {
     font-size: 3rem;
@@ -295,11 +307,19 @@ li {
     z-index: 1;
   }
   .header__name {
+    -webkit-animation: text-appear 0.3s ease-in 0.8s;
+            animation: text-appear 0.3s ease-in 0.8s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
     display: grid;
     grid-column: 8/span 5;
     grid-template-areas: "blank" "content";
     grid-template-rows: repeat(2, 1fr);
+    opacity: 0;
     padding: 0 3rem 3rem 0;
+    -webkit-transform: translateY(-10px);
+        -ms-transform: translateY(-10px);
+            transform: translateY(-10px);
   }
   .header__name-content {
     align-self: end;
@@ -323,7 +343,7 @@ li {
     padding: 4rem;
   }
   .header__role-image {
-    max-width: 500px;
+    max-width: 80%;
   }
   .header__role-text {
     font-size: 3.5rem;
@@ -334,12 +354,12 @@ li {
   0% {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    right: 0;
+    right: 100%;
   }
   100% {
-    -webkit-clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
-            clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
-    right: 45%;
+    -webkit-clip-path: polygon(0 0, 100% 0, 64% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 64% 100%, 0% 100%);
+    right: 35%;
   }
 }
 
@@ -347,18 +367,18 @@ li {
   0% {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    right: 0;
+    right: 100%;
   }
   100% {
-    -webkit-clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
-            clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
-    right: 45%;
+    -webkit-clip-path: polygon(0 0, 100% 0, 64% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 64% 100%, 0% 100%);
+    right: 35%;
   }
 }
 @-webkit-keyframes text-appear {
   0% {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
     opacity: 0;
   }
   100% {
@@ -369,8 +389,8 @@ li {
 }
 @keyframes text-appear {
   0% {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
     opacity: 0;
   }
   100% {
