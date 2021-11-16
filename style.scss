@@ -436,13 +436,13 @@ li {
 			margin-bottom: 0;
 		}
 		&--1 {
-			animation: hamburger-jiggle .3s ease-out .5s;
+			animation: hamburger-jiggle .3s ease-out 1.4s;
 		}
 		&--2 {
-			animation: hamburger-jiggle .3s ease-out .6s;
+			animation: hamburger-jiggle .3s ease-out 1.5s;
 		}
 		&--3 {
-			animation: hamburger-jiggle .3s ease-out .7s;
+			animation: hamburger-jiggle .3s ease-out 1.6s;
 		}
 	}
 	&.hamburger-cross {

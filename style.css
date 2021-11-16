@@ -559,16 +559,16 @@ li {
   margin-bottom: 0;
 }
 .hamburger__line--1 {
-  -webkit-animation: hamburger-jiggle 0.3s ease-out 0.5s;
-          animation: hamburger-jiggle 0.3s ease-out 0.5s;
+  -webkit-animation: hamburger-jiggle 0.3s ease-out 1.4s;
+          animation: hamburger-jiggle 0.3s ease-out 1.4s;
 }
 .hamburger__line--2 {
-  -webkit-animation: hamburger-jiggle 0.3s ease-out 0.6s;
-          animation: hamburger-jiggle 0.3s ease-out 0.6s;
+  -webkit-animation: hamburger-jiggle 0.3s ease-out 1.5s;
+          animation: hamburger-jiggle 0.3s ease-out 1.5s;
 }
 .hamburger__line--3 {
-  -webkit-animation: hamburger-jiggle 0.3s ease-out 0.7s;
-          animation: hamburger-jiggle 0.3s ease-out 0.7s;
+  -webkit-animation: hamburger-jiggle 0.3s ease-out 1.6s;
+          animation: hamburger-jiggle 0.3s ease-out 1.6s;
 }
 .hamburger.hamburger-cross .hamburger__line--1 {
   -webkit-transform: rotate(225deg) translate(-7px, -7px);
