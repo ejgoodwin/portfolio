@@ -1,36 +1,32 @@
-$(document).ready(function() {
+// Menu.
+const dropdownMenu = document.querySelector('.js-dropdown-menu');
+const dropdownMenuLink = document.querySelectorAll('.dropdown-menu__link');
+const hamburgerToggle = document.querySelector('.js-hamburger');
 
+hamburgerToggle.addEventListener('click', function() {
+	if (this.classList.contains('hamburger-cross')) {
+		this.classList.remove('hamburger-cross');
+		dropdownMenu.classList.remove('dropdown-menu--open');
+	} else {
+		this.classList.add('hamburger-cross');
+		dropdownMenu.classList.add('dropdown-menu--open');
+	}
+});
 
-	$('.filter__btn').on('click', function() {
-		var $filter = $(this).attr('data-filter');
+// SVG toggle.
+const switchToggle = document.querySelector('#svg-switch-input');
 
-		$('.website').css('display', 'block');
-		$('.website').not($filter).css('display', 'none');
-	});
+switchToggle.addEventListener('click', function() {
+	let svgImage = document.querySelector('.header__role-image');
+	let svgCircle = document.querySelector('.svg-switch');
 
-	$('.filter__btn--all').on('click', function() {
-		$('.website').css('display', 'block');
-	});
-
-	$('.js-hamburger').click(function() {
-		$(this).toggleClass('hamburger-cross');
-		$('.js-dropdown-menu').toggleClass('dropdown-menu--open');
-	});
-
-	$('.dropdown-menu__link').click(function() {
-		$('.js-dropdown-menu').removeClass('dropdown-menu--open');
-		$('.js-hamburger').removeClass('hamburger-cross');
-	})
-
-	$('#svg-switch-input').click(function() {
-		let svgImage = $('.header__role-image');
-		let svgCircle = $('.svg-switch');
 		if (this.checked) {
-			svgImage.addClass('lights-off').removeClass('lights-on');
-			svgCircle.addClass('lights-off');
+			svgImage.classList.add('lights-off');
+			svgImage.classList.remove('lights-on');
+			svgCircle.classList.add('lights-off');
 		} else {
-			svgImage.removeClass('lights-off').addClass('lights-on');
-			svgCircle.removeClass('lights-off');
+			svgImage.classList.remove('lights-off');
+			svgImage.classList.add('lights-on');
+			svgCircle.classList.remove('lights-off');
 		}
-	})
 });

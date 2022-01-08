@@ -150,10 +150,9 @@ li {
 	top: 0;
 	left: 0;
 	right: 0;
-	height: 100vh;
+	height: 0;
 	padding: 5rem 2rem;
 	background: $secondary;
-	transform: translateY(-150%);
 	transition: .5s;
 	z-index: 2;
 	&__list {

@@ -138,12 +138,9 @@ li {
   top: 0;
   left: 0;
   right: 0;
-  height: 100vh;
+  height: 0;
   padding: 5rem 2rem;
   background: #221E27;
-  -webkit-transform: translateY(-150%);
-      -ms-transform: translateY(-150%);
-          transform: translateY(-150%);
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
