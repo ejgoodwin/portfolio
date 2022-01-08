@@ -9,6 +9,9 @@ $font-colour: #3e3d44;
 $headerFont 	: 'Montserrat', sans-serif;
 $bodyFont		: 'Work Sans', sans-serif;
 
+$spacing-small: .5rem;
+$spacing-medium: 1rem;
+
 /* ---------------- MEDIA QUERIES ----------------
 
 ------------------------------------------- */
@@ -177,7 +180,6 @@ li {
 		}
 	}
 	&--open {
-		background: $secondary;
 		transform: translateY(0);
 		transition: .5s;
 	}
@@ -770,6 +772,31 @@ li {
 
 iframe {
 	max-width: 800px;
+}
+
+// PROJECTS.
+.project {
+	padding: $spacing-small;
+
+	@include device800() {
+		display: grid;
+		grid-template: auto / repeat(2, 1fr);
+		padding: $spacing-medium;
+	}
+}
+
+.gallery {
+	display: grid;
+	grid-gap: $spacing-small;
+	grid-template: auto / repeat(2, 1fr);
+
+	&__item {
+		height: 150px;
+	}
+	
+	@include device800() {
+		grid-gap: $spacing-medium;
+	}
 }
 
 footer {

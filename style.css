@@ -181,7 +181,6 @@ li {
   color: white;
 }
 .dropdown-menu--open {
-  background: #221E27;
   -webkit-transform: translateY(0);
       -ms-transform: translateY(0);
           transform: translateY(0);
@@ -922,6 +921,31 @@ li {
 
 iframe {
   max-width: 800px;
+}
+
+.project {
+  padding: 0.5rem;
+}
+@media only screen and (min-width: 800px) {
+  .project {
+    display: grid;
+    grid-template: auto/repeat(2, 1fr);
+    padding: 1rem;
+  }
+}
+
+.gallery {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template: auto/repeat(2, 1fr);
+}
+.gallery__item {
+  height: 150px;
+}
+@media only screen and (min-width: 800px) {
+  .gallery {
+    grid-gap: 1rem;
+  }
 }
 
 footer {

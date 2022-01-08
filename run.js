@@ -33,5 +33,4 @@ $(document).ready(function() {
 			svgCircle.removeClass('lights-off');
 		}
 	})
-
 });
