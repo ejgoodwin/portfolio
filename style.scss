@@ -5,6 +5,7 @@ $secondary	: #221E27;
 $grey		: #F4F4F4;
 $grey-dark: #4A464D;
 $font-colour: #3e3d44;
+$chip-colour: #c5f0e2;
 
 $headerFont 	: 'Montserrat', sans-serif;
 $bodyFont		: 'Work Sans', sans-serif;
@@ -65,6 +66,7 @@ h1, h2, h3 {
 }
 
 img {
+	max-height: 100%;
 	max-width: 100%;
 }
 
@@ -122,7 +124,7 @@ li {
 	text-decoration: none;
 	width: 100%;
 	margin: .5rem 0;
-	border-radius: 2rem;
+	border-radius: 4px;
 	&:hover {
 		background-color: darken($primary, 10%);
 		transition: .3s;
@@ -131,9 +133,6 @@ li {
 	}
 	@include device500 {
 		width: auto;
-	}
-	@include device1200 {
-		font-size: 1.2rem;
 	}
 }
 
@@ -150,9 +149,10 @@ li {
 	top: 0;
 	left: 0;
 	right: 0;
-	height: 0;
+	height: 100vh;
 	padding: 5rem 2rem;
 	background: $secondary;
+	transform: translateY(-100%);
 	transition: .5s;
 	z-index: 2;
 	&__list {
@@ -207,6 +207,7 @@ li {
 	}
 	&__role-text {
 		line-height: 1.5;
+		max-width: 800px;
 	}
 	&__role-image {
 		display: block;
@@ -776,12 +777,36 @@ iframe {
 // PROJECTS.
 .project {
 	padding: $spacing-small;
+	margin: 5rem auto;
+
+	h2 {
+		margin-bottom: .5rem;
+	}
 
 	@include device800() {
 		display: grid;
+		grid-gap: 1rem;
 		grid-template: auto / repeat(2, 1fr);
 		padding: $spacing-medium;
+
+		&:nth-of-type(even) {
+			.project__info {
+				order: 1;
+			}
+		}
 	}
+}
+.chip-container {
+	display: flex;
+	gap: $spacing-small;
+	flex-wrap: wrap;
+	margin: .5rem 0 1rem;
+}
+
+.chip {
+	background: $chip-colour;
+	border-radius: 2rem;
+	padding: .25rem .75rem;
 }
 
 .gallery {
@@ -790,11 +815,72 @@ iframe {
 	grid-template: auto / repeat(2, 1fr);
 
 	&__item {
-		height: 150px;
+		cursor: pointer;
+
+		&:hover {
+			img {
+				box-shadow: 0px 0px 5px #b7b7b7;
+			}
+		}
+	}
+
+	img {
+		box-shadow: 0px 0px 3px #d8d8d8;
+		transition: .1s;
 	}
 	
 	@include device800() {
 		grid-gap: $spacing-medium;
+	}
+}
+
+.gallery-modal {
+	align-items: center;
+	background: rgba(black, .9);
+	bottom: 0;
+	display: none;
+	justify-content: center;
+	left: 0;
+	padding: 1rem;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 4;
+
+	&--open {
+		display: flex;
+	}
+
+	&__button {
+		align-items: center;
+		background: rgba(white, .5);
+		border: 0;
+		border-radius: 50%;
+		cursor: pointer;
+		display: flex;
+
+		font-size: 2rem;
+		height: 45px;
+		justify-content: center;
+		position: absolute;
+		width: 45px;
+	}
+
+	&__close {
+		top: 1rem;
+		right: 1rem;
+	}
+
+	&__next {
+		right: 1rem;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	&__prev {
+		left: 1rem;
+		top: 50%;
+		transform: translateY(-50%);
 	}
 }
 
