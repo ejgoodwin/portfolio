@@ -17,10 +17,13 @@
 <div class="dropdown-menu js-dropdown-menu">
 	<ul class="dropdown-menu__list">
 		<li class="dropdown-menu__list-item">
-			<a class="dropdown-menu__link" href="#feature-project">Feature project</a>
+			<a class="dropdown-menu__link" href="#tv">TV listings website</a>
 		</li>
 		<li class="dropdown-menu__list-item">
-			<a class="dropdown-menu__link" href="#all-projects">All projects</a>
+			<a class="dropdown-menu__link" href="#playlist">Spotify playlist creator</a>
+		</li>
+		<li class="dropdown-menu__list-item">
+			<a class="dropdown-menu__link" href="#othello">Othello game</a>
 		</li>
 	</ul>
 </div>
@@ -172,7 +175,7 @@
 
 <main class="main-body container">
 	<h2>Projects</h2>
-	<div class="project">
+	<div class="project" id="tv">
 		<div class="project__info">
 			<h3>TV listings website</h3>
 			<div class="chip-container">
@@ -181,9 +184,12 @@
 				<span class="chip">Material UI</span>
 			</div>
 			<h4>Aims</h4>
-			<p>These are my aims</p>
+			<p>Improve knowledge in React, hooks, React client-side routing and dynamic routes.</p>
 			<h4>Challenges</h4>
-			<p>These were the challenges</p>
+			<ul>
+				<li>Creating dynamic routes for the cast and shows. I used the IDs in the data to form part of the URL and created a component for shows and a component for cast members.</li>
+				<li>Refreshing pages caused app to lose state. Initially, I wanted to handle state in a parent component and pass the data down to the child when required, however, the state was lost when the page refreshed. So, I fetched and stored the data in the cast or show component, utilising the URL parameters that include the cast or show's ID. This could be an opportunity to expand the project and add Redux to handle state of the components and ensure state persists.</li>
+			</ul>
 			<a class="btn" href="https://ejgoodwin.github.io/tv-shows" target="_blank">Visit website</a>
 			<a class="btn" href="https://github.com/ejgoodwin/tv-shows" target="_blank">Visit GitHub</a>
 		</div>
@@ -213,7 +219,7 @@
 		</div>
 	</div>
 
-	<div class="project">
+	<div class="project" id="playlist">
 		<div class="project__info">
 			<h3>Spotify playlist creator</h3>
 			<div class="chip-container">
@@ -222,9 +228,12 @@
 				<span class="chip">Spotify web API</span>
 			</div>
 			<h4>Aims</h4>
-			<p>These are my aims</p>
+			<p>Use Spotiy web API to search for related artists and tracks, create a playlist and add tracks to them. Understand how to develop custom web components.</p>
 			<h4>Challenges</h4>
-			<p>These were the challenges</p>
+			<ul>
+				<li>Encapsulation made it difficult to use consistent styles because styles cannot penetrate the shadow DOM. However, custom properties can be referenced inside the web component and set in a main stylesheet, external to the component. This helps to keep colours, fonts and spacing consistent.</li>
+				<li>The template that Spotify provides is written in Node.js, so my next step in this project is to better understand Node and OAuth so that I can adapt the flow slightly.</li>
+			</ul>
 			<a class="btn" href="https://github.com/ejgoodwin/playlist-generator" target="_blank">Visit GitHub</a>
 		</div>
 		<div class="gallery-container">
@@ -253,7 +262,7 @@
 		</div>
 	</div>
 
-	<div class="project">
+	<div class="project" id="othello">
 		<div class="project__info">
 			<h3>Othello game with minimax and Monte Carlo tree search</h3>
 			<div class="chip-container">
@@ -262,9 +271,12 @@
 				<span class="chip">AI search algorithms</span>
 			</div>
 			<h4>Aims</h4>
-			<p>These are my aims</p>
+			<p>I initially built a web version in JS that uses minimax to select a move so the user can play against the computer. I wanted to expand this idea for a university module, so I implemented the game in Java and added alpha-beta pruning and MCTS so that I could study and compare the algorithms.</p>
 			<h4>Challenges</h4>
-			<p>These were the challenges</p>
+			<ul>
+				<li>Understanding the game tree and how to create a search tree. The implementation of MCTS was very different to the brute force minimax and AB, so understanding how to traverse the tree, creating nodes and calculating the best node to expand was a great learning experience.</li>
+				<li>Implementing the game logic.</li>
+			</ul>
 			<a class="btn" href="https://ejgoodwin.github.io/reversi/" target="_blank">Play web version</a>
 			<a class="btn" href="https://github.com/ejgoodwin/IRP-Prototype-Othello" target="_blank">Visit GitHub</a>
 		</div>
@@ -282,12 +294,12 @@
 				</li>
 				<li class="gallery__item">
 					<a class="gallery__item-link">
-						<img src="images/project-gallery/othello-java-small.jpg" alt="" data-image="images/project-gallery/othello-java.jpg">
+						<img src="images/project-gallery/othello-java-small.jpg" alt="" data-image="images/project-gallery/othello-java.png">
 					</a>
 				</li>
 				<li class="gallery__item">
 					<a class="gallery__item-link">
-						<img src="images/project-gallery/othello-java-back-small.jpg" alt="" data-image="images/project-gallery/othello-java-back.jpg">
+						<img src="images/project-gallery/othello-java-back-small.jpg" alt="" data-image="images/project-gallery/othello-java-back.png">
 					</a>
 				</li>
 			</ul>

@@ -13,6 +13,13 @@ hamburgerToggle.addEventListener('click', function() {
 	}
 });
 
+dropdownMenuLink.forEach(link => {
+	link.addEventListener('click', () => {
+		dropdownMenu.classList.remove('dropdown-menu--open');
+		hamburgerToggle.classList.remove('hamburger-cross');
+	});
+});
+
 // SVG toggle.
 const switchToggle = document.querySelector('#svg-switch-input');
 
@@ -32,14 +39,14 @@ switchToggle.addEventListener('click', function() {
 });
 
 // Gallery.
+const galleryModal = document.querySelector('.gallery-modal');
 const imageLinks = document.querySelectorAll('.gallery__item-link');
 const modalCloseButton = document.querySelector('.gallery-modal__close');
 const modalPrevButton = document.querySelector('.gallery-modal__prev');
 const modalNextButton = document.querySelector('.gallery-modal__next');
 
 const closeModal = () => {
-	console.log(document.querySelector('.gallery-modal'));
-	document.querySelector('.gallery-modal').classList.remove('gallery-modal--open');
+	galleryModal.classList.remove('gallery-modal--open');
 	const currentImage = document.querySelector('.image-current');
 	currentImage.classList.remove('image-current');
 	modalPrevButton.removeAttribute('disabled');
@@ -48,7 +55,6 @@ const closeModal = () => {
 
 const checkPrevNext = () => {
 	const currentImage = document.querySelector('.image-current');
-	console.log(currentImage.closest('.gallery__item'));
 	const prevImage = currentImage.closest('.gallery__item').previousElementSibling;
 	const nextImage = currentImage.closest('.gallery__item').nextElementSibling;
 
@@ -60,8 +66,7 @@ const changeImage = e => {
 	const next = e.target.closest('.gallery-modal__button').classList.contains('gallery-modal__next') ? true : false;
 	modalPrevButton.removeAttribute('disabled');
 	modalNextButton.removeAttribute('disabled');
-	const modal = document.querySelector('.gallery-modal');
-	const image = modal.querySelector('img');
+	const image = galleryModal.querySelector('img');
 	// Find current image
 	const currentImage = document.querySelector('.image-current');
 	const currentItem = currentImage.closest('.gallery__item');
@@ -78,9 +83,8 @@ const changeImage = e => {
 const galleryLink = (e) => {
 	e.preventDefault();
 	e.target.classList.add('image-current');
-	const modal = document.querySelector('.gallery-modal');
-	const image = modal.querySelector('img');
-	modal.classList.add('gallery-modal--open');
+	const image = galleryModal.querySelector('img');
+	galleryModal.classList.add('gallery-modal--open');
 	image.src = e.target.dataset.image;
 	checkPrevNext();
 }
@@ -89,4 +93,5 @@ modalCloseButton.addEventListener('click', closeModal);
 modalNextButton.addEventListener('click', changeImage);
 modalPrevButton.addEventListener('click', changeImage);
 imageLinks.forEach(link => link.addEventListener('click', galleryLink));
+galleryModal.addEventListener('click', (e) => e.target === galleryModal && closeModal());
 

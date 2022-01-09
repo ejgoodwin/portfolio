@@ -53,6 +53,9 @@ h3 {
 	font-size: 1.5rem;
 	margin: 0;
 }
+h4 {
+	margin: 1.75rem 0 1rem;
+}
 h1, h2, h3 {
 	color: $primary;
 	font-family: $headerFont;
@@ -63,6 +66,10 @@ h1, h2, h3 {
 	h1 {font-size: 3.5rem;}
 	h2 {font-size: 2.5rem;}
 	h3 {font-size: 1.5rem;}
+}
+
+li {
+	margin: .5rem 0;
 }
 
 img {
@@ -108,13 +115,6 @@ p, li {
 	font-family: $bodyFont;
 	line-height: 1.5;
 }
-ul {
-	padding: 0;
-}
-li {
-	list-style: none;
-	padding: 5px 0;
-}
 
 .btn {
 	padding: .6rem 1rem;
@@ -156,13 +156,15 @@ li {
 	transition: .5s;
 	z-index: 2;
 	&__list {
-		display: flex;
-		justify-content: center;
 		align-items: center;
+		background: $primary;
+		display: flex;
 		flex-direction: column;
 		height: 100%;
-		background: $primary;
+		justify-content: center;
+		list-style: none;
 		margin: 0;
+		padding: 0;
 	}
 	&__list-item {
 		text-align: center;
@@ -776,18 +778,20 @@ iframe {
 
 // PROJECTS.
 .project {
-	padding: $spacing-small;
 	margin: 5rem auto;
 
 	h2 {
 		margin-bottom: .5rem;
 	}
 
+	&:first-of-type {
+		margin-top: 0;
+	}
+
 	@include device800() {
 		display: grid;
-		grid-gap: 1rem;
+		grid-gap: 2rem;
 		grid-template: auto / repeat(2, 1fr);
-		padding: $spacing-medium;
 
 		&:nth-of-type(even) {
 			.project__info {
@@ -813,9 +817,12 @@ iframe {
 	display: grid;
 	grid-gap: $spacing-small;
 	grid-template: auto / repeat(2, 1fr);
+	list-style: none;
+	padding: 0;
 
 	&__item {
 		cursor: pointer;
+		margin: 0;
 
 		&:hover {
 			img {

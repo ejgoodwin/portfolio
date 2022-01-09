@@ -18,6 +18,10 @@ h3 {
   margin: 0;
 }
 
+h4 {
+  margin: 1.75rem 0 1rem;
+}
+
 h1, h2, h3 {
   color: #435197;
   font-family: "Montserrat", sans-serif;
@@ -37,6 +41,10 @@ h1, h2, h3 {
     font-size: 1.5rem;
   }
 }
+li {
+  margin: 0.5rem 0;
+}
+
 img {
   max-height: 100%;
   max-width: 100%;
@@ -84,15 +92,6 @@ p, li {
   color: #3e3d44;
   font-family: "Work Sans", sans-serif;
   line-height: 1.5;
-}
-
-ul {
-  padding: 0;
-}
-
-li {
-  list-style: none;
-  padding: 5px 0;
 }
 
 .btn {
@@ -146,22 +145,24 @@ li {
   z-index: 2;
 }
 .dropdown-menu__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: #435197;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100%;
-  background: #435197;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
   margin: 0;
+  padding: 0;
 }
 .dropdown-menu__list-item {
   text-align: center;
@@ -921,18 +922,19 @@ iframe {
 }
 
 .project {
-  padding: 0.5rem;
   margin: 5rem auto;
 }
 .project h2 {
   margin-bottom: 0.5rem;
 }
+.project:first-of-type {
+  margin-top: 0;
+}
 @media only screen and (min-width: 800px) {
   .project {
     display: grid;
-    grid-gap: 1rem;
+    grid-gap: 2rem;
     grid-template: auto/repeat(2, 1fr);
-    padding: 1rem;
   }
   .project:nth-of-type(even) .project__info {
     -webkit-box-ordinal-group: 2;
@@ -961,9 +963,12 @@ iframe {
   display: grid;
   grid-gap: 0.5rem;
   grid-template: auto/repeat(2, 1fr);
+  list-style: none;
+  padding: 0;
 }
 .gallery__item {
   cursor: pointer;
+  margin: 0;
 }
 .gallery__item:hover img {
   -webkit-box-shadow: 0px 0px 5px #b7b7b7;
