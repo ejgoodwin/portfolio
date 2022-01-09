@@ -129,19 +129,19 @@ p, li {
 }
 
 .dropdown-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100vh;
-  padding: 5rem 2rem;
   background: #221E27;
+  height: 100vh;
+  left: 0;
+  padding: 5rem 2rem;
+  position: fixed;
+  right: 0;
   -webkit-transform: translateY(-100%);
       -ms-transform: translateY(-100%);
           transform: translateY(-100%);
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  top: 0;
   z-index: 2;
 }
 .dropdown-menu__list {
@@ -157,20 +157,18 @@ p, li {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 1rem;
 }
 .dropdown-menu__list-item {
   text-align: center;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .dropdown-menu__link {
-  padding: 1.5rem;
   color: rgba(255, 255, 255, 0.8);
   border-bottom: 4px solid transparent;
 }
@@ -190,7 +188,7 @@ p, li {
     padding: 5rem;
   }
   .dropdown-menu__list-item {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 
@@ -555,18 +553,6 @@ p, li {
 .hamburger__line:last-of-type {
   margin-bottom: 0;
 }
-.hamburger__line--1 {
-  -webkit-animation: hamburger-jiggle 0.3s ease-out 1.4s;
-          animation: hamburger-jiggle 0.3s ease-out 1.4s;
-}
-.hamburger__line--2 {
-  -webkit-animation: hamburger-jiggle 0.3s ease-out 1.5s;
-          animation: hamburger-jiggle 0.3s ease-out 1.5s;
-}
-.hamburger__line--3 {
-  -webkit-animation: hamburger-jiggle 0.3s ease-out 1.6s;
-          animation: hamburger-jiggle 0.3s ease-out 1.6s;
-}
 .hamburger.hamburger-cross .hamburger__line--1 {
   -webkit-transform: rotate(225deg) translate(-7px, -7px);
       -ms-transform: rotate(225deg) translate(-7px, -7px);
@@ -584,27 +570,6 @@ p, li {
           transform: rotate(-225deg) translate(-8px, 9px);
 }
 
-@-webkit-keyframes hamburger-jiggle {
-  50% {
-    -webkit-transform: translateY(-4px);
-            transform: translateY(-4px);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@keyframes hamburger-jiggle {
-  50% {
-    -webkit-transform: translateY(-4px);
-            transform: translateY(-4px);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
 /* ---------------- Feature Project ----------------
 
 ------------------------------------------- */

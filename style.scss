@@ -145,15 +145,15 @@ p, li {
 }
 
 .dropdown-menu {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	height: 100vh;
-	padding: 5rem 2rem;
 	background: $secondary;
+	height: 100vh;
+	left: 0;
+	padding: 5rem 2rem;
+	position: fixed;
+	right: 0;
 	transform: translateY(-100%);
 	transition: .5s;
+	top: 0;
 	z-index: 2;
 	&__list {
 		align-items: center;
@@ -161,19 +161,18 @@ p, li {
 		display: flex;
 		flex-direction: column;
 		height: 100%;
-		justify-content: center;
+		justify-content: space-around;
 		list-style: none;
 		margin: 0;
-		padding: 0;
+		padding: 1rem;
 	}
 	&__list-item {
 		text-align: center;
 		font-weight: 600;
-		font-size: 2rem;
+		font-size: 1.5rem;
 
 	}
 	&__link {
-		padding: 1.5rem;
 		color: rgba(#fff, .8);
 		border-bottom: 4px solid transparent;
 		&:hover {
@@ -187,7 +186,7 @@ p, li {
 	@include device800 {
 		padding: 5rem;
 		&__list-item {
-			font-size: 4rem;
+			font-size: 3rem;
 		}
 	}
 }
@@ -439,20 +438,8 @@ p, li {
 		&:last-of-type {
 			margin-bottom: 0;
 		}
-		&--1 {
-			animation: hamburger-jiggle .3s ease-out 1.4s;
-		}
-		&--2 {
-			animation: hamburger-jiggle .3s ease-out 1.5s;
-		}
-		&--3 {
-			animation: hamburger-jiggle .3s ease-out 1.6s;
-		}
 	}
 	&.hamburger-cross {
-		// .hamburger__line {
-		// 	background: $primary;
-		// }
 		.hamburger__line--1 {
 			transform: rotate(225deg) translate(-7px, -7px);
 		}
@@ -463,14 +450,6 @@ p, li {
 		.hamburger__line--3 {
 			transform: rotate(-225deg) translate(-8px, 9px);
 		}
-	}
-}
-@keyframes hamburger-jiggle {
-	50% {
-		transform: translateY(-4px);
-	}
-	100% {
-		transform: translateY(0);
 	}
 }
 
