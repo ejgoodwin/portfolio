@@ -6,7 +6,7 @@
 	<meta property="og:description" content="Frontend developer with a creative background and a love for building beautiful interfaces.">
 	<meta name="image" property="og:image" content="https://ejgoodwin.github.io/portfolio/images/share-image-v2.png">
 	<meta name="description" content="Erica Goodwin's dev and design potfolio.">
-	<title>Erica Goodwin | UI/UX design and development</title>
+	<title>Erica Goodwin | UI design and development</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="icon" href="images/favicon.png">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
@@ -17,10 +17,16 @@
 <div class="dropdown-menu js-dropdown-menu">
 	<ul class="dropdown-menu__list">
 		<li class="dropdown-menu__list-item">
-			<a class="dropdown-menu__link" href="#feature-project">Feature project</a>
+			<a class="dropdown-menu__link" href="#tv">TV listings website</a>
 		</li>
 		<li class="dropdown-menu__list-item">
-			<a class="dropdown-menu__link" href="#all-projects">All projects</a>
+			<a class="dropdown-menu__link" href="#playlist">Spotify playlist creator</a>
+		</li>
+		<li class="dropdown-menu__list-item">
+			<a class="dropdown-menu__link" href="#othello">Othello game</a>
+		</li>
+		<li class="dropdown-menu__list-item">
+			<a class="dropdown-menu__link" href="#workbench">UI design and development</a>
 		</li>
 	</ul>
 </div>
@@ -28,7 +34,7 @@
 <header class="header">
 	<div class="header__content">
 		<div class="header__role">
-			<h1 class="header__role-text">Frontend development and UI/UX design</h1>
+			<h1 class="header__role-text">Frontend development and UI design</h1>
 			<!-- SVG START -->
 			<div class="header__role-image">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1430 623">
@@ -170,140 +176,196 @@
 	</div>
 </header>
 
-<main class="main-body">
-
-		<div class="feature-project" id="feature-project">
-			<div class="container">
-				<div class="feature-project__heading">
-						<div class="feature-project__title-container">
-							<h2 class="feature-project__title">UI design and development: <br>web apps and email </h2>
-							<p class="feature-project__subtitle">Feature project</p>
-						</div>
-						<div class="feature-project__vid">
-							<video width="100%" autoplay muted loop controls>
-								<source src="images/workbench-vid.mp4" type="video/mp4">
-							</video>
-						</div>
-				</div>
+<main class="main-body container">
+	<h2>Projects</h2>
+	<div class="project" id="tv">
+		<div class="project__info">
+			<h3>TV listings website</h3>
+			<div class="chip-container">
+				<span class="chip">React</span>
+				<span class="chip">React routing</span>
+				<span class="chip">Material UI</span>
 			</div>
-			<div class="feature-project__description">
-				<div class="feature-project__description-container container">
-					<div class="feature-project__paragraph">
-						<p>This project offered an exciting opportunity to redesign and develop the UI of internal web applications and client-facing emails for an international translations company. I focused on reusable components that would provide consistency across the applications. </p>
-						<p>A pattern library streamlined UI development by providing reusable components and patterns that created a coherent user experience. Created at <a href="https://www.strakertranslations.com/" target="_blank">Straker Translations</a>.</p>
-						<a class="btn" href="code-examples/workbench-media/index.html" target="_blank" rel="noreferrer">UI example 1</a>
-						<a class="btn" href="code-examples/vendor-portal/index.html" target="_blank" rel="noreferrer">UI example 2</a>
-					</div>
-					<div class="feature-project__mobile-container">
-						<img class="feature-project__mobile-pic" src=images/mobile.png alt=""></img>
-					</div>
-				</div>
-			</div>
-			<div class="feature-project__tiles">
-				<img src="images/all-squares_v4.jpg" alt="">
-			</div>
-			<div class="feature-project__email">
-				<div class="feature-project__email-img-large">
-					<img src="images/email-business_2.jpg" alt="email for business enquiries">
-				</div>
-				<div class="feature-project__email-text">
-					<h3>Email redesign</h3>
-					<p>A redesign gave the company's emails a fresh, professional feel.</p> 
-					<p>Tables and inline styles ensured emails rendered correctly across all browsers and email clients. Created at <a href="https://www.strakertranslations.com/" target="_blank">Straker Translations</a>.</p>
-					<a class="btn" href="code-examples/quote-email-template.html" target="_blank" rel="noreferrer">Email template</a>
-					<img src="images/email-quote.jpg" alt="email for quote">
-				</div>
-			</div>
+			<h4>Aims</h4>
+			<p>Improve knowledge in React, hooks, React client-side routing and dynamic routes.</p>
+			<h4>Challenges</h4>
+			<ul>
+				<li>Dynamic routes for the cast and shows. I used the IDs in the data to form part of the URL and created a component for shows and cast members.</li>
+				<li>Refreshing pages caused the app to lose state. Initially, I wanted to handle state in a parent component and pass the data down to the child when required. However, the state was lost when the page refreshed, so I fetched and stored the data in the cast or show component, utilising the URL parameters that include the cast or show's ID. The issue of losing state could be an opportunity to expand the project and add Redux to handle the state of the components and ensure the state persists.</li>
+			</ul>
+			<a class="btn" href="https://ejgoodwin.github.io/tv-shows" target="_blank">Visit website</a>
+			<a class="btn" href="https://github.com/ejgoodwin/tv-shows" target="_blank">Visit GitHub</a>
 		</div>
-
-		<!-- ******************* -->
-		<div class="container">
-			<div class="all-projects" id="all-projects">
-				<div class="all-projects__title">
-					<h2>Projects</h2>
-				</div>
-			</div>
-
-			<div class="website-container">
-				<div class="website design development">
-					<div class="website__image">
-						<img src="images/playlist-generator.jpg" alt="">
-					</div>
-
-					<div class="website__info">
-						<h3 class="website__header"><a href="https://github.com/ejgoodwin/playlist-generator" target="_blank" rel="noreferrer">Spotify playlist generator</a></h3>
-						<ul>
-							<li>WIP personal development and design project</li>
-							<li>Used Spotify Web API to create playlists, search for an artist and select suggested tracks</li>
-							<li>Spotify's play button is embedded to allow users to preview songs</li>
-						</ul>
-						<a href="https://github.com/ejgoodwin/playlist-generator" class="btn">GitHub repo</a>
-					</div>
-				</div>
-
-				<div class="website design development">
-					<div class="website__image">
-						<img src="images/weather-app.jpg" alt="">
-					</div>
-
-					<div class="website__info">
-						<h3 class="website__header"><a href="https://github.com/ejgoodwin/weather-react" target="_blank" rel="noreferrer">Weather app (React JS)</a></h3>
-						<ul>
-							<li>Personal development and design project</li>
-							<li>Used APIs to fetch weather data and goecoding</li>
-							<li>Display icons and background images based on the app's state</li>
-						</ul>
-						<a href="https://github.com/ejgoodwin/weather-react" class="btn">GitHub repo</a>
-					</div>
-				</div>
-
-				<div class="website development design">
-					<div class="website__image">
-						<img src="images/ara-locksmiths.jpg" alt="">
-					</div>
-					
-					<div class="website__info">
-						<h3 class="website__header"><a href="https://locksmiths.aragroup.com.au/" target="_blank" rel="noreferrer">ARA Locksmiths</a></h3>
-						<ul>
-							<li>Development and design project</li>
-							<li>Client wanted full access to the CMS - WordPress backend simplicity was important</li>
-							<li>I designed and built this theme so that it could be used as a more general theme to satisfy the needs to two of our similar companies</li>
-							<li>Created at <a target="_blank" href="https://aragroup.com.au/" rel="noreferrer">ARA</a></li>
-						</ul>
-						<a href="https://locksmiths.aragroup.com.au/" class="btn">ARA Locksmiths</a>
-					</div>
-				</div>
-
-				<div class="website development">
-					<div class="website__image">
-						<img src="images/cond-env.jpg" alt="">
-					</div>
-
-					
-					<div class="website__info">
-						<h3 class="website__header"><a href="http://www.conditioned-environment.co.uk/" target="_blank" rel="noreferrer">Conditioned Environment</a></h3>
-						<ul>
-							<li>Development project</li>
-							<li>Air conditioning company with many large clients</li>
-							<li>Liaised regularly with external departments for content and branding</li>
-							<li>The client was heavily involved and wanted full CMS access - WordPress backend simplicity was important</li>
-							<li>Created at <a target="_blank" href="https://www.adtrak.co.uk/" rel="noreferrer">Adtrak</a></li>
-						</ul>
-						<a href="http://www.conditioned-environment.co.uk/" class="btn">Conditioned Environment</a>
-					</div>
-				</div>
-			</div>
+		<div class="gallery-container">
+			<ul class="gallery">
+				<li class="gallery__item">
+					<a class="gallery__item-link">
+						<img src="images/project-gallery/tv-home-small.jpg" alt="" data-image="images/project-gallery/tv-home.jpg">
+					</a>
+				</li>
+				<li class="gallery__item">
+					<a class="gallery__item-link">
+						<img src="images/project-gallery/tv-show-small.jpg" alt="" data-image="images/project-gallery/tv-show.jpg">
+					</a>
+				</li>
+				<li class="gallery__item">
+					<a class="gallery__item-link">
+						<img src="images/project-gallery/tv-light-search-small.jpg" alt="" data-image="images/project-gallery/tv-light-search.jpg">
+					</a>
+				</li>
+				<li class="gallery__item">
+					<a class="gallery__item-link">
+						<img src="images/project-gallery/tv-cast-small.jpg" alt="" data-image="images/project-gallery/tv-cast.jpg">
+					</a>
+				</li>
+			</ul>
 		</div>
+	</div>
 
-		<footer id="contact">
-			<p>
-				<a href="https://www.linkedin.com/in/erica-goodwin-4b6b64112/" target="_blank" rel="noreferrer"><i class="fab fa-linkedin"></i></a> 
-				<a href="https://github.com/ejgoodwin" target="_blank" rel="noreferrer"><i class="fab fa-github-square"></i></a>
-			</p>
-		</footer>
+	<div class="project" id="playlist">
+		<div class="project__info">
+			<h3>Spotify playlist creator</h3>
+			<div class="chip-container">
+				<span class="chip">JavaScript</span>
+				<span class="chip">Web components</span>
+				<span class="chip">Spotify web API</span>
+			</div>
+			<h4>Aims</h4>
+			<p>Use Spotify web API to search for related artists and tracks, create a playlist and add tracks. Understand how to develop custom web components.</p>
+			<h4>Challenges</h4>
+			<ul>
+				<li>Encapsulation made it challenging to use consistent styles because styles cannot penetrate the shadow DOM. However, custom properties can be referenced inside the web component and set in the main stylesheet, external to the component. Setting custom properties and referencing them where needed provides consistency.</li>
+				<li>The template that Spotify provides is Node.js, so my next step in this project is to understand Node and OAuth better so I can alter the flow.</li>
+			</ul>
+			<a class="btn" href="https://github.com/ejgoodwin/playlist-generator" target="_blank">Visit GitHub</a>
+		</div>
+		<div class="gallery-container">
+			<ul class="gallery">
+				<li class="gallery__item">
+					<a class="gallery__item-link">
+						<img src="images/project-gallery/create-playlist-small.jpg" alt="" data-image="images/project-gallery/create-playlist.jpg">
+					</a>
+				</li>
+				<li class="gallery__item">
+					<a class="gallery__item-link">
+						<img src="images/project-gallery/create-playlist-selected-small.jpg" alt="" data-image="images/project-gallery/create-playlist-selected.jpg">
+					</a>
+				</li>
+				<li class="gallery__item">
+					<a class="gallery__item-link">
+						<img src="images/project-gallery/create-playlist-search-small.jpg" alt="" data-image="images/project-gallery/create-playlist-search.jpg">
+					</a>
+				</li>
+				<li class="gallery__item">
+					<a class="gallery__item-link">
+						<img src="images/project-gallery/create-playlist-mobile-small.jpg" alt="" data-image="images/project-gallery/create-playlist-mobile.jpg">
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="project" id="othello">
+		<div class="project__info">
+			<h3>Othello game with minimax and Monte Carlo tree search</h3>
+			<div class="chip-container">
+				<span class="chip">Java</span>
+				<span class="chip">JavaScript</span>
+				<span class="chip">AI search algorithms</span>
+			</div>
+			<h4>Aims</h4>
+			<p>I initially built a web version in JS that uses minimax to select a move so the user can play against the computer. I wanted to expand this idea for a university module, so I implemented the game in Java and added alpha-beta pruning and MCTS so that I could study and compare the algorithms.</p>
+			<h4>Challenges</h4>
+			<ul>
+				<li>Understanding the game tree and how to create a search tree. The implementation of MCTS was very different to the brute force minimax and AB, so understanding how to traverse the tree, create nodes and calculate the best node to expand was a great learning experience.</li>
+				<li>Implementing the game logic.</li>
+			</ul>
+			<a class="btn" href="https://ejgoodwin.github.io/reversi/" target="_blank">Play web version</a>
+			<a class="btn" href="https://github.com/ejgoodwin/IRP-Prototype-Othello" target="_blank">Visit GitHub</a>
+		</div>
+		<div class="gallery-container">
+			<ul class="gallery">
+				<li class="gallery__item">
+					<a class="gallery__item-link">
+						<img src="images/project-gallery/othello-web-small.jpg" alt="" data-image="images/project-gallery/othello-web.jpg">
+					</a>
+				</li>
+				<li class="gallery__item">
+					<a class="gallery__item-link">
+						<img src="images/project-gallery/othello-web-back-small.jpg" alt="" data-image="images/project-gallery/othello-web-back.jpg">
+					</a>
+				</li>
+				<li class="gallery__item">
+					<a class="gallery__item-link">
+						<img src="images/project-gallery/othello-java-small.jpg" alt="" data-image="images/project-gallery/othello-java.png">
+					</a>
+				</li>
+				<li class="gallery__item">
+					<a class="gallery__item-link">
+						<img src="images/project-gallery/othello-java-back-small.jpg" alt="" data-image="images/project-gallery/othello-java-back.png">
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="project" id="workbench">
+		<div class="project__info">
+			<h3>UI design and development: translator's app</h3>
+			<div class="chip-container">
+				<span class="chip">UI design</span>
+				<span class="chip">UI development</span>
+			</div>
+			<h4>Aims</h4>
+			<p>Redesign and develop the UI for an app that vendors use to translate video. Created at <a href="https://www.strakertranslations.com/" target="_blank">Straker Translations</a>.</p>
+			<h4>Challenges</h4>
+			<ul>
+				<li>Complex functionality had to be organised and compartmentalised for ease of use.</li>
+				<li>Dark theme: I experimented with dark tones to create levels of elevation to differentiate sections.</li>
+			</ul>
+			<a class="btn" href="workbench-media/index.html" target="_blank">View UI example</a>
+		</div>
+		<div class="gallery-container">
+			<ul class="gallery">
+				<li class="gallery__item">
+					<a class="gallery__item-link">
+						<img src="images/project-gallery/workbench-small.jpg" alt="" data-image="images/project-gallery/workbench.jpg">
+					</a>
+				</li>
+				<li class="gallery__item">
+					<a class="gallery__item-link">
+						<img src="images/project-gallery/workbench-bottom-small.jpg" alt="" data-image="images/project-gallery/workbench-bottom.jpg">
+					</a>
+				</li>
+				<li class="gallery__item">
+					<a class="gallery__item-link">
+						<img src="images/project-gallery/workbench-dark-small.jpg" alt="" data-image="images/project-gallery/workbench-dark.jpg">
+					</a>
+				</li>
+				<li class="gallery__item">
+					<a class="gallery__item-link">
+						<img src="images/project-gallery/workbench-collapse-small.jpg" alt="" data-image="images/project-gallery/workbench-collapse.jpg">
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="gallery-modal">
+		<button class="gallery-modal__button gallery-modal__prev"><i class="fas fa-chevron-left"></i></button>
+		<img src="" alt="">
+		<button class="gallery-modal__button gallery-modal__next"><i class="fas fa-chevron-right"></i></button>
+		<button class="gallery-modal__button gallery-modal__close"><i class="fas fa-times"></i></button>
+	</div>
 
 	</div>
 </main>
+<footer id="contact">
+	<p>
+		<a href="https://www.linkedin.com/in/erica-goodwin-4b6b64112/" target="_blank" rel="noreferrer"><i class="fab fa-linkedin"></i></a> 
+		<a href="https://github.com/ejgoodwin" target="_blank" rel="noreferrer"><i class="fab fa-github-square"></i></a>
+	</p>
+</footer>
 
 <script type="text/javascript" src="run.js"></script>
 
