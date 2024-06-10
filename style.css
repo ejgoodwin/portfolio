@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* ---------------- MEDIA QUERIES ----------------
 
 ------------------------------------------- */
@@ -14,6 +13,7 @@ h2 {
 }
 
 h3 {
+  color: #3e3d44;
   font-size: 1.5rem;
   margin: 0;
 }
@@ -23,20 +23,22 @@ h4 {
 }
 
 h1, h2, h3 {
-  color: #435197;
   font-family: "Montserrat", sans-serif;
+  font-weight: normal;
   line-height: 1.5;
+}
+
+h1, h2 {
+  color: #4458bc;
 }
 
 @media only screen and (min-width: 800px) {
   h1 {
     font-size: 3.5rem;
   }
-
   h2 {
     font-size: 2.5rem;
   }
-
   h3 {
     font-size: 1.5rem;
   }
@@ -70,14 +72,13 @@ body {
 
 a {
   display: inline-block;
-  color: #435197;
+  color: #4458bc;
   -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
   transition: 0.2s;
   text-decoration: none;
 }
 a:hover {
-  color: #333e74;
+  color: #364697;
 }
 
 p a {
@@ -98,16 +99,15 @@ p, li {
   padding: 0.6rem 1rem;
   text-align: center;
   color: #fff;
-  background: #435197;
+  background: #4458bc;
   text-decoration: none;
   width: 100%;
   margin: 0.5rem 0;
   border-radius: 4px;
 }
 .btn:hover {
-  background-color: #333e74;
+  background-color: #364697;
   -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
   transition: 0.3s;
   cursor: pointer;
   color: #fff;
@@ -129,7 +129,7 @@ p, li {
 }
 
 .dropdown-menu {
-  background: #221E27;
+  background: #1a151e;
   height: 100vh;
   left: 0;
   padding: 5rem 2rem;
@@ -137,7 +137,6 @@ p, li {
   right: 0;
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
-  -o-transition: transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
   top: -100%;
@@ -147,7 +146,7 @@ p, li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #435197;
+  background: #4458bc;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -164,7 +163,6 @@ p, li {
 }
 .dropdown-menu__list-item {
   text-align: center;
-  font-weight: 600;
   font-size: 1.5rem;
 }
 .dropdown-menu__link {
@@ -193,14 +191,14 @@ p, li {
 ------------------------------------------- */
 .header {
   color: #fff;
-  background-color: #221E27;
+  background-color: #1a151e;
   position: relative;
 }
 .header h1, .header h2 {
   color: rgba(255, 255, 255, 0.9);
 }
 .header__role {
-  background: #435197;
+  background: #4458bc;
   padding: 2.5rem 1rem 1rem;
 }
 .header__role-text {
@@ -229,7 +227,7 @@ p, li {
           margin-inline-end: 0.5rem;
 }
 .header__social a:hover {
-  color: #5868b5;
+  color: #6a7ac9;
 }
 @media only screen and (min-width: 500px) {
   .header__role-image {
@@ -245,9 +243,8 @@ p, li {
             animation: header-slide 0.5s ease-in-out 0.2s;
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards;
-    background: #435197;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    background: #4458bc;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     content: "";
     bottom: 0;
     left: 0;
@@ -288,7 +285,6 @@ p, li {
   }
   .header__role-text {
     font-size: 3rem;
-    font-weight: bold;
     margin-top: 0;
     z-index: 1;
   }
@@ -343,26 +339,22 @@ p, li {
 
 @-webkit-keyframes header-slide {
   0% {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     right: 100%;
   }
   100% {
-    -webkit-clip-path: polygon(0 0, 100% 0, 64% 100%, 0% 100%);
-            clip-path: polygon(0 0, 100% 0, 64% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 64% 100%, 0% 100%);
     right: 35%;
   }
 }
 
 @keyframes header-slide {
   0% {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     right: 100%;
   }
   100% {
-    -webkit-clip-path: polygon(0 0, 100% 0, 64% 100%, 0% 100%);
-            clip-path: polygon(0 0, 100% 0, 64% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 64% 100%, 0% 100%);
     right: 35%;
   }
 }
@@ -526,7 +518,7 @@ p, li {
   cursor: pointer;
 }
 .hamburger:hover .hamburger__line {
-  background-color: #5868b5;
+  background-color: #6a7ac9;
 }
 .hamburger__line {
   display: block;
@@ -534,16 +526,15 @@ p, li {
   width: 50px;
   margin-bottom: 6px;
   border-radius: 5px;
-  background: #221E27;
+  background: #1a151e;
   -webkit-transition: background-color 0.1s, -webkit-transform 0.5s;
   transition: background-color 0.1s, -webkit-transform 0.5s;
-  -o-transition: background-color 0.1s, transform 0.5s;
   transition: background-color 0.1s, transform 0.5s;
   transition: background-color 0.1s, transform 0.5s, -webkit-transform 0.5s;
 }
 @media only screen and (min-width: 800px) {
   .hamburger__line {
-    background: #435197;
+    background: #4458bc;
   }
 }
 .hamburger__line:last-of-type {
@@ -590,7 +581,7 @@ p, li {
   padding-bottom: 1rem;
   margin-top: 0;
   margin-bottom: 0.5rem;
-  color: #435197;
+  color: #4458bc;
 }
 .feature-project__title::after {
   content: "";
@@ -611,7 +602,6 @@ p, li {
 .feature-project__subtitle {
   color: #444444;
   margin-top: 0;
-  font-weight: 700;
   font-size: 0.75rem;
   letter-spacing: 1.2px;
   text-transform: uppercase;
@@ -757,7 +747,7 @@ p, li {
   padding: 2rem 0 0;
 }
 .all-projects h2 {
-  color: #435197;
+  color: #4458bc;
 }
 @media only screen and (min-width: 800px) {
   .all-projects h2 {
@@ -786,7 +776,6 @@ p, li {
       flex-wrap: wrap;
   padding: 2rem 0;
   -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
   transition: 0.3s;
   display: block;
 }
@@ -835,13 +824,13 @@ p, li {
   position: relative;
 }
 .website li::before {
-  content: "";
+  content: "\f0da";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   position: absolute;
   left: -18px;
   top: 4px;
-  color: #435197;
+  color: #4458bc;
 }
 @media only screen and (min-width: 800px) {
   .website {
@@ -867,7 +856,7 @@ p, li {
   margin: 100px auto;
 }
 .animation__header {
-  color: #435197;
+  color: #4458bc;
   font-size: 2rem;
   font-weight: 500;
 }
@@ -939,7 +928,6 @@ iframe {
   -webkit-box-shadow: 0px 0px 3px #d8d8d8;
           box-shadow: 0px 0px 3px #d8d8d8;
   -webkit-transition: 0.1s;
-  -o-transition: 0.1s;
   transition: 0.1s;
 }
 @media only screen and (min-width: 800px) {
@@ -1009,15 +997,15 @@ iframe {
 }
 
 footer {
-  background: #221E27;
+  background: #1a151e;
   text-align: center;
   padding: 2rem 1rem;
 }
 footer a {
-  color: #435197;
+  color: #4458bc;
 }
 footer a:hover {
-  color: #5868b5;
+  color: #6a7ac9;
 }
 footer i {
   font-size: 2.5rem;
@@ -1025,14 +1013,13 @@ footer i {
 }
 
 .svg-switch {
-  background: #6EB8BF;
+  background: #6FCDD6;
   border-radius: 2rem;
   cursor: pointer;
   margin: 2rem 0;
   padding: 6px;
   position: relative;
   -webkit-transition: 0.1s;
-  -o-transition: 0.1s;
   transition: 0.1s;
   width: 52px;
   z-index: 1;
@@ -1045,7 +1032,6 @@ footer i {
   height: 20px;
   margin-left: 0;
   -webkit-transition: 0.1s;
-  -o-transition: 0.1s;
   transition: 0.1s;
   width: 20px;
 }
@@ -1059,7 +1045,6 @@ footer i {
   opacity: 0;
   position: absolute;
   -webkit-transition: 0.1s;
-  -o-transition: 0.1s;
   transition: 0.1s;
   right: 0;
   top: 0;
@@ -1090,7 +1075,6 @@ footer i {
 #svg-monitor-shadow {
   opacity: 1;
   -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
   transition: 0.2s;
 }
 
@@ -1105,7 +1089,6 @@ footer i {
 #svg-monitor-base,
 #svg-post-it-strike {
   -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
   transition: 0.2s;
 }
 
