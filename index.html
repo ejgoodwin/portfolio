@@ -150,43 +150,53 @@
 </header>
 
 <main class="main-body container">
-	<h2>Projects</h2>
+	<h2 class="main-body__heading">My Projects</h2>
+	<div class="project">
+		<div class="project__info">
+			<h3>HubSpot: Product Updates and Approvals</h3>
+			<div class="chip-container">
+				<span class="chip">FE development</span>
+				<span class="chip">TypeScript</span>
+				<span class="chip">React</span>
+			</div>
+			<ul>
+				<li>Developed features for Product Approvals and Product Updates at <a href="https://www.hubspot.com/" target="_blank">HubSpot</a></li>
+				<li>Focused on Typescript, state management (React Context and Redux), fetching and aggregating data from the BE</li>
+				<li>Product Approvals is a library that is consumed by multiple high usage apps, and Product Updates is the main area where users can view the new features for the platform and join betas</li>
+			</ul>
+		</div>
+
+		<div class="gallery-container">
+			<ul class="gallery">
+				<li class="gallery__item gallery__item--large">
+					<a class="gallery__item-link">
+						<img src="images/project-gallery/hs-product-updates.png" alt="" data-image="images/project-gallery/hs-product-updates.png">
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
 	<div class="project" id="workbench">
 		<div class="project__info">
-			<h3>UI design and development: translator's app</h3>
+			<h3>Translator's app</h3>
 			<div class="chip-container">
 				<span class="chip">UI design</span>
 				<span class="chip">UI development</span>
 			</div>
-			<h4>Aims</h4>
-			<p>Redesign and develop the UI for an app that vendors use to translate video. Created at <a href="https://www.strakertranslations.com/" target="_blank">Straker Translations</a>.</p>
-			<h4>Challenges</h4>
 			<ul>
-				<li>Complex functionality had to be organised and compartmentalised for ease of use.</li>
-				<li>Dark theme: I experimented with dark tones to create levels of elevation to differentiate sections.</li>
+				<li>UI design and development for NZ translations company, <a href="https://www.straker.ai/" target="_blank">Straker Translations</a></li>
+				<li>App for translators to translate captions on video</li>
+				<li>Incorporated popular features into the design: memory matches from the database, QA recommendations, search and replace</li>
+				<li>The user can move the sidebar to sit vertically or horizontally and pull it up and down, switch to dark mode, and collapse the video timeline to reduce distraction</li>
 			</ul>
 			<a class="btn" href="workbench-media/index.html" target="_blank">View UI example</a>
 		</div>
 		<div class="gallery-container">
 			<ul class="gallery">
-				<li class="gallery__item">
+				<li class="gallery__item gallery__item--large">
 					<a class="gallery__item-link">
-						<img src="images/project-gallery/workbench-small.jpg" alt="" data-image="images/project-gallery/workbench.jpg">
-					</a>
-				</li>
-				<li class="gallery__item">
-					<a class="gallery__item-link">
-						<img src="images/project-gallery/workbench-bottom-small.jpg" alt="" data-image="images/project-gallery/workbench-bottom.jpg">
-					</a>
-				</li>
-				<li class="gallery__item">
-					<a class="gallery__item-link">
-						<img src="images/project-gallery/workbench-dark-small.jpg" alt="" data-image="images/project-gallery/workbench-dark.jpg">
-					</a>
-				</li>
-				<li class="gallery__item">
-					<a class="gallery__item-link">
-						<img src="images/project-gallery/workbench-collapse-small.jpg" alt="" data-image="images/project-gallery/workbench-collapse.jpg">
+						<img src="images/project-gallery/workbench.jpg" alt="" data-image="images/project-gallery/workbench.jpg">
 					</a>
 				</li>
 			</ul>
@@ -201,12 +211,10 @@
 				<span class="chip">JavaScript</span>
 				<span class="chip">AI search algorithms</span>
 			</div>
-			<h4>Aims</h4>
-			<p>I initially built a web version in JS that uses minimax to select a move so the user can play against the computer. I wanted to expand this idea for a university module, so I implemented the game in Java and added alpha-beta pruning and MCTS so that I could study and compare the algorithms.</p>
-			<h4>Challenges</h4>
 			<ul>
-				<li>Understanding the game tree and how to create a search tree. The implementation of MCTS was very different to the brute force minimax and AB, so understanding how to traverse the tree, create nodes and calculate the best node to expand was a great learning experience.</li>
-				<li>Implementing the game logic.</li>
+				<li>Built a web version in JS that uses the Minimax algorithm so the user can play against the computer</li>
+				<li>Adapted into a Java app for a university project that compared algorithms alpha-beta pruning and MCTS</li>
+				<li>The difficulty level adjusted to the user, so the difficulty would rise if the user was winning the games, and fall if the user was losing</li>
 			</ul>
 			<a class="btn" href="https://ejgoodwin.github.io/reversi/" target="_blank">Play web version</a>
 			<a class="btn" href="https://github.com/ejgoodwin/IRP-Prototype-Othello" target="_blank">Visit GitHub</a>
@@ -237,44 +245,25 @@
 		</div>
 	</div>
 
-	<div class="project" id="tv">
+	<div class="project" id="playlist">
 		<div class="project__info">
-			<h3>TV listings website</h3>
+			<h3>Weather app</h3>
 			<div class="chip-container">
+				<span class="chip">JavaScript</span>
 				<span class="chip">React</span>
-				<span class="chip">React routing</span>
-				<span class="chip">Material UI</span>
+				<span class="chip">UI design</span>
 			</div>
-			<h4>Aims</h4>
-			<p>Improve knowledge in React, hooks, React client-side routing and dynamic routes.</p>
-			<h4>Challenges</h4>
 			<ul>
-				<li>Dynamic routes for the cast and shows. I used the IDs in the data to form part of the URL and created a component for shows and cast members.</li>
-				<li>Refreshing pages caused the app to lose state. Initially, I wanted to handle state in a parent component and pass the data down to the child when required. However, the state was lost when the page refreshed, so I fetched and stored the data in the cast or show component, utilising the URL parameters that include the cast or show's ID. The issue of losing state could be an opportunity to expand the project and add Redux to handle the state of the components and ensure the state persists.</li>
+				<li>Simple weather app that shows a different design depending on the weather</li>
+				<li>Fetches data from multiple endpoints to show weather for various locations</li>
 			</ul>
-			<a class="btn" href="https://ejgoodwin.github.io/tv-shows" target="_blank">Visit website</a>
-			<a class="btn" href="https://github.com/ejgoodwin/tv-shows" target="_blank">Visit GitHub</a>
+			<a class="btn" href="https://github.com/ejgoodwin/weather-react" target="_blank">Visit GitHub</a>
 		</div>
 		<div class="gallery-container">
 			<ul class="gallery">
-				<li class="gallery__item">
+				<li class="gallery__item gallery__item--large">
 					<a class="gallery__item-link">
-						<img src="images/project-gallery/tv-home-small.png" alt="" data-image="images/project-gallery/tv-home.png">
-					</a>
-				</li>
-				<li class="gallery__item">
-					<a class="gallery__item-link">
-						<img src="images/project-gallery/tv-light-search-small.jpg" alt="" data-image="images/project-gallery/tv-light-search.jpg">
-					</a>
-				</li>
-				<li class="gallery__item">
-					<a class="gallery__item-link">
-						<img src="images/project-gallery/tv-show-small.jpg" alt="" data-image="images/project-gallery/tv-show.jpg">
-					</a>
-				</li>
-				<li class="gallery__item">
-					<a class="gallery__item-link">
-						<img src="images/project-gallery/tv-cast-small.jpg" alt="" data-image="images/project-gallery/tv-cast.jpg">
+						<img src="images/project-gallery/weather-app-image.png" alt="" data-image="images/project-gallery/weather-app-image.png">
 					</a>
 				</li>
 			</ul>
@@ -288,36 +277,19 @@
 				<span class="chip">JavaScript</span>
 				<span class="chip">Web components</span>
 				<span class="chip">Spotify web API</span>
+				<span class="chip">UI design</span>
 			</div>
-			<h4>Aims</h4>
-			<p>Use Spotify web API to search for related artists and tracks, create a playlist and add tracks. Understand how to develop custom web components.</p>
-			<h4>Challenges</h4>
 			<ul>
-				<li>Encapsulation made it challenging to use consistent styles because styles cannot penetrate the shadow DOM. However, custom properties can be referenced inside the web component and set in the main stylesheet, external to the component. Setting custom properties and referencing them where needed provides consistency.</li>
-				<li>The template that Spotify provides is Node.js, so my next step in this project is to understand Node and OAuth better so I can alter the flow.</li>
+				<li>An app that allows you to log in via Spotify and create playlists</li>
+				<li>Spotify provides a template server for development, so this project focuses on using web components and the shadow DOM for the FE</li>
 			</ul>
 			<a class="btn" href="https://github.com/ejgoodwin/playlist-generator" target="_blank">Visit GitHub</a>
 		</div>
 		<div class="gallery-container">
 			<ul class="gallery">
-				<li class="gallery__item">
+				<li class="gallery__item gallery__item--large">
 					<a class="gallery__item-link">
-						<img src="images/project-gallery/create-playlist-small.jpg" alt="" data-image="images/project-gallery/create-playlist.jpg">
-					</a>
-				</li>
-				<li class="gallery__item">
-					<a class="gallery__item-link">
-						<img src="images/project-gallery/create-playlist-selected-small.jpg" alt="" data-image="images/project-gallery/create-playlist-selected.jpg">
-					</a>
-				</li>
-				<li class="gallery__item">
-					<a class="gallery__item-link">
-						<img src="images/project-gallery/create-playlist-search-small.jpg" alt="" data-image="images/project-gallery/create-playlist-search.jpg">
-					</a>
-				</li>
-				<li class="gallery__item">
-					<a class="gallery__item-link">
-						<img src="images/project-gallery/create-playlist-mobile-small.jpg" alt="" data-image="images/project-gallery/create-playlist-mobile.jpg">
+						<img src="images/project-gallery/readme-design-main-v4.png" alt="" data-image="images/project-gallery/readme-design-main-v4.png">
 					</a>
 				</li>
 			</ul>
@@ -334,6 +306,7 @@
 	</div>
 </main>
 <footer id="contact">
+	<p class="thank-you">Thank you for taking a look at my portfolio!</p>
 	<p>
 		<a href="https://www.linkedin.com/in/erica-g-4b6b64112/" target="_blank" rel="noreferrer"><i class="fab fa-linkedin"></i></a> 
 		<a href="https://github.com/ejgoodwin" target="_blank" rel="noreferrer"><i class="fab fa-github-square"></i></a>
