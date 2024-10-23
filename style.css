@@ -20,7 +20,7 @@ h2 {
 
 h3 {
   font-size: 1.5rem;
-  margin: 0;
+  margin: 0 0 1rem;
 }
 
 h4 {
@@ -47,7 +47,12 @@ h3 {
     font-size: 3rem;
   }
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  h1 {
+    font-size: 6rem;
   }
 }
 ul {
@@ -109,6 +114,12 @@ li {
   font-family: "Work Sans", sans-serif;
   line-height: 1.5;
 }
+@media only screen and (min-width: 800px) {
+  p,
+  li {
+    font-size: 1.125rem;
+  }
+}
 
 .btn {
   padding: 0.6rem 1rem;
@@ -130,6 +141,11 @@ li {
 @media only screen and (min-width: 500px) {
   .btn {
     width: auto;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .btn {
+    font-size: 1.125rem;
   }
 }
 
@@ -157,6 +173,7 @@ li {
   grid-template-rows: 2fr 3fr;
 }
 .header__name-container {
+  background-color: #c2c8f3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -251,6 +268,11 @@ li {
 @media only screen and (min-width: 1200px) {
   .header__desc-container, .header__name-container {
     padding: 4rem;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  .header__desc-container p {
+    font-size: 3rem;
   }
 }
 
@@ -486,13 +508,13 @@ li {
   gap: 0.5rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 0.5rem 0 1rem;
+  margin: 0.5rem 0 2rem;
 }
 
 .chip {
   background: #c2c8f3;
   border-radius: 2rem;
-  font-size: 0.85rem;
+  font-size: 1rem;
   padding: 0.25rem 0.75rem;
 }
 
