@@ -1,6 +1,6 @@
 // Variables
-$primary: #343a65;
-$secondary: #c2c8f3;
+$primary: #363d76;
+$secondary: #cbd1ff;
 $tertiary: #f4f5ff;
 // $darkenPrimary : #05383D;
 $grey: #f4f4f4;
@@ -157,10 +157,10 @@ li {
   text-decoration: none;
   width: 100%;
   margin: 0.5rem 0;
-  border-radius: 4px;
+  border-radius: 8px;
   &:hover {
-    background-color: lighten($primary, 10%);
-    transition: 0.3s;
+    background-color: lighten($primary, 15%);
+    transition: 0.1s;
     cursor: pointer;
     color: #fff;
   }
