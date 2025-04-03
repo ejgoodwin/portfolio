@@ -279,13 +279,41 @@ li {
 /* ---------------- Feature Project ----------------
 
 ------------------------------------------- */
+.body-section {
+  margin: 3rem 0;
+}
+@media only screen and (min-width: 800px) {
+  .body-section {
+    margin: 5rem 0;
+  }
+}
+
 .main-body__heading {
   text-align: center;
 }
 @media only screen and (min-width: 800px) {
   .main-body__heading {
-    margin: 4rem 0 5rem;
+    margin: 1rem 0 1rem;
   }
+}
+.main-body__description {
+  max-width: 800px;
+  text-align: center;
+}
+.main-body__description-container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .feature-project__description {
@@ -494,7 +522,7 @@ li {
     grid-gap: 2rem;
     grid-template: auto/repeat(2, 1fr);
   }
-  .project:nth-of-type(even) .project__info {
+  .project:nth-of-type(odd) .project__info {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
